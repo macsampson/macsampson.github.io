@@ -16,7 +16,7 @@ class Portfolio extends Component {
               <div className="columns portfolio-item">
                 <div className="item-wrap">
                   <a href="#modal-01" title>
-                    <img alt src="images/portfolio/gamedeals_tile.png" />
+                    <img alt src="images/portfolio/gamedeals_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
                         <h5>Game Dealer</h5>
@@ -33,7 +33,7 @@ class Portfolio extends Component {
               <div className="columns portfolio-item">
                 <div className="item-wrap">
                   <a href="#modal-02" title>
-                    <img alt src="images/portfolio/parkr_tile.png" />
+                    <img alt src="images/portfolio/parkr_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
                         <h5>VanCity Parkr</h5>
@@ -66,7 +66,7 @@ class Portfolio extends Component {
               <div className="columns portfolio-item">
                 <div className="item-wrap">
                   <a href="#modal-03" title>
-                    <img alt src="images/portfolio/black_panther_min.jpg" />
+                    <img alt src="images/portfolio/black_panther_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
                         <h5>Panther</h5>
@@ -83,7 +83,7 @@ class Portfolio extends Component {
               <div className="columns portfolio-item">
                 <div className="item-wrap">
                   <a href="#modal-04" title>
-                    <img alt src="images/portfolio/tracer_min.jpg" />
+                    <img alt src="images/portfolio/tracer_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
                         <h5>Tracer</h5>
@@ -181,7 +181,7 @@ class Portfolio extends Component {
             alt
           />
           <div className="description-box">
-            <h4>Panther</h4>
+            <h4>Wakanda Forever</h4>
             <p>
               Recreated a piece in Photoshop originally done by one of my
               favourite illustrators: @marcusthevisual
