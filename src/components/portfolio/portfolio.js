@@ -7,7 +7,7 @@ class Portfolio extends Component {
       <section id="portfolio">
         <div id="coding" className="row">
           <div className="twelve columns collapsed">
-            <h1>Coding</h1>
+            <h1>Projects</h1>
             {/* portfolio-wrapper */}
             <div
               id="portfolio-wrapper"
