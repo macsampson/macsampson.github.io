@@ -66,7 +66,7 @@ class Portfolio extends Component {
               <div className="columns portfolio-item">
                 <div className="item-wrap">
                   <a href="#modal-03" title>
-                    <img alt src="images/portfolio/black_panther_tile.jpg" />
+                    <img alt src="images/portfolio/panther_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
                         <h5>Panther</h5>
@@ -100,7 +100,7 @@ class Portfolio extends Component {
               <div className="columns portfolio-item">
                 <div className="item-wrap">
                   <a href="#modal-05" title>
-                    <img alt src="images/portfolio/emma_min.jpg" />
+                    <img alt src="images/portfolio/emma_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
                         <h5>Emma</h5>
@@ -125,7 +125,7 @@ class Portfolio extends Component {
         <div id="modal-01" className="popup-modal mfp-hide">
           <img
             className="scale-with-grid"
-            src="images/portfolio/modals/gamedeals.png"
+            src="images/portfolio/modals/gamedeals.jpg"
             alt
           />
           <div className="description-box">
@@ -177,7 +177,7 @@ class Portfolio extends Component {
         <div id="modal-03" className="popup-modal mfp-hide">
           <img
             className="scale-with-grid"
-            src="images/portfolio/modals/black_panther_large_min.png"
+            src="images/portfolio/modals/panther_large.jpg"
             alt
           />
           <div className="description-box">
@@ -202,7 +202,7 @@ class Portfolio extends Component {
         <div id="modal-04" className="popup-modal mfp-hide">
           <img
             className="scale-with-grid"
-            src="images/portfolio/modals/tracer_large_min.png"
+            src="images/portfolio/modals/tracer_large.jpg"
             alt
           />
           <div className="description-box">
@@ -227,7 +227,7 @@ class Portfolio extends Component {
         <div id="modal-05" className="popup-modal mfp-hide">
           <img
             className="scale-with-grid"
-            src="images/portfolio/modals/emma_large_min.jpg"
+            src="images/portfolio/modals/emma_large.jpg"
             alt
           />
           <div className="description-box">
