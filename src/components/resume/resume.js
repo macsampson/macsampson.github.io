@@ -53,24 +53,25 @@ class Resume extends Component {
               <div className="twelve columns">
                 <h3>SAP</h3>
                 <p className="info">
-                  Software Engineer and CodeCenter Support Intern <span>•</span>{" "}
+                  Software Compliance Intern <span>•</span>{" "}
                   <em className="date">May - Dec 2017 </em>
                 </p>
                 <p>
                   <ul>
                     <li>
-                      • Saved hundreds of hours of manual work by initiating
-                      development of a Python script that utilized Selenium to
-                      automate many data entry tasks
-                    </li>
-                    <li>
-                      • Supported software engineers by scanning and creating
-                      FOSS components within SAP’s internal database in order to
-                      be risk rated by analysts
+                      • Worked with a team to ensure that SAP fell within legal
+                      compliance when software engineers wished to incorporate
+                      open source components into the products they were
+                      developing
                     </li>
                     <li>
                       • Streamlined software engineer’s development process by
                       quickly responding to their FOSS requests
+                    </li>
+                    <li>
+                      • On my own initiative, I developed an automation tool
+                      with Selenium and Python that automated many data entry
+                      tasks, resulting in hundreds of hours of manual work saved
                     </li>
                   </ul>
                 </p>
@@ -87,26 +88,32 @@ class Resume extends Component {
                 <p>
                   <ul>
                     <li>
-                      • Successfully achieved early release of new corporate
-                      website by maintaining constant and open communication
-                      with the marketing team, in order to determine essential
-                      and practical features to implement in the final release
+                      • Developed and integrated the new corporate website with
+                      a web content management platform in order for easy
+                      maintenance by the marketing team after release
                     </li>
 
                     <li>
-                      • Improved website performance by using browser dev tools
-                      to monitor script load times and refactoring redundancies
+                      • Worked closely with the marketing team to meet their
+                      requirements and ensure development stayed ahead of
+                      schedule, resulting in the website being released 2 months
+                      early
                     </li>
 
                     <li>
-                      • Maintained internal company applications by promptly
-                      responding to update requests, bug fixes and developing
-                      additional features
+                      • Improved website performance across all major browsers
+                      by using their respective network monitoring tools to
+                      analyze script load times and refactoring any code
+                      redundancies
                     </li>
 
                     <li>
-                      • Ensured site reliability by monitoring performance and
-                      settings within IIS
+                      • Maintained internal legacy applications by promptly
+                      handling change requests and bug fixes
+                    </li>
+                    <li>
+                      • Ensured reliability by configuring webserver security
+                      and network settings during new site roll out
                     </li>
                   </ul>
                 </p>
@@ -123,15 +130,21 @@ class Resume extends Component {
                 <p>
                   <ul>
                     <li>
-                      • Provided individual and group guidance regarding course
-                      material by responding to student inquiries via online
-                      forum
+                      • Handpicked by course professor to assist in managing
+                      instructor workload
                     </li>
 
                     <li>
-                      • Facilitated weekly lab sessions by assisting students
-                      with their web application projects
+                      • Provided individual and group guidance with course
+                      material by responding to student inquiries via online
+                      forum
                     </li>
+                    <li>
+                      • Led weekly 2-hour lab sessions to ensure sprint
+                      progression by providing students with technical guidance
+                      and leadership for their web application projects
+                    </li>
+                    <li>• Marked exams and graded final group projects</li>
                   </ul>
                 </p>
               </div>
@@ -154,7 +167,7 @@ class Resume extends Component {
               <span>
                 <strong>Languages: </strong>
               </span>
-              Python, JavaScript, Java, HTML/CSS, C, SQL
+              Python, TypeScript/JavaScript, Java, HTML/CSS, SQL
             </p>
             <p>
               <span>
@@ -166,13 +179,14 @@ class Resume extends Component {
               <span>
                 <strong>Frameworks: </strong>
               </span>
-              Selenium, Django
+              Selenium, Express
             </p>
             <p>
               <span>
                 <strong>Tools: </strong>
               </span>
-              Git, Eclipse, JIRA, Visual Studio, VirtualBox
+              Git, Eclipse, JIRA, Visual Studio, VirtualBox, Docker, NodeJS,
+              MongoDB
             </p>
             <p>
               <span>

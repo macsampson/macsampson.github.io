@@ -19,7 +19,7 @@ class Portfolio extends Component {
                     <img alt src="images/portfolio/gamedeals_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
-                        <h5>Game Dealer</h5>
+                        <h5>GameDeals</h5>
                         <p>Django App</p>
                       </div>
                     </div>
@@ -36,7 +36,7 @@ class Portfolio extends Component {
                     <img alt src="images/portfolio/parkr_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
-                        <h5>VanCity Parkr</h5>
+                        <h5>Parker</h5>
                         <p>Rails App</p>
                       </div>
                     </div>
@@ -129,7 +129,7 @@ class Portfolio extends Component {
             alt
           />
           <div className="description-box">
-            <h4>Game Dealer</h4>
+            <h4>GameDeals</h4>
             <p>
               A Django app that uses the Reddit API to pull game sale
               information from r/gamedeals and associate the games with their
@@ -154,7 +154,7 @@ class Portfolio extends Component {
             alt
           />
           <div className="description-box">
-            <h4>VanCity Parkr</h4>
+            <h4>Parker</h4>
             <p>
               An app that plots all public parking meters in the Metro Vancouver
               area, along with their rates and hours of operation. There is an

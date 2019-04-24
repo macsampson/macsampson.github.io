@@ -35,7 +35,7 @@ class About extends Component {
               <div className="columns download">
                 <p>
                   <a
-                    href="https://www.dropbox.com/s/glnqlcob71n9w8s/MSampson%20Resume%202018%202.0.pdf?dl=1"
+                    href="https://www.dropbox.com/s/6voo3z8z8448591/MSampson%20Resume%202018%203.1.pdf?dl=0"
                     className="button"
                   >
                     <i className="fa fa-download" />
