@@ -53,7 +53,7 @@ class Resume extends Component {
               <div className="twelve columns">
                 <h3>SAP</h3>
                 <p className="info">
-                  Software Compliance Intern <span>•</span>{" "}
+                  Software Compliance/Engineer Intern <span>•</span>{" "}
                   <em className="date">May - Dec 2017 </em>
                 </p>
                 <p>
