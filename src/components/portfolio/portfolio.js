@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class Portfolio extends Component {
-  state = {};
   render() {
     return (
       <section id="portfolio">
@@ -36,8 +35,8 @@ class Portfolio extends Component {
                     <img alt src="images/portfolio/parkr_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
-                        <h5>Parker</h5>
-                        <p>Rails App</p>
+                        <h5>Parking Spot Finder</h5>
+                        <p>MERN App</p>
                       </div>
                     </div>
                     <div className="link-icon">
@@ -154,18 +153,18 @@ class Portfolio extends Component {
             alt
           />
           <div className="description-box">
-            <h4>Parker</h4>
+            <h4>Parking Spot Finder</h4>
             <p>
-              An app that plots all public parking meters in the Metro Vancouver
-              area, along with their rates and hours of operation. There is an
-              additional option to overlay a heatmap with all auto-related
-              crime, so you can feel more at ease parking in certain
-              neighbourhoods.
+              A MERN app that plots all public parking meters in the Metro
+              Vancouver area, along with their rates and hours of operation.
+              There will also be an additional option to overlay a heatmap with
+              all auto-related crime, so you can feel more at ease parking in
+              certain neighbourhoods.
             </p>
           </div>
           <div className="link-box">
             <a
-              href="https://github.com/macsampson/VanCity-Parkr"
+              href="https://github.com/macsampson/Parking-Spot-Finder"
               target="_blank"
             >
               View on GitHub
