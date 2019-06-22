@@ -12,26 +12,9 @@ class Portfolio extends Component {
               id="portfolio-wrapper"
               className="bgrid-quarters s-bgrid-thirds cf"
             >
-              <div className="columns portfolio-item">
+            <div className="columns portfolio-item">
                 <div className="item-wrap">
                   <a href="#modal-01" title>
-                    <img alt src="images/portfolio/gamedeals_tile.jpg" />
-                    <div className="overlay">
-                      <div className="portfolio-item-meta">
-                        <h5>GameDeals</h5>
-                        <p>Django App</p>
-                      </div>
-                    </div>
-                    <div className="link-icon">
-                      <i className="icon-plus" />
-                    </div>
-                  </a>
-                </div>
-              </div>{" "}
-              {/* item end */}
-              <div className="columns portfolio-item">
-                <div className="item-wrap">
-                  <a href="#modal-02" title>
                     <img alt src="images/portfolio/parkr_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
@@ -46,6 +29,24 @@ class Portfolio extends Component {
                 </div>
               </div>{" "}
               {/* item end */}
+              <div className="columns portfolio-item">
+                <div className="item-wrap">
+                  <a href="#modal-02" title>
+                    <img alt src="images/portfolio/gamedeals_tile.jpg" />
+                    <div className="overlay">
+                      <div className="portfolio-item-meta">
+                        <h5>GameDeals</h5>
+                        <p>Django App</p>
+                      </div>
+                    </div>
+                    <div className="link-icon">
+                      <i className="icon-plus" />
+                    </div>
+                  </a>
+                </div>
+              </div>{" "}
+              {/* item end */}
+              
             </div>{" "}
             {/* portfolio-wrapper end */}
           </div>{" "}
@@ -121,7 +122,7 @@ class Portfolio extends Component {
         {/* row End */}
         {/* Modal Popup
 	      --------------------------------------------------------------- */}
-        <div id="modal-01" className="popup-modal mfp-hide">
+        <div id="modal-02" className="popup-modal mfp-hide">
           <img
             className="scale-with-grid"
             src="images/portfolio/modals/gamedeals.jpg"
@@ -146,7 +147,7 @@ class Portfolio extends Component {
           </div>
         </div>
         {/* modal-01 End */}
-        <div id="modal-02" className="popup-modal mfp-hide">
+        <div id="modal-01" className="popup-modal mfp-hide">
           <img
             className="scale-with-grid"
             src="images/portfolio/modals/parkr.jpg"
@@ -163,6 +164,12 @@ class Portfolio extends Component {
             </p>
           </div>
           <div className="link-box">
+          <a id="view-app"
+              href="http://ec2-34-215-172-68.us-west-2.compute.amazonaws.com/"
+              target="_blank"
+            >
+              Go to App
+            </a>
             <a
               href="https://github.com/macsampson/Parking-Spot-Finder"
               target="_blank"
