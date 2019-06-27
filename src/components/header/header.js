@@ -16,15 +16,15 @@ class Header extends Component {
       document.getElementById("home").style.backgroundImage = "url(../images/1.png)";
     } else if (hour >= 9 && hour < 12){
       document.getElementById("home").style.backgroundImage = "url(../images/2.png)";
-    } else if (hour >= 12 && hour < 18){
+    } else if (hour >= 12 && hour < 17){
       document.getElementById("home").style.backgroundImage = "url(../images/2a.jpg)";
-    } else if (hour >= 18 && hour < 20){
+    } else if (hour >= 17 && hour < 19){
       document.getElementById("home").style.backgroundImage = "url(../images/3.png)";
-    } else if (hour >= 20 && hour < 21){
+    } else if (hour >= 19 && hour < 20){
       document.getElementById("home").style.backgroundImage = "url(../images/4.png)";
-    } else if (hour >= 21 && hour <= 22){
+    } else if (hour >= 20 && hour < 22){
       document.getElementById("home").style.backgroundImage = "url(../images/5.png)";
-    } else if (hour > 22 || hour < 3){
+    } else if (hour >= 22 || hour < 3){
       document.getElementById("home").style.backgroundImage = "url(../images/6.png)";
     } else if (hour >= 3 && hour < 5){
       document.getElementById("home").style.backgroundImage = "url(../images/7.png)";
@@ -82,8 +82,8 @@ class Header extends Component {
           <div className="banner-text">
             <h1 className="responsive-headline">Hey, I'm {resumeData.name}.</h1>
             <h3>
-              I'm a Vancouver-based software engineer and{" "}
-              <span>hobbyist illustrator. </span>
+              I'm a software engineer{" "}
+              <span> currently based in Vancouver, Canada. </span>
               <a className="smoothscroll" href="#about">
                 Start scrolling{" "}
               </a>
