@@ -2,6 +2,36 @@ import React, { Component } from "react";
 
 class Header extends Component {
   state = {};
+
+  
+
+  componentDidMount() {
+    let today = new Date(),
+    hour = today.getHours();
+
+    // Change the background based on what time of day it is
+    if ( hour >= 5 && hour < 7){
+      document.getElementById("home").style.backgroundImage = "url(../images/0.png)";
+    } else if (hour >= 7 && hour < 9){
+      document.getElementById("home").style.backgroundImage = "url(../images/1.png)";
+    } else if (hour >= 9 && hour < 12){
+      document.getElementById("home").style.backgroundImage = "url(../images/2.png)";
+    } else if (hour >= 12 && hour < 18){
+      document.getElementById("home").style.backgroundImage = "url(../images/2a.jpg)";
+    } else if (hour >= 18 && hour < 20){
+      document.getElementById("home").style.backgroundImage = "url(../images/3.png)";
+    } else if (hour >= 20 && hour < 22){
+      document.getElementById("home").style.backgroundImage = "url(../images/4.png)";
+    } else if (hour >= 22 && hour < 24){
+      document.getElementById("home").style.backgroundImage = "url(../images/5.png)";
+    } else if (hour < 3){
+      document.getElementById("home").style.backgroundImage = "url(../images/6.png)";
+    } else if (hour >= 3 && hour < 5){
+      document.getElementById("home").style.backgroundImage = "url(../images/7.png)";
+    }
+  }
+
+  
   render() {
     let resumeData = this.props.resumeData;
     return (
