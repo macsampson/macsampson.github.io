@@ -18,7 +18,7 @@ class Portfolio extends Component {
                     <img alt src="images/portfolio/parkr_tile.jpg" />
                     <div className="overlay">
                       <div className="portfolio-item-meta">
-                        <h5>Parking Spot Finder</h5>
+                        <h5>VanCity Parking</h5>
                         <p>MERN App</p>
                       </div>
                     </div>
@@ -154,7 +154,7 @@ class Portfolio extends Component {
             alt
           />
           <div className="description-box">
-            <h4>Parking Spot Finder</h4>
+            <h4>VanCity Parking</h4>
             <p>
               A MERN app that plots all public parking meters in the Metro
               Vancouver area, along with their rates and hours of operation.
@@ -165,7 +165,7 @@ class Portfolio extends Component {
           </div>
           <div className="link-box">
           <a id="view-app"
-              href="http://ec2-34-215-172-68.us-west-2.compute.amazonaws.com/"
+              href="http://www.vancityparking.com/"
               target="_blank"
             >
               Go to App

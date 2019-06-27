@@ -45,29 +45,29 @@ class Resume extends Component {
         <div className="row work">
           <div className="three columns header-col">
             <h1>
-              <span>Work</span>
+              <span>Experience</span>
             </h1>
           </div>
           <div className="nine columns main-col">
             <div className="row item">
               <div className="twelve columns">
-                <h3>SAP</h3>
+                <h3>Software Compliance/Engineer Intern</h3>
                 <p className="info">
-                  Software Compliance/Engineer Intern <span>•</span>{" "}
+                SAP <span>•</span>{" "}
                   <em className="date">May - Dec 2017 </em>
                 </p>
                 <p>
                   <ul>
                     <li>
-                      • Worked with a team to ensure that SAP fell within legal
+                      • Worked with a team to ensure that SAP operated within legal
                       compliance when software engineers wished to incorporate
                       open source components into the products they were
                       developing
                     </li>
-                    <li>
+                    {/* <li>
                       • Streamlined software engineer’s development process by
                       quickly responding to their FOSS requests
-                    </li>
+                    </li> */}
                     <li>
                       • On my own initiative, I developed an automation tool
                       with Selenium and Python that automated many data entry
@@ -80,22 +80,22 @@ class Resume extends Component {
             {/* item end */}
             <div className="row item">
               <div className="twelve columns">
-                <h3>MDA</h3>
+                <h3>Software Engineer Intern</h3>
                 <p className="info">
-                  Software Engineer Intern <span>•</span>{" "}
+                  MDA <span>•</span>{" "}
                   <em className="date">Jan - Sept 2016</em>
                 </p>
                 <p>
                   <ul>
-                    <li>
+                    {/* <li>
                       • Developed and integrated the new corporate website with
                       a web content management platform in order for easy
                       maintenance by the marketing team after release
-                    </li>
+                    </li> */}
 
                     <li>
                       • Worked closely with the marketing team to meet their
-                      requirements and ensure development stayed ahead of
+                      requirements and ensure corporate website development stayed ahead of
                       schedule, resulting in the website being released 2 months
                       early
                     </li>
@@ -106,7 +106,7 @@ class Resume extends Component {
                       analyze script load times and refactoring any code
                       redundancies
                     </li>
-
+{/* 
                     <li>
                       • Maintained internal legacy applications by promptly
                       handling change requests and bug fixes
@@ -114,7 +114,7 @@ class Resume extends Component {
                     <li>
                       • Ensured reliability by configuring webserver security
                       and network settings during new site roll out
-                    </li>
+                    </li> */}
                   </ul>
                 </p>
               </div>
@@ -122,9 +122,9 @@ class Resume extends Component {
             {/* item end */}
             <div className="row item">
               <div className="twelve columns">
-                <h3>UBC</h3>
+                <h3>Software Engineering Teaching Assistant</h3>
                 <p className="info">
-                  Software Engineering Teaching Assistant <span>•</span>{" "}
+                UBC <span>•</span>{" "}
                   <em className="date">Sept - Dec 2015</em>
                 </p>
                 <p>
@@ -133,18 +133,18 @@ class Resume extends Component {
                       • Handpicked by course professor to assist in managing
                       instructor workload
                     </li>
-
+{/* 
                     <li>
                       • Provided individual and group guidance with course
                       material by responding to student inquiries via online
                       forum
-                    </li>
+                    </li> */}
                     <li>
                       • Led weekly 2-hour lab sessions to ensure sprint
                       progression by providing students with technical guidance
                       and leadership for their web application projects
                     </li>
-                    <li>• Marked exams and graded final group projects</li>
+                    {/* <li>• Marked exams and graded final group projects</li> */}
                   </ul>
                 </p>
               </div>
@@ -159,7 +159,7 @@ class Resume extends Component {
         <div className="row skill">
           <div className="three columns header-col">
             <h1>
-              <span>Skills</span>
+              <span>Tech</span>
             </h1>
           </div>
           <div className="nine columns main-col">
@@ -167,32 +167,13 @@ class Resume extends Component {
               <span>
                 <strong>Languages: </strong>
               </span>
-              Python, TypeScript/JavaScript, Java, HTML/CSS, SQL
+              Python, TypeScript/JavaScript, Java, SQL
             </p>
             <p>
               <span>
-                <strong>Libraries: </strong>
+                <strong>Other: </strong>
               </span>
-              React
-            </p>
-            <p>
-              <span>
-                <strong>Frameworks: </strong>
-              </span>
-              Selenium, Express
-            </p>
-            <p>
-              <span>
-                <strong>Tools: </strong>
-              </span>
-              Git, Eclipse, JIRA, Visual Studio, VirtualBox, Docker, NodeJS,
-              MongoDB
-            </p>
-            <p>
-              <span>
-                <strong>Systems: </strong>
-              </span>
-              Linux, Windows, macOS
+              React, Docker, NodeJS, MongoDB, Selenium, Express, HTML/CSS
             </p>
             {/* <div className="bars">
               <ul className="skills">
