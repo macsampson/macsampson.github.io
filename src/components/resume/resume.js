@@ -19,7 +19,7 @@ class Resume extends Component {
                 <h3>University of British Columbia</h3>
                 <p className="info">
                   Bachelor of Computer Science <span>•</span>{" "}
-                  <em className="date">May 2018</em>
+                  <em className="date">Dec 2018</em>
                 </p>
                 <p />
               </div>
@@ -159,7 +159,7 @@ class Resume extends Component {
         <div className="row skill">
           <div className="three columns header-col">
             <h1>
-              <span>Tech</span>
+              <span>Technologies</span>
             </h1>
           </div>
           <div className="nine columns main-col">
@@ -173,7 +173,7 @@ class Resume extends Component {
               <span>
                 <strong>Other: </strong>
               </span>
-              React, Docker, NodeJS, MongoDB, Selenium, Express, HTML/CSS
+              React, Docker, Node.js, MongoDB, Selenium, Express, HTML/CSS
             </p>
             {/* <div className="bars">
               <ul className="skills">

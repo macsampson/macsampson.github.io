@@ -7,7 +7,7 @@ class About extends Component {
       <section id="about">
         <div className="row">
           <div className="three columns">
-            <img className="profile-pic" src="images/profile_pic1.jpg" alt />
+            <img className="profile-pic" src="images/profile_pic1.png" alt />
           </div>
           <div className="nine columns main-col">
             <h2>About Me</h2>
@@ -20,8 +20,12 @@ class About extends Component {
               meaningful never ceases to excite me.
               <br />
               <br />
-              Some of my non-coding hobbies include: drawing, gaming, sailing,
-              and weightlifting.
+              When I'm not coding my next project, I enjoy spending time: 
+              <li>Gaming</li>
+              <li>Weightlifting</li>
+              <li>Drawing</li>
+              <li>Watching eSports on Twitch</li>
+              <li>Discovering new functional prints for my 3D printer</li>
             </p>
             <div className="row">
               {/* <div className="columns contact-details">
