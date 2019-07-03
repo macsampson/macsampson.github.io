@@ -3,35 +3,64 @@ import React, { Component } from "react";
 class Header extends Component {
   state = {};
 
-  
-
   componentDidMount() {
     let today = new Date(),
-    hour = today.getHours();
+      hour = today.getHours();
 
-    // Change the background based on what time of day it is
-    if ( hour >= 5 && hour < 7){
-      document.getElementById("home").style.backgroundImage = "url(../images/0.png)";
-    } else if (hour >= 7 && hour < 9){
-      document.getElementById("home").style.backgroundImage = "url(../images/1.png)";
-    } else if (hour >= 9 && hour < 12){
-      document.getElementById("home").style.backgroundImage = "url(../images/2.png)";
-    } else if (hour >= 12 && hour < 17){
-      document.getElementById("home").style.backgroundImage = "url(../images/2a.jpg)";
-    } else if (hour >= 17 && hour < 19){
-      document.getElementById("home").style.backgroundImage = "url(../images/3.png)";
-    } else if (hour >= 19 && hour < 20){
-      document.getElementById("home").style.backgroundImage = "url(../images/4.png)";
-    } else if (hour >= 20 && hour < 22){
-      document.getElementById("home").style.backgroundImage = "url(../images/5.png)";
-    } else if (hour >= 22 || hour < 3){
-      document.getElementById("home").style.backgroundImage = "url(../images/6.png)";
-    } else if (hour >= 3 && hour < 5){
-      document.getElementById("home").style.backgroundImage = "url(../images/7.png)";
+    // Change the background based on what time of day it is (Pixel background)
+    if (hour >= 5 && hour < 7) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/0.png)";
+    } else if (hour >= 7 && hour < 10) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/1.png)";
+    } else if (hour >= 10 && hour < 12) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/2.png)";
+      // document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
+    } else if (hour >= 12 && hour < 17) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/2a.jpg)";
+      // document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
+    } else if (hour >= 17 && hour < 19) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/3.png)";
+    } else if (hour >= 19 && hour < 20) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/4.png)";
+    } else if (hour >= 20 && hour < 22) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/5.png)";
+    } else if (hour >= 22 || hour < 3) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/6.png)";
+    } else if (hour >= 3 && hour < 5) {
+      document.getElementById("home").style.backgroundImage =
+        "url(../images/7.png)";
     }
   }
 
-  
+  // Change the background based on what time of day it is (Deer background)
+  //   if ( hour >= 5 && hour < 8){
+  //     document.getElementById("home").style.backgroundImage = "url(../images/0deer.jpg)";
+  //   } else if (hour >= 8 && hour < 12){
+  //     document.getElementById("home").style.backgroundImage = "url(../images/1deer.jpg)";
+  //     document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
+  //   } else if (hour >= 12 && hour < 15){
+  //     document.getElementById("home").style.backgroundImage = "url(../images/2deer.jpg)";
+  //     document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
+  //   } else if (hour >= 15 && hour < 19){
+  //     document.getElementById("home").style.backgroundImage = "url(../images/3deer.jpg)";
+  //     document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
+  //   } else if (hour >= 19 && hour < 21){
+  //     document.getElementById("home").style.backgroundImage = "url(../images/4deer.jpg)";
+  //   } else if (hour >= 21 && hour < 23){
+  //     document.getElementById("home").style.backgroundImage = "url(../images/5deer.jpg)";
+  //   } else if (hour >= 23 || hour < 5){
+  //     document.getElementById("home").style.backgroundImage = "url(../images/6deer.jpg)";
+  //   }
+  // }
+
   render() {
     let resumeData = this.props.resumeData;
     return (
@@ -82,16 +111,8 @@ class Header extends Component {
           <div className="banner-text">
             <h1 className="responsive-headline">Hey, I'm {resumeData.name}.</h1>
             <h3>
-              I'm a software engineer{" "}
-              <span> currently based in Vancouver, Canada. </span>
-              <a className="smoothscroll" href="#about">
-                Start scrolling{" "}
-              </a>
-              to learn more{" "}
-              <a className="smoothscroll" href="#about">
-                about me
-              </a>
-              .
+              I'm a software engineer currently based in Vancouver, Canada.
+              Start scrolling to learn more about me.
             </h3>
             <hr />
             <ul className="social">
