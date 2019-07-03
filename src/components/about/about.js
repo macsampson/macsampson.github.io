@@ -14,10 +14,8 @@ class About extends Component {
             <p>
               I am a recent CS graduate from the University of British Columbia
               who is passionate about using technology to improve the daily
-              lives of people. I find building things addictive; whether it's a
-              piece of software, a web site, a business, a game, or a piece of
-              art; utilizing the resources around me to create something
-              meaningful never ceases to excite me.
+              lives of people. I find building things addictive - whether it's software, a website, a game, or a piece of
+              art.
               <br />
               <br />
               When I'm not coding my next project, I enjoy spending time: 
