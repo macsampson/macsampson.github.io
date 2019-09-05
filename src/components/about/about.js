@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 class About extends Component {
-  state = {};
+  state = {}
   render() {
     return (
       <section id="about">
@@ -14,11 +14,11 @@ class About extends Component {
             <p>
               I am a recent CS graduate from the University of British Columbia
               who is passionate about using technology to improve the daily
-              lives of people. I find building things addictive - whether it's software, a website, a game, or a piece of
-              art.
+              lives of people. I find building things addictive - whether it's
+              software, a website, a game, or a piece of art.
               <br />
               <br />
-              When I'm not coding my next project, I enjoy spending time: 
+              When I'm not coding my next project, I enjoy spending time:
               <li>Gaming</li>
               <li>Weightlifting</li>
               <li>Drawing</li>
@@ -39,7 +39,7 @@ class About extends Component {
                   <a
                     // Remember to replace www.dropbox.com with dl.dropboxusercontent.com in order to do a direct download!
                     // Also run "npm run deploy" to deploy this website..
-                    href="https://dl.dropboxusercontent.com/s/u6p1fzf4fzwssl5/MSampson%20Resume%202019%203.5.pdf"
+                    href="https://dl.dropboxusercontent.com/s/9gwdl5xra0avfm6/MSampson%20Resume%202019%204.1.pdf?dl=0"
                     className="button"
                   >
                     <i className="fa fa-download" />
@@ -47,14 +47,14 @@ class About extends Component {
                   </a>
                 </p>
               </div>
-            </div>{" "}
+            </div>{' '}
             {/* end row */}
-          </div>{" "}
+          </div>{' '}
           {/* end .main-col */}
         </div>
       </section>
-    );
+    )
   }
 }
 
-export default About;
+export default About
