@@ -9,34 +9,34 @@ class Header extends Component {
 
     //   // Change the background based on what time of day it is (Pixel background)
     //   if (hour >= 5 && hour < 7) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/0.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/0.png)'
     //   } else if (hour >= 7 && hour < 10) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/1.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/1.png)'
     //   } else if (hour >= 10 && hour < 12) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/2.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/2.png)'
     //     // document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
     //   } else if (hour >= 12 && hour < 17) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/2a.jpg)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/2a.jpg)'
     //     // document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
     //   } else if (hour >= 17 && hour < 19) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/3.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/3.png)'
     //   } else if (hour >= 19 && hour < 20) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/4.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/4.png)'
     //   } else if (hour >= 20 && hour < 22) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/5.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/5.png)'
     //   } else if (hour >= 22 || hour < 3) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/6.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/6.png)'
     //   } else if (hour >= 3 && hour < 5) {
-    //     document.getElementById("home").style.backgroundImage =
-    //       "url(../images/7.png)";
+    //     document.getElementById('home').style.backgroundImage =
+    //       'url(../images/7.png)'
     //   }
     // }
 
