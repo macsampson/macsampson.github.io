@@ -39,7 +39,7 @@ class About extends Component {
                   <a
                     // Remember to replace www.dropbox.com with dl.dropboxusercontent.com in order to do a direct download!
                     // Also run "npm run deploy" to deploy this website..
-                    href="https://dl.dropboxusercontent.com/s/9gwdl5xra0avfm6/MSampson%20Resume%202019%204.1.pdf?dl=0"
+                    href="https://dl.dropboxusercontent.com/s/uibfpwtlbqu2hwk/MSampson%20Resume%202019%204.3.pdf?dl=0"
                     className="button"
                   >
                     <i className="fa fa-download" />
