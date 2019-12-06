@@ -41,9 +41,21 @@ class Resume extends Component {
           </div>
           <div className="nine columns main-col">
             <Job
+              position="Technical Artist"
+              company="Electronic Arts"
+              dates="Sept 2019 - Present"
+              technology="C#, Python"
+              desc1="• Developing a tool for artists that provides a visual interface 
+              for character assets in order to streamline their workflows"
+              desc2="• Developing internal tool that provides a GUI for a microservice ecosystem
+              that connects various applications together and standardizes additional tool development"
+              desc3=""
+            />
+            <Job
               position="Software Compliance Engineer Intern"
               company="SAP"
               dates="May - Dec 2017"
+              technology="Python, Selenium"
               desc1="• Worked with a team to ensure that SAP operated within legal
                       compliance when software engineers wished to incorporate
                       open source components into the products they were
@@ -57,6 +69,7 @@ class Resume extends Component {
               position="Software Engineer Intern"
               company="MDA"
               dates="Jan - Sept 2016"
+              technology="Javascript, HTML/CSS, C#"
               desc1="• Worked closely with the marketing team to meet their
                       requirements and ensure corporate website development stayed ahead of
                       schedule, resulting in the website being released 2 months
@@ -70,6 +83,7 @@ class Resume extends Component {
               position="Software Engineering Teaching Assistant"
               company="UBC"
               dates="Sept - Dec 2015"
+              technology="Python, Django, Rails"
               desc1="• Handpicked by course professor to assist in managing
                       instructor workload"
               desc2="• Led weekly 2-hour lab sessions to ensure sprint
@@ -94,7 +108,7 @@ class Resume extends Component {
               <span>
                 <strong>Languages: </strong>
               </span>
-              Python, JavaScript, Java, SQL
+              Python, JavaScript, C#, Java, SQL
             </p>
             <p>
               <span>

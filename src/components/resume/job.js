@@ -9,7 +9,10 @@ class Job extends Component {
           <p className="info">
             {this.props.company} <span>•</span>{" "}
             <em className="date">{this.props.dates} </em>
+            <span>•</span>{" "}
+            <em className="technology">{this.props.technology} </em>
           </p>
+
           <p>
             <ul>
               <li>{this.props.desc1}</li>

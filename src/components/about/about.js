@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class About extends Component {
-  state = {}
+  state = {};
   render() {
     return (
       <section id="about">
@@ -12,18 +12,18 @@ class About extends Component {
           <div className="nine columns main-col">
             <h2>About Me</h2>
             <p>
-              I am a recent CS graduate from the University of British Columbia
-              who is passionate about using technology to improve the daily
-              lives of people. I find building things addictive - whether it's
-              software, a website, a game, or a piece of art.
+              I am a software engineer/web developer that's currently working in
+              the gaming industry. I'm passionate about using technology to
+              improve people's standard of living. I find building things
+              addictive - whether it's an app, website, game, or piece of art.
               <br />
               <br />
               When I'm not coding my next project, I enjoy spending time:
               <li>Gaming</li>
-              <li>Weightlifting</li>
+              <li>Bodybuilding</li>
               <li>Drawing</li>
-              <li>Watching eSports on Twitch</li>
-              <li>Discovering new functional prints for my 3D printer</li>
+              <li>Watching Twitch</li>
+              <li>3D printing</li>
             </p>
             <div className="row">
               {/* <div className="columns contact-details">
@@ -47,14 +47,14 @@ class About extends Component {
                   </a>
                 </p>
               </div>
-            </div>{' '}
+            </div>{" "}
             {/* end row */}
-          </div>{' '}
+          </div>{" "}
           {/* end .main-col */}
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default About
+export default About;
