@@ -4,74 +4,40 @@ class Header extends Component {
   state = {};
 
   componentDidMount() {
-    let today = new Date(),
-      hour = today.getHours();
-
-    //   // Change the background based on what time of day it is (Pixel background)
-    //   if (hour >= 5 && hour < 7) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/0.png)'
-    //   } else if (hour >= 7 && hour < 10) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/1.png)'
-    //   } else if (hour >= 10 && hour < 12) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/2.png)'
-    //     // document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
-    //   } else if (hour >= 12 && hour < 17) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/2a.jpg)'
-    //     // document.getElementById("home").getElementsByTagName("h3")[0].style.color = "#535F67";
-    //   } else if (hour >= 17 && hour < 19) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/3.png)'
-    //   } else if (hour >= 19 && hour < 20) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/4.png)'
-    //   } else if (hour >= 20 && hour < 22) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/5.png)'
-    //   } else if (hour >= 22 || hour < 3) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/6.png)'
-    //   } else if (hour >= 3 && hour < 5) {
-    //     document.getElementById('home').style.backgroundImage =
-    //       'url(../images/7.png)'
-    //   }
-    // }
-
+    // let today = new Date();
+    // hour = today.getHours();
     // Change the background based on what time of day it is (Deer background)
-    if (hour >= 5 && hour < 8) {
-      document.getElementById("home").style.backgroundImage =
-        "url(../images/0deer.jpg)";
-    } else if (hour >= 8 && hour < 12) {
-      document.getElementById("home").style.backgroundImage =
-        "url(../images/1deer.jpg)";
-      document
-        .getElementById("home")
-        .getElementsByTagName("h3")[0].style.color = "#535F67";
-    } else if (hour >= 12 && hour < 15) {
-      document.getElementById("home").style.backgroundImage =
-        "url(../images/2deer.jpg)";
-      document
-        .getElementById("home")
-        .getElementsByTagName("h3")[0].style.color = "#535F67";
-    } else if (hour >= 15 && hour < 19) {
-      document.getElementById("home").style.backgroundImage =
-        "url(../images/3deer.jpg)";
-      document
-        .getElementById("home")
-        .getElementsByTagName("h3")[0].style.color = "#535F67";
-    } else if (hour >= 19 && hour < 21) {
-      document.getElementById("home").style.backgroundImage =
-        "url(../images/4deer.jpg)";
-    } else if (hour >= 21 && hour < 23) {
-      document.getElementById("home").style.backgroundImage =
-        "url(../images/5deer.jpg)";
-    } else if (hour >= 23 || hour < 5) {
-      document.getElementById("home").style.backgroundImage =
-        "url(../images/6deer.jpg)";
-    }
+    // if (hour >= 5 && hour < 8) {
+    //   document.getElementById("home").style.backgroundImage =
+    //     "url(../images/0deer.jpg)";
+    // } else if (hour >= 8 && hour < 12) {
+    //   document.getElementById("home").style.backgroundImage =
+    //     "url(../images/1deer.jpg)";
+    //   document
+    //     .getElementById("home")
+    //     .getElementsByTagName("h3")[0].style.color = "#535F67";
+    // } else if (hour >= 12 && hour < 15) {
+    //   document.getElementById("home").style.backgroundImage =
+    //     "url(../images/2deer.jpg)";
+    //   document
+    //     .getElementById("home")
+    //     .getElementsByTagName("h3")[0].style.color = "#535F67";
+    // } else if (hour >= 15 && hour < 19) {
+    //   document.getElementById("home").style.backgroundImage =
+    //     "url(../images/3deer.jpg)";
+    //   document
+    //     .getElementById("home")
+    //     .getElementsByTagName("h3")[0].style.color = "#535F67";
+    // } else if (hour >= 19 && hour < 21) {
+    //   document.getElementById("home").style.backgroundImage =
+    //     "url(../images/4deer.jpg)";
+    // } else if (hour >= 21 && hour < 23) {
+    //   document.getElementById("home").style.backgroundImage =
+    //     "url(../images/5deer.jpg)";
+    // } else if (hour >= 23 || hour < 5) {
+    //   document.getElementById("home").style.backgroundImage =
+    //     "url(../images/6deer.jpg)";
+    // }
   }
 
   render() {
@@ -130,27 +96,48 @@ class Header extends Component {
             <hr />
             <ul className="social">
               <li>
-                <a href="https://github.com/macsampson" target="_blank">
-                  <i className="fa fa-github" />
+                <a
+                  href="https://github.com/macsampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github" />
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/macsampson" target="_blank">
-                  <i className="fa fa-linkedin" />
+                <a
+                  href="https://linkedin.com/in/macsampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin" />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/themacsampson" target="_blank">
-                  <i className="fa fa-twitter" />
+                <a
+                  href="https://medium.com/@mackenzie.sampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-medium-m" />
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/themacsampson" target="_blank">
-                  <i className="fa fa-instagram" />
+                <a
+                  href="https://twitter.com/themacsampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-twitter" />
                 </a>
               </li>
+
               <li>
-                <a href="mailto:mackenzie.sampson@outlook.com" target="_blank">
+                <a
+                  href="mailto:mackenzie.sampson@outlook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa fa-envelope" />
                 </a>
               </li>
@@ -159,7 +146,7 @@ class Header extends Component {
         </div>
         <p className="scrolldown">
           <a className="smoothscroll" href="#about">
-            <i className="icon-down-circle" />
+            <i className="icon-down-open" />
           </a>
         </p>
       </header>
