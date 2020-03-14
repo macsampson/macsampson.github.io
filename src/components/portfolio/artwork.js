@@ -22,7 +22,7 @@ class Artwork extends Component {
         </div>
 
         <div id={this.props.modal} className="popup-modal mfp-hide">
-          <img className="scale-with-grid" src={this.props.modalImg} alt />
+          <img className="scale-with-grid" src={this.props.modalImg} />
           <div className="description-box">
             <h4>{this.props.name}</h4>
             <p>{this.props.desc}</p>

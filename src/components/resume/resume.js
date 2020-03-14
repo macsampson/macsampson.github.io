@@ -13,7 +13,7 @@ class Resume extends Component {
           <div className="three columns header-col">
             <h1>
               <span>Education</span>
-              <i className="fa fa-graduation-cap" />
+              {/* <i className="fa fa-graduation-cap" /> */}
             </h1>
           </div>
           <div className="nine columns main-col">
@@ -22,11 +22,11 @@ class Resume extends Component {
               program="Bachelor of Computer Science"
               dates="Sept 2014 - May 2018"
             />
-            <School
+            {/* <School
               school="Thompson Rivers University"
               program="Bachelor of Business Administration"
               dates="Sept 2008 - May 2014"
-            />
+            /> */}
           </div>{" "}
           {/* main-col end */}
         </div>{" "}
@@ -45,10 +45,10 @@ class Resume extends Component {
               company="Electronic Arts"
               dates="Sept 2019 - Present"
               technology="C#, Python"
-              desc1="• Developing a tool for artists that provides a visual interface 
-              for character assets in order to streamline their workflows"
-              desc2="• Developing internal tool that provides a GUI for a microservice ecosystem
-              that connects various applications together and standardizes additional tool development"
+              desc1="• Developed scripts using Python and C# to parse, aggregate, 
+                      and restructure repository assets to adhere to new conventions for upcoming game title"
+              desc2="• Identify and develop automation solutions to support FIFA asset conversion 
+                      processes from console to mobile/online"
               desc3=""
             />
             <Job

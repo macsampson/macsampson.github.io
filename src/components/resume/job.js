@@ -13,13 +13,11 @@ class Job extends Component {
             <em className="technology">{this.props.technology} </em>
           </p>
 
-          <p>
-            <ul>
-              <li>{this.props.desc1}</li>
-              <li>{this.props.desc2}</li>
-              <li>{this.props.desc3}</li>
-            </ul>
-          </p>
+          <ul>
+            <li>{this.props.desc1}</li>
+            <li>{this.props.desc2}</li>
+            <li>{this.props.desc3}</li>
+          </ul>
         </div>
       </div>
     );

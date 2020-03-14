@@ -7,23 +7,26 @@ class About extends Component {
       <section id="about">
         <div className="row">
           <div className="three columns">
-            <img className="profile-pic" src="images/profile_pic1.png" alt />
+            <img
+              className="profile-pic"
+              src="images/profile_pic1.png"
+              alt="profile pic"
+            />
           </div>
           <div className="nine columns main-col">
             <h2>About Me</h2>
             <p>
               I am a software engineer/web developer that's currently working in
               the gaming industry. I'm passionate about using technology to
-              improve people's standard of living. I find building things
-              addictive - whether it's an app, website, game, or piece of art.
+              improve people's quality of life.
               <br />
               <br />
-              When I'm not coding my next project, I enjoy spending time:
+              {/* When I'm not coding my next project, I enjoy spending time:
               <li>Gaming</li>
               <li>Bodybuilding</li>
               <li>Drawing</li>
               <li>Watching Twitch</li>
-              <li>3D printing</li>
+              <li>3D printing</li> */}
             </p>
             <div className="row">
               {/* <div className="columns contact-details">
@@ -34,19 +37,19 @@ class About extends Component {
                   <span>mackenzie.sampson@outlook.com</span>
                 </p>
               </div> */}
-              <div className="columns download">
+              {/* <div className="columns download">
                 <p>
                   <a
                     // Remember to replace www.dropbox.com with dl.dropboxusercontent.com in order to do a direct download!
                     // Also run "npm run deploy" to deploy this website..
-                    href="https://dl.dropboxusercontent.com/s/uibfpwtlbqu2hwk/MSampson%20Resume%202019%204.3.pdf?dl=0"
+                    href="https://dl.dropboxusercontent.com/s/r4jcs18w2ify1cx/msampson%20resume%202019%207.0.pdf?dl=0"
                     className="button"
                   >
                     <i className="fa fa-download" />
                     Download Resume
                   </a>
                 </p>
-              </div>
+              </div> */}
             </div>{" "}
             {/* end row */}
           </div>{" "}

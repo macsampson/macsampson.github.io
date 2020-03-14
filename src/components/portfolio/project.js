@@ -6,7 +6,7 @@ class Project extends Component {
       <div>
         <div className="columns portfolio-item">
           <div className="item-wrap">
-            <a href={"#" + this.props.modal} title>
+            <a href={"#" + this.props.modal}>
               <img alt={this.props.alt} src={this.props.img} />
               <div className="overlay">
                 <div className="portfolio-item-meta">
@@ -22,7 +22,11 @@ class Project extends Component {
         </div>
 
         <div id={this.props.modal} className="popup-modal mfp-hide">
-          <img className="scale-with-grid" src={this.props.modalImg} alt />
+          <img
+            className="scale-with-grid"
+            src={this.props.modalImg}
+            alt="grid"
+          />
           <div className="description-box">
             <h4>{this.props.name}</h4>
             <p>{this.props.desc}</p>
@@ -30,12 +34,17 @@ class Project extends Component {
           <div className="link-box">
             {/* Check to see if the project is live or not */}
             {this.props.isLive ? (
-              <a id="view-app" href={this.props.appLink} target="_blank">
+              <a
+                id="view-app"
+                href={this.props.appLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Go to App
               </a>
             ) : null}
 
-            <a href={this.props.link} target="_blank">
+            <a href={this.props.link} target="_blank" rel="noopener noreferrer">
               View on GitHub
             </a>
             <a className="popup-modal-dismiss">Close</a>

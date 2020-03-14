@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Project from './project'
-import Artwork from './artwork'
+import React, { Component } from "react";
+import Project from "./project";
+// import Artwork from "./artwork";
 
 class Portfolio extends Component {
   render() {
@@ -43,22 +43,22 @@ class Portfolio extends Component {
                 isLive={false}
                 modalImg="images/portfolio/modals/gamedeals.jpg"
               />
-            </div>{' '}
+            </div>{" "}
             {/* portfolio-wrapper end */}
-          </div>{' '}
+          </div>{" "}
           {/* twelve columns end */}
-        </div>{' '}
+        </div>{" "}
         <br />
         <br />
-        <div id="art" className="row">
+        {/* <div id="art" className="row">
           <div className="twelve columns collapsed">
-            <h1>Artwork</h1>
-            {/* portfolio-wrapper */}
-            <div
+            <h1>Artwork</h1> */}
+        {/* portfolio-wrapper */}
+        {/* <div
               id="portfolio-wrapper"
               className="bgrid-quarters s-bgrid-thirds cf"
-            >
-              <Artwork
+            > */}
+        {/* <Artwork
                 name="Panther"
                 type="Illustration"
                 modal="modal-03"
@@ -92,15 +92,15 @@ class Portfolio extends Component {
                 desc="I watched too much Harry Potter during my impressionable years."
                 link="https://www.artstation.com/artwork/qAo1eL"
                 modalImg="images/portfolio/modals/emma_large.jpg"
-              />
-            </div>{' '}
-            {/* portfolio-wrapper end */}
-          </div>{' '}
-          {/* twelve columns end */}
-        </div>
+              /> */}
+        {/* </div>{' '} */}
+        {/* portfolio-wrapper end
+          </div>{' '} */}
+        {/* twelve columns end */}
+        {/* </div> */}
       </section>
-    )
+    );
   }
 }
 
-export default Portfolio
+export default Portfolio;
