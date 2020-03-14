@@ -9,40 +9,69 @@ class Footer extends Component {
           <div className="twelve columns">
             <ul className="social-links">
               <li>
-                <a href="https://github.com/macsampson" target="_blank">
-                  <i className="fa fa-github" />
+                <a
+                  href="https://github.com/macsampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github" />
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/macsampson" target="_blank">
-                  <i className="fa fa-linkedin" />
+                <a
+                  href="https://linkedin.com/in/macsampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin" />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/themacsampson" target="_blank">
-                  <i className="fa fa-twitter" />
+                <a
+                  href="https://medium.com/@mackenzie.sampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-medium-m" />
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/themacsampson" target="_blank">
+                <a
+                  href="https://twitter.com/themacsampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-twitter" />
+                </a>
+              </li>
+              {/* <li>
+                <a
+                  href="https://instagram.com/themacsampson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa fa-instagram" />
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a href="mailto:mackenzie.sampson@outlook.com" target="_blank">
+                <a
+                  href="mailto:mackenzie.sampson@outlook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa fa-envelope" />
                 </a>
               </li>
             </ul>
-            {/* <ul className="copyright">
+            <ul className="copyright">
               <li>© Copyright 2018 Mac Sampson</li>
-              <li>
-                Design by{" "}
-                <a title="Styleshout" href="http://www.styleshout.com/">
-                  Styleshout
+              {/* <li>
+                Medium Icon by{" "}
+                <a title="flaticon" href="http://www.flaticon.com/">
+                  Freepik from www.flaticon.com
                 </a>
-              </li>
-            </ul> */}
+              </li> */}
+            </ul>
           </div>
           <div id="go-top">
             <a className="smoothscroll" title="Back to Top" href="#home">
