@@ -114,7 +114,8 @@ class Resume extends Component {
               <span>
                 <strong>Other: </strong>
               </span>
-              React, Docker, Node.js, MongoDB, Selenium, Express.js, HTML5, CSS3
+              React, Docker, Node.js, AWS, MongoDB, Selenium, Express.js,
+              HTML5/CSS3
             </p>
             {/* <div className="bars">
               <ul className="skills">
