@@ -16,9 +16,10 @@ class About extends Component {
           <div className="nine columns main-col">
             <h2>About Me</h2>
             <p>
-              I am a software engineer/web developer that's currently working in
-              the gaming industry. I'm passionate about using technology to
-              improve people's quality of life.
+              I am a software engineer/web developer. I'm passionate about
+              figuring out ways to use technology to improve people's quality of
+              life. I believe that the internet will be the backbone of the
+              future and I'm always striving to learn new web technology.
               <br />
               <br />
               {/* When I'm not coding my next project, I enjoy spending time:
