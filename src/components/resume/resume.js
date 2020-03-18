@@ -45,7 +45,7 @@ class Resume extends Component {
               company="Electronic Arts"
               dates="Sept 2019 - Present"
               technology="C#, Python"
-              desc1="• Developed scripts using Python and C# to parse, aggregate, 
+              desc1="• Developed solutions using Python and C# to parse, aggregate, 
                       and restructure repository assets to adhere to new conventions for upcoming game title"
               desc2="• Identify and develop automation solutions to support FIFA asset conversion 
                       processes from console to mobile/online"
