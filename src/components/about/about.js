@@ -16,18 +16,14 @@ class About extends Component {
           <div className="nine columns main-col">
             <h2>About Me</h2>
             <p>
-              I am a software engineer/web developer. I'm passionate about
+              I am a software engineer/web developer who is passionate about
               figuring out ways to use technology to improve people's quality of
-              life. I believe that the internet will be the backbone of the
-              future and I'm always striving to learn new web technology.
+              life. I believe that the internet will increasingly be the backbone of the
+              future; because of this, I'm always striving to learn new web technologies.
               <br />
               <br />
-              {/* When I'm not coding my next project, I enjoy spending time:
-              <li>Gaming</li>
-              <li>Bodybuilding</li>
-              <li>Drawing</li>
-              <li>Watching Twitch</li>
-              <li>3D printing</li> */}
+              Outside of engineering, I enjoy spending time setting up new projects on my Raspberri Pi, finding new and
+              useful ways to utilize my 3D printer, and gathering friends together for late night gaming sessions.
             </p>
             <div className="row">
               {/* <div className="columns contact-details">
@@ -43,11 +39,13 @@ class About extends Component {
                   <a
                     // Remember to replace www.dropbox.com with dl.dropboxusercontent.com in order to do a direct download!
                     // Also run "npm run deploy" to deploy this website..
-                    href="https://dl.dropboxusercontent.com/s/r4jcs18w2ify1cx/msampson%20resume%202019%207.0.pdf?dl=0"
+                    href="https://hired.com/resumes/mac-sampson"
                     className="button"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="fa fa-download" />
-                    Download Resume
+                    View PDF Resume
                   </a>
                 </p>
               </div> */}
