@@ -88,7 +88,7 @@ class Header extends Component {
         {/* end #nav-wrap */}
         <div className="row banner">
           <div className="banner-text">
-            <h1 className="responsive-headline">Hey, I'm {resumeData.name}.</h1>
+            <h1 className="responsive-headline">Hey, I'm Mac.</h1>
             <h3>
               I'm a software engineer currently based in Vancouver, Canada.
               Start scrolling to learn more about me.
