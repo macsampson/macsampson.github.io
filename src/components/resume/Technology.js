@@ -1,5 +1,5 @@
 import React from "react";
-import { languages, tech } from "../../resumeData";
+import resumeData from "../../resumeData";
 
 function Technology() {
   return (
@@ -14,13 +14,13 @@ function Technology() {
           <span>
             <strong>Languages: </strong>
           </span>
-          {languages.join(", ")}
+          {resumeData.languages.join(", ")}
         </p>
         <p>
           <span>
             <strong>Other: </strong>
           </span>
-          {tech.join(", ")}
+          {resumeData.tech.join(", ")}
         </p>
         {/* <div className="bars">
               <ul className="skills">
