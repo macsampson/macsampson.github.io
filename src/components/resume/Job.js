@@ -9,8 +9,8 @@ function Job(props) {
         <h3>{props.position}</h3>
         <p className="info">
           {props.company} <span>•</span>{" "}
-          <em className="date">{props.dates} </em>
-          <span>•</span> <em className="technology">{props.technology} </em>
+          <em className="technology">{props.technology} </em>
+          <span>•</span> <em className="date">{props.dates} </em>
         </p>
 
         <ul>

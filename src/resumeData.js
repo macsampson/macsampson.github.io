@@ -97,7 +97,7 @@ const resumeData = {
                 There will also be an additional option to overlay a heatmap with
                 all auto-related crime, so you can feel more at ease parking in
                 certain neighbourhoods.`,
-      link: `https://github.com/macsampson/VanCity-Parking`,
+      // link: `https://github.com/macsampson/VanCity-Parking`,
       modalImg: `images/portfolio/modals/parkr.jpg`,
       isLive: true,
       appLink: `https://www.vancityparking.com/`
@@ -111,7 +111,7 @@ const resumeData = {
       desc: `A Django app that uses the Reddit API to pull game sale
               information from r/gamedeals and associate the games with their
               respective artwork obtained from the IGDB API.`,
-      link: `https://github.com/macsampson/GameDeals-Aggregator`,
+      // link: `https://github.com/macsampson/GameDeals-Aggregator`,
       isLive: false,
       modalImg: `images/portfolio/modals/gamedeals.jpg`
     }
