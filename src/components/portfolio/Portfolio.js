@@ -1,13 +1,13 @@
 import React from "react";
 import Projects from "./Projects";
 import Artwork from "./Artwork";
-import resumeData from "../../resumeData";
+import artData from "../../data/artData";
 
 function Portfolio() {
   return (
     <section id="portfolio">
       <Projects />
-      {resumeData.artwork.display ? <Artwork /> : null}
+      {artData.artwork.display ? <Artwork /> : null}
       <br />
       <br />
     </section>

@@ -1,11 +1,11 @@
 import React from "react";
-import textData from "../../textData";
+import aboutData from "../../data/aboutData";
 
 function Intro() {
   return (
     <div>
-      <h1 className="responsive-headline">{textData.intro.headline}</h1>
-      <h3>{textData.intro.blurb}</h3>
+      <h1 className="responsive-headline">{aboutData.intro.headline}</h1>
+      <h3>{aboutData.intro.blurb}</h3>
     </div>
   );
 }

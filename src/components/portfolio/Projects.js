@@ -1,9 +1,9 @@
 import React from "react";
-import resumeData from "../../resumeData";
+import projectData from "../../data/projectData";
 import Project from "./Project";
 
 function Projects() {
-  const projectComps = resumeData.projects.map(project => (
+  const projectComps = projectData.projects.map(project => (
     <Project
       name={project.name}
       type={project.type}

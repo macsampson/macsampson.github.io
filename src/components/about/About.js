@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import textData from "../../textData";
+import aboutData from "../../data/aboutData";
 import DownloadResume from "./DownloadResume";
 
 class About extends Component {
@@ -18,12 +18,12 @@ class About extends Component {
           <div className="nine columns main-col">
             <h2>About Me</h2>
             <p>
-              {textData.aboutMe.p1}
+              {aboutData.aboutMe.p1}
               <br />
               <br />
-              {textData.aboutMe.p2}
+              {aboutData.aboutMe.p2}
             </p>
-          </div>{" "}
+          </div>
         </div>
         {/* <DownloadResume /> */}
       </section>

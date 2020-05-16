@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 class School extends Component {
   state = {};
   render() {

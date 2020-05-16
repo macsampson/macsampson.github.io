@@ -1,6 +1,6 @@
 import React from "react";
 import School from "./School";
-import resumeData from "../../resumeData";
+import resumeData from "../../data/resumeData";
 
 function Education() {
   var educationComps = resumeData.education.map(school => (

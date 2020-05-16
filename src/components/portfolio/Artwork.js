@@ -1,9 +1,9 @@
 import React from "react";
 import Art from "./Art";
-import resumeData from "../../resumeData";
+import artData from "../../data/artData";
 
 function Artwork() {
-  const artComps = resumeData.artwork.map(art => (
+  const artComps = artData.artwork.art.map(art => (
     <Art
       name={art.name}
       type={art.type}
