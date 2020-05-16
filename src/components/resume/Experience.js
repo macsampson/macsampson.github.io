@@ -8,6 +8,7 @@ function Experience() {
       key={job.id}
       position={job.position}
       company={job.company}
+      logo={job.logo}
       technology={job.technology}
       dates={job.dates}
       desc1={job.desc1}
@@ -17,12 +18,12 @@ function Experience() {
 
   return (
     <div className="row work">
-      <div className="three columns header-col">
+      <div className="two columns header-col">
         <h1>
           <span>Experience</span>
         </h1>
       </div>
-      <div className="nine columns main-col">{jobComps}</div>{" "}
+      <div className="ten columns main-col">{jobComps}</div>
       {/* main-col end */}
     </div>
   );

@@ -3,10 +3,6 @@ import resumeData from "../../resumeData";
 import Tech from "./Tech";
 
 function Technologies() {
-  const languageComps = resumeData.languages.map(language => (
-    <Tech name={language.name} logo={language.logo} />
-  ));
-
   const techComps = resumeData.tech.map(tech => (
     <Tech name={tech.name} logo={tech.logo} />
   ));
@@ -18,7 +14,6 @@ function Technologies() {
           <span>Technologies</span>
         </h1>
       </div>
-      <div className="ten columns main-col">{languageComps}</div>
       <div className="ten columns main-col">{techComps}</div>
       {/* <div className="bars">
               <ul className="skills">

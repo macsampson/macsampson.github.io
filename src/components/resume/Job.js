@@ -1,27 +1,26 @@
-import React, { Component } from "react";
-class Job extends Component {
-  state = {};
-  render() {
-    return (
-      <div className="row item">
-        <div className="twelve columns">
-          <h3>{this.props.position}</h3>
-          <p className="info">
-            {this.props.company} <span>•</span>{" "}
-            <em className="date">{this.props.dates} </em>
-            <span>•</span>{" "}
-            <em className="technology">{this.props.technology} </em>
-          </p>
-
-          <ul>
-            <li>{this.props.desc1}</li>
-            <li>{this.props.desc2}</li>
-            <li>{this.props.desc3}</li>
-          </ul>
-        </div>
+import React from "react";
+function Job(props) {
+  return (
+    <div className="row item">
+      <div className="two columns">
+        <img className="company-logo" src={props.logo} alt="company logo" />
       </div>
-    );
-  }
+      <div className="ten columns">
+        <h3>{props.position}</h3>
+        <p className="info">
+          {props.company} <span>•</span>{" "}
+          <em className="date">{props.dates} </em>
+          <span>•</span> <em className="technology">{props.technology} </em>
+        </p>
+
+        <ul>
+          <li>{props.desc1}</li>
+          <li>{props.desc2}</li>
+          <li>{props.desc3}</li>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 export default Job;

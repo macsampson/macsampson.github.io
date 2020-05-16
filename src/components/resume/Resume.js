@@ -1,14 +1,14 @@
 import React from "react";
-import Technology from "./Technology";
+import Technologies from "./Technologies";
 import Experience from "./Experience";
 import Education from "./Education";
 
 function Resume() {
   return (
     <section id="resume">
+      <Technologies />
       <Education />
       <Experience />
-      <Technology />
     </section>
   );
 }

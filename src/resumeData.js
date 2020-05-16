@@ -70,16 +70,20 @@ const resumeData = {
     //   dates: `Sept 2008 - May 2014`
     // }
   ],
-  languages: [`TypeScript`, `C#`, `Python`, `Java`, `SQL`],
   tech: [
-    `React`,
-    `Docker`,
-    `Node.js`,
-    `AWS`,
-    `MongoDB`,
-    `Selenium`,
-    `Express.js`,
-    `HTML5/CSS3`
+    { name: `TypeScript`, logo: `images/typescript.png` },
+    { name: `JavaScript`, logo: `images/javascript.png` },
+    { name: `Python`, logo: `images/python.png` },
+    { name: `C#`, logo: `images/csharp.png` },
+    // { name: `Java`, logo: `images/java.png` },
+    // { name: `GraphQL`, logo: `images/graphql.png` },
+    // { name: `SQL`, logo: `images/sql.png` },
+    { name: `React`, logo: `images/react.png` },
+    { name: `Node.js`, logo: `images/node.png` },
+    { name: `Docker`, logo: `images/docker.png` },
+    // { name: `AWS`, logo: `images/aws.png` },
+    { name: `MongoDB`, logo: `images/mongodb.png` }
+    // { name: `Express.js`, logo: `images/express.png` }
   ],
   projects: [
     {
@@ -96,7 +100,7 @@ const resumeData = {
       link: `https://github.com/macsampson/VanCity-Parking`,
       modalImg: `images/portfolio/modals/parkr.jpg`,
       isLive: true,
-      appLink: `http://www.vancityparking.com/`
+      appLink: `https://www.vancityparking.com/`
     },
     {
       name: `Game Deals`,

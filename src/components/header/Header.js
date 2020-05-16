@@ -1,6 +1,6 @@
 import React from "react";
 import Socials from "./Socials";
-import Nav from "../Nav";
+import Nav from "../Nav/Nav";
 import Intro from "./Intro";
 
 function Header() {
