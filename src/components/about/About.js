@@ -23,9 +23,9 @@ class About extends Component {
               <br />
               {aboutData.aboutMe.p2}
             </p>
+            <DownloadResume />
           </div>
         </div>
-        {/* <DownloadResume /> */}
       </section>
     );
   }
