@@ -14,7 +14,8 @@ const aboutData = {
     projects on my Raspberri Pi, finding new and useful ways to
     utilize my 3D printer, and gathering friends together for late
     night gaming sessions.`
-  }
+  },
+  profile_pic: `images/mountains_pic.jpeg`
 };
 
 export default aboutData;

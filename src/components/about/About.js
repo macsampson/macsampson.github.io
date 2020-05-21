@@ -11,7 +11,7 @@ class About extends Component {
           <div className="three columns">
             <img
               className="profile-pic"
-              src="images/profile_pic1.png"
+              src={aboutData.profile_pic}
               alt="profile pic"
             />
           </div>

@@ -82,8 +82,8 @@ const resumeData = {
     { name: `Node.js`, logo: `images/node.png` },
     { name: `Docker`, logo: `images/docker.png` },
     // { name: `AWS`, logo: `images/aws.png` },
-    { name: `MongoDB`, logo: `images/mongodb.png` }
-    // { name: `Express.js`, logo: `images/express.png` }
+    { name: `MongoDB`, logo: `images/mongodb.png` },
+    { name: `Firebase`, logo: `images/firebase.webp` }
   ]
 };
 
