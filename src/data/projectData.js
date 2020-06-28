@@ -14,7 +14,7 @@ const projectData = {
       // link: `https://github.com/macsampson/VanCity-Parking`,
       modalImg: `images/portfolio/modals/parkr.jpg`,
       isLive: true,
-      appLink: `https://www.vancityparking.com/`
+      appLink: `https://vancityparking.netlify.app/`
     },
     {
       name: `Game Deals`,
