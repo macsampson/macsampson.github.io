@@ -6,9 +6,9 @@ import Education from "./Education";
 function Resume() {
   return (
     <section id="resume">
-      <Technologies />
-      <Education />
       <Experience />
+      <Education />
+      <Technologies />
     </section>
   );
 }

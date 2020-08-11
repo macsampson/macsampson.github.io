@@ -151,7 +151,7 @@ header .scrolldown a:hover {
 
 /* nav-wrap */
 #nav-wrap {
-  font: 12px "opensans-bold", sans-serif;
+  font: 15px "opensans-bold", sans-serif;
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -177,6 +177,18 @@ ul#nav {
 
   /* center align the menu */
   text-align: center;
+}
+
+nav .social li a {
+  color: #525252;
+}
+
+nav .social li a:hover {
+  color: #11abb0;
+}
+
+nav .socials {
+  float: right;
 }
 
 ul#nav li {
@@ -1331,4 +1343,22 @@ footer .social li a:hover {
 .tech-logo {
   width: 64px;
   height: 64px;
+}
+
+.flex-tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 40px;
+}
+
+.flex-tech-item {
+  width: 20%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0 40px;
 }

@@ -4,15 +4,17 @@ import About from "./components/about/About";
 import Resume from "./components/resume/Resume";
 import Portfolio from "./components/portfolio/Portfolio";
 import Footer from "./components/footer/Footer";
+import Nav from './components/Nav/Nav'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        {/* <Header /> */}
+        <Nav />
         <About />
-        <Resume />
         <Portfolio />
+        <Resume />
         <Footer />
       </div>
     );

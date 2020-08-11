@@ -14,7 +14,7 @@ function Technologies() {
           <span>Technologies</span>
         </h1>
       </div>
-      <div className="ten columns main-col">{techComps}</div>
+      <div className="flex-tech-container">{techComps}</div>
       {/* <div className="bars">
               <ul className="skills">
                 <li>
