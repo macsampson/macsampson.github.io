@@ -28,6 +28,18 @@ const projectData = {
       // link: `https://github.com/macsampson/GameDeals-Aggregator`,
       isLive: false,
       modalImg: `images/portfolio/modals/gamedeals.jpg`
+    },
+    {
+      name: `Pokecord`,
+      type: `Javascript Discord Bot`,
+      modal: `modal-03`,
+      img: `images/portfolio/modals/poke_construction.gif`,
+      alt: `pokecord`,
+      desc: `A Discord bot that allows users to earn currency and use it to
+      purchase and collect pokemon cards.`,
+      // link: `https://github.com/macsampson/GameDeals-Aggregator`,
+      isLive: false,
+      modalImg: `images/portfolio/modals/poke_construction.gif`
     }
   ]
 };
