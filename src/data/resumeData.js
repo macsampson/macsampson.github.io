@@ -2,14 +2,17 @@ const resumeData = {
   experience: [
     {
       id: 0,
-      position: `Technical Artist`,
+      position: `Pipeline Engineer/Technical Artist`,
       company: `Electronic Arts`,
       logo: `images/ea.png`,
-      dates: `Sept 2019 - Present`,
-      technology: `C#, Python`,
-      desc1: `• Developed solutions using Python and C# to parse, aggregate, and restructure repository assets to adhere to new conventions for upcoming game title`,
-      desc2: `• Identify and develop automation solutions to support FIFA asset conversion processes from console to mobile/online`,
-      desc3: ``
+      dates: `Sept 2019 - Nov 2020`,
+      technology: `C#, Python, XML, Maya, MyPel`,
+      desc1: `• Owned FIFA 21 pipelines to process and integrate console quality assets into Nintendo Switch through entire
+      production cycle to game shipment`,
+      desc2: `• Developed C# tools to pull game assets from Perforce and store them in proprietary asset database and version control
+      system `,
+      desc3: `Developed Maya Python tools to automate collider integration and hair physics onto FIFA 21 players
+      `
     },
     {
       id: 1,
@@ -18,12 +21,10 @@ const resumeData = {
       logo: `images/sap.png`,
       dates: `May - Dec 2017`,
       technology: `Python, Selenium`,
-      desc1: `• Worked with a team to ensure that SAP operated within legal compliance when software engineers wished to incorporate
-                      open source components into the products they were
-                      developing`,
-      desc2: `• On my own initiative, I developed an automation tool
-                      with Selenium and Python that automated many data entry
-                      tasks, resulting in hundreds of hours of manual work saved`,
+      desc1: `• Spearheaded automation of manual data entry tasks, using Python and Selenium to parse spreadsheet data into a
+      software composition analysis database, eliminating 50+ hours of work for the team each month `,
+      desc2: `• Analyzed open source tools (such as Kubernetes, pandas) with Whitesource, a license compliance management
+      platform, to ensure legal compliance upon their integration to SAP BusinessObject Cloud`,
       desc3: ``
     },
     {
@@ -33,14 +34,10 @@ const resumeData = {
       logo: `images/mda.png`,
       dates: `Jan - Sept 2016`,
       technology: `Javascript, HTML/CSS, C#`,
-      desc1: `• Worked closely with the marketing team to meet their
-                      requirements and ensure corporate website development stayed ahead of
-                      schedule, resulting in the website being released 2 months
-                      early`,
-      desc2: `• On my own initiative, I developed an automation tool
-                      with Selenium and Python that automated many data entry
-                      tasks, resulting in hundreds of hours of manual work saved`,
-      desc3: ``
+      desc1: `• Planned and implemented MDA’s corporate website in HTML5/CSS3, making it mobile responsive and touch friendly`,
+      desc2: `• Managed site rollout using Microsoft IIS to monitor stability, assign security certificates, and stage internal domains
+      `,
+      desc3: `Optimized script runtime performance across Chrome, Firefox, and IE using browser devtools `
     },
     {
       id: 3,
