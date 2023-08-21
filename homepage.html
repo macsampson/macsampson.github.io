@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mac Sampson</title>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet" />
+	<link href="assets/css/styles.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="/assets/images/thunder.png">
+</head>
+<!-- <nav class="bg-white"> -->
+<div class="bg-white relative flex mx-auto items-center border-b-2 border-gray-100 p-2 sm:px-8 sm:py-3">
+	<div class="flex items-center justify-between py-4">
+		<a href="homepage.html" class="flex items-center text-gray-800">
+			<img src="assets/images/profiles/image_random_8ZB8-b0m_1670614859143_512.jpg" alt="Logo"
+				class="w-12 h-12 rounded-full mr-4">
+			<span class="text-xl font-semibold">Mac Sampson</span>
+		</a>
+		<!-- <button id="mobile-menu-button" class="lg:hidden px-2 py-1 text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button> -->
+		<!-- <ul id="mobile-menu" class="hidden lg:flex space-x-6">
+                <li><a href="about.html" class="text-gray-800">About Me</a></li>
+                <li><a href="tweets.html" class="text-gray-800">Tweets</a></li>
+                <li><a href="projects.html" class="text-gray-800 float-left">Projects</a></li>
+                <li><a href="https://github.com/macsampson" class="text-gray-800" target="_blank">GitHub</a></li>
+            </ul> -->
+	</div>
+</div>
+<!-- </nav> -->
+
+<script>
+	const mobileMenuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+
+	mobileMenuButton.addEventListener('click', () => {
+		mobileMenu.classList.toggle('hidden');
+	});
+</script>
+
+<body class="bg-gray-100 ">
+	<div class="flex flex-col h-[calc(100vh-58px)] items-center">
+		<div class=" align-middle items-start mx-16">
+			<div class="pt-12 text-xl space-y-4 sm:text-2xl sm:mt-32">
+
+				<h1 class="text-3xl font-semibold mb-4">
+					Hey 👋
+				</h1>
+				<p>
+					My name is Mac Sampson and I make AI stuff.</br>
+					You can find me on <a class="underline font-bold hover:opacity-50"
+						href="https://twitter.com/macxsampson" target="_blank">Twitter</a> and
+					<a class="underline font-bold hover:opacity-50" href="https://github.com/macsampson"
+						target="_blank">GitHub</a>.
+				</p>
+
+
+			</div>
+			<div class="pt-12 text-xl space-y-4 sm:text-2xl sm:mt-32 ">
+				<h2 class="text-2xl font-bold mb-4">Projects</h2>
+
+				<ul class="list-disc pl-6">
+					<li>
+						<a class="underline font-mono hover:opacity-50" href="https://cover-letter-gpt-nine.vercel.app/"
+							target="_blank">Cover Letter GPT</a> 📝🤖
+					</li>
+					<li>
+						<a class="underline font-mono hover:opacity-50" href="https://parksmart-vancouver.vercel.app/"
+							target="_blank">ParkSmart</a> 🅿️🚗
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>

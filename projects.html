@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <a href="homepage.html" class="flex items-center text-gray-800">
+                    <img src="assets/images/image_random_8ZB8-b0m_1670614859143_512.jpg" alt="Logo"
+                        class="w-12 h-12 rounded-full mr-2">
+                    <span class="text-2xl font-semibold">Mac Sampson</span>
+                </a>
+                <button id="mobile-menu-button" class="lg:hidden px-2 py-1 text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+                <ul id="mobile-menu" class="hidden lg:flex space-x-6">
+                    <!-- <li><a href="about.html" class="text-gray-800">About Me</a></li> -->
+                    <!-- <li><a href="tweets.html" class="text-gray-800">Tweets</a></li> -->
+                    <li><a href="projects.html" class="text-gray-800">Projects</a></li>
+                    <!-- <li><a href="https://github.com/macsampson" class="text-gray-800" target="_blank">GitHub</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <div class="container mx-auto mt-8 px-4">
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+            <p>Information about your projects goes here...</p>
+            <table class="border-collapse border border-slate-500 ...">
+                <thead>
+                    <tr>
+                        <th class="border border-slate-600 ...">State</th>
+                        <th class="border border-slate-600 ...">City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-slate-700 ...">Indiana</td>
+                        <td class="border border-slate-700 ...">Indianapolis</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-700 ...">Ohio</td>
+                        <td class="border border-slate-700 ...">Columbus</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-700 ...">Michigan</td>
+                        <td class="border border-slate-700 ...">Detroit</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</body>
+
+</html>
