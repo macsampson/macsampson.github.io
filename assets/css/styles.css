@@ -1,19 +1,14 @@
 body {
-    margin: 0;
-    font-family: 'Fire Code', monospace;
-    /* display: flex;
+  margin: 0;
+  /* font-family: "Merryweather", serif; */
+  /* display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh; */
 }
 
-.container {
-    /* width: 50%;
-    max-width: 100%; */
-}
-
 @media (max-width: 767px) {
-    /* .container {
+  /* .container {
         width: 100%;
     } */
 }
