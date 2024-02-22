@@ -715,4 +715,9 @@ video {
   .md\:p-8 {
     padding: 2rem;
   }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
