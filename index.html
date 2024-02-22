@@ -6,12 +6,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Mac Sampson</title>
-    <link
+
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
       rel="stylesheet"
-    />
+    /> -->
     <link
       href="/assets/css/styles.css"
       rel="stylesheet"
@@ -48,18 +49,14 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gray-800 text-white h-full">
-    <nav class="flex relative items-center justify-between p-2 sm:px-8 sm:py-3">
-      <div
-        class="grow shrink-0 basis-0 items-center justify-center text-2xl font-bold"
-      >
+  <body class="bg-gray-800 text-white w-full h-full m-0 p-0">
+    <nav class="flex relative items-center justify-between p-5">
+      <div class="items-center justify-center text-2xl font-bold">
         <a
           href="/"
           class="uppercase"
         >
-          <span style="display: block"> Mackenzie </span>
-
-          <span style="display: block"> Sampson </span>
+          Mackenzie Sampson
         </a>
       </div>
       <ul
@@ -68,7 +65,7 @@
       >
         <li
           title="Twitter"
-          class=""
+          class="hover:opacity-50"
         >
           <a
             aria-label="Twitter"
@@ -95,7 +92,7 @@
 
         <li
           title="GitHub"
-          class="hidden md:flex"
+          class="hover:opacity-50"
         >
           <a
             aria-label="GitHub"
@@ -122,12 +119,12 @@
         <!-- list item with a link and svg to medium -->
         <li
           title="Medium"
-          class="md:flex"
+          class=""
         >
           <a
             aria-label="Medium"
             href="https://medium.com/@mackenzie.sampson"
-            class=""
+            class="hover:opacity-50"
             ><svg
               stroke="currentColor"
               fill="currentColor"
@@ -147,27 +144,17 @@
         </li>
       </ul>
     </nav>
-    <!-- </nav> -->
-
-    <!-- <script>
-      const mobileMenuButton = document.getElementById("mobile-menu-button")
-      const mobileMenu = document.getElementById("mobile-menu")
-
-      mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden")
-      })
-    </script> -->
 
     <div class="flex flex-row justify-center">
       <div class="max-w-4xl flex flex-col leading-6 p-8 md:p-32">
         <div class="flex flex-row items-center mb-12">
           <div
-            class="w-32 md:w-48 max-w-none rounded-full overflow-hidden mr-8"
+            class="flex items-center rounded-full overflow-hidden mr-6 md:mr-8"
           >
             <img
               src="assets/images/profiles/pfp.jpg"
               alt="Logo"
-              class="w-20 h-20 rounded-full mr-4"
+              class="w-32 md:w-[100%]"
             />
           </div>
           <div class="flex flex-col">
@@ -177,22 +164,35 @@
             >
               Mackenzie Sampson
             </h1>
-            <p style="font-family: 'Merriweather', serif">
+            <p
+              class="hidden md:block"
+              style="font-family: 'Merriweather', serif"
+            >
               I'm Mac, a software developer currently located in Vancouver,
               Canada (for now). I focus mainly on full stack web development
-              with React, Next.js, Typescript, and Go.
+              with React, Next.js, Typescript, and Go. I'm currently building a
+              Japanese learning platform.
             </p>
           </div>
         </div>
+        <div>
+          <p
+            class="block md:hidden mb-12"
+            style="font-family: 'Merriweather', serif"
+          >
+            I'm Mac, a software developer currently located in Vancouver, Canada
+            (for now). I focus mainly on full stack web development with React,
+            Next.js, Typescript, and Go. I'm currently building a Japanese
+            learning platform.
+          </p>
+        </div>
         <div class="">
-          <!-- <h2 class="text-2xl font-bold mb-4">Projects</h2> -->
-
           <ul
             class="p-0 md:p-8"
             style="font-family: 'Merriweather', serif"
           >
             <li class="pb-6">
-              ⌨️ I built an ecommerce site (along with a
+              🛒 I built an ecommerce site (along with a
               <a
                 class="underline hover:opacity-50 text-cyan-500"
                 href="https://github.com/macsampson/ecommerce-admin"
@@ -210,14 +210,14 @@
             </li>
 
             <li class="pb-6">
-              💬 I built a chrome extension that allows you to use ChatGPT
-              directly in the sidebar of any webpage,
+              🤖 I built a chrome extension called
               <a
                 class="underline hover:opacity-50 text-cyan-500"
                 href="https://chrome.google.com/webstore/detail/chatgpt-sidebar/llbhbmemofnidifkpffglhipkjdbgghf"
                 target="_blank"
                 >ChatGPT Sidebar</a
               >
+              that allows you to use ChatGPT directly in the sidebar of Chrome.
             </li>
             <li class="pb-6">
               🐙 I made another chrome extension that explains code from any
