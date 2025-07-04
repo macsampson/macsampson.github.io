@@ -2,7 +2,11 @@
 module.exports = {
   content: ["index.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: ['"Press Start 2P"', 'cursive'],
+      },
+    },
   },
   plugins: [require("tailwindcss")],
 }

@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Mac Sampson</title>
+    <title>Mackenzie Sampson</title>
     <link
       href="./output.css"
       rel="stylesheet"
@@ -16,111 +16,96 @@
       type="image/png"
       href="/assets/images/thunder.png"
     />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-gray-900 text-white font-sans">
-    <div class="container mx-auto px-4 py-16">
-      <header class="text-center mb-12">
-        <h1 class="text-5xl font-bold mb-2">Mac Sampson</h1>
-        <p class="text-gray-400 text-lg">Software Developer</p>
+  <body class="bg-purple-900 text-cyan-300 font-display full-height">
+    <div class="animated-bg"></div>
+    <div class="scanline"></div>
+
+    <!-- Main container wrapper to limit width to 75% -->
+    <div class="main-container full-height-flex">
+      <header class="p-4 text-center header-section">
+        <img
+          src="/assets/images/profiles/pfp.jpg"
+          alt="Mackenzie Sampson"
+          class="rounded-full w-24 h-24 mx-auto mb-4 border-2 border-cyan-300"
+        />
+        <h1 class="text-3xl font-bold">Mackenzie Sampson</h1>
+        <p class="text-md max-w-2xl mx-auto">
+          Full-stack developer specializing in building modern, scalable web
+          applications with a focus on the MERN stack and Python. Proven ability
+          to deliver high-quality software solutions from concept to deployment.
+        </p>
       </header>
-
-      <main>
-        <section
-          id="about"
-          class="mb-16"
-        >
-          <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-          <p class="max-w-2xl mx-auto text-center text-gray-300">
-            I'm a software developer based in Vancouver, Canada. I specialize in
-            full-stack web development with a focus on React, Next.js,
-            TypeScript, and Go. I'm passionate about building beautiful and
-            functional applications.
-          </p>
-        </section>
-
-        <section id="projects">
-          <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-gray-800 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-2">PocketCaps (2020-2024)</h3>
-              <p class="text-gray-400 mb-4">
-                An ecommerce site for my 3D-printed keycaps business.
-              </p>
-              <a
-                href="https://pocketcaps.com/"
-                target="_blank"
-                class="text-cyan-400 hover:underline"
-                >View Project</a
-              >
-            </div>
-            <div class="bg-gray-800 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-2">CodeScribe (2023)</h3>
-              <p class="text-gray-400 mb-4">
-                A Chrome extension that explains code from any GitHub
-                repository.
-              </p>
-              <a
-                href="https://chrome.google.com/webstore/detail/codescribe-for-github/dbjkcephefchomnpbnfnikceacaakkjj"
-                target="_blank"
-                class="text-cyan-400 hover:underline"
-                >View Project</a
-              >
-            </div>
-            <div class="bg-gray-800 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-2">
-                Cover Letter GPT (Early 2023)
-              </h3>
-              <p class="text-gray-400 mb-4">
-                A cover letter generator using OpenAI's GPT-4.
-              </p>
-              <a
-                href="https://cover-letter-gpt-nine.vercel.app/"
-                target="_blank"
-                class="text-cyan-400 hover:underline"
-                >View Project</a
-              >
-            </div>
-            <div class="bg-gray-800 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-2">ParkSmart (2019)</h3>
-              <p class="text-gray-400 mb-4">
-                A web app to find parking in Metro Vancouver.
-              </p>
-              <a
-                href="https://parksmart-vancouver.vercel.app/"
-                target="_blank"
-                class="text-cyan-400 hover:underline"
-                >View Project</a
-              >
+      <div class="flex flex-grow main-content">
+        <div class="w-1/2 p-4 flex flex-col h-full">
+          <div
+            id="terminal"
+            class="bg-black bg-opacity-50 p-4 rounded-lg h-full border border-cyan-300 flex flex-col terminal-container"
+          >
+            <div
+              id="output"
+              class="flex-grow terminal-output"
+            ></div>
+            <div class="flex">
+              <span class="text-pink-500">></span>
+              <input
+                type="text"
+                id="input"
+                class="bg-transparent border-none text-cyan-300 w-full focus:outline-none ml-2"
+              />
             </div>
           </div>
-        </section>
-      </main>
-
-      <footer class="text-center mt-16">
-        <div class="flex justify-center space-x-6">
-          <a
-            href="https://twitter.com/macxsampson"
-            target="_blank"
-            class="text-gray-400 hover:text-white"
-            >Twitter</a
-          >
-          <a
-            href="https://github.com/macsampson"
-            target="_blank"
-            class="text-gray-400 hover:text-white"
-            >GitHub</a
-          >
-          <a
-            href="https://medium.com/@mackenzie.sampson"
-            target="_blank"
-            class="text-gray-400 hover:text-white"
-            >Medium</a
-          >
         </div>
-        <p class="text-gray-500 mt-4">
-          &copy; 2025 Mac Sampson. All rights reserved.
-        </p>
-      </footer>
+        <div class="w-1/2 p-4 flex flex-col h-full">
+          <div
+            id="display"
+            class="bg-black bg-opacity-50 p-4 rounded-lg h-full border border-cyan-300 display-container"
+          >
+            <!-- Content will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/terminal.js"></script>
+
+    <!-- Audio and Volume Control -->
+    <audio
+      id="audio"
+      src="/assets/audio/happy-synthwave-wobble-216020.mp3"
+      loop
+      preload="auto"
+    ></audio>
+
+    <!-- Volume Control Bar -->
+    <div
+      id="volume-control"
+      class="volume-control"
+    >
+      <div class="volume-icon">🔊</div>
+      <input
+        type="range"
+        id="volume-slider"
+        class="volume-slider"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Volume Control"
+      />
+      <div class="volume-display">50</div>
     </div>
   </body>
 </html>
