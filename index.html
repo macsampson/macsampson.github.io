@@ -1,256 +1,126 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  class="h-full"
->
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
     <title>Mac Sampson</title>
-
     <link
       href="./output.css"
       rel="stylesheet"
     />
-
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link
       rel="icon"
       type="image/png"
       href="/assets/images/thunder.png"
     />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
   </head>
-  <body class="bg-gray-800 text-white w-full h-full m-0 p-0">
-    <nav class="flex relative items-center justify-between p-5 md:px-16">
-      <div class="items-center justify-center text-2xl font-bold">
-        <a
-          href="/"
-          class="uppercase"
-        >
-          Mac Sampson
-        </a>
-      </div>
-      <ul
-        id="mobile-menu"
-        class="flex space-x-6"
-      >
-        <li
-          title="Twitter"
-          class="hover:opacity-50"
-        >
-          <a
-            aria-label="Twitter"
-            href="https://twitter.com/macxsampson"
-            class="default__A-phsh4y-5 Nav__StyledA-sc-17txzo8-4 glYDzJ"
-            ><svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 512 512"
-              color="rgba(128, 165, 177, 1)"
-              size="24"
-              style="color: rgba(128, 165, 177, 1)"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-              ></path>
-            </svg>
-          </a>
-        </li>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto px-4 py-16">
+      <header class="text-center mb-12">
+        <h1 class="text-5xl font-bold mb-2">Mac Sampson</h1>
+        <p class="text-gray-400 text-lg">Software Developer</p>
+      </header>
 
-        <li
-          title="GitHub"
-          class="hover:opacity-50"
+      <main>
+        <section
+          id="about"
+          class="mb-16"
         >
-          <a
-            aria-label="GitHub"
-            href="https://github.com/macsampson"
-            class=""
-            ><svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 512 512"
-              color="rgba(128, 165, 177, 1)"
-              size="24"
-              style="color: rgba(128, 165, 177, 1)"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9 1.4.3 2.6.4 3.8.4 8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1-8.4 1.9-15.9 2.7-22.6 2.7-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1 10.5 0 20-3.4 25.6-6 2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8 0 0 1.6-.5 5-.5 8.1 0 26.4 3.1 56.6 24.1 17.9-5.1 37-7.6 56.1-7.7 19 .1 38.2 2.6 56.1 7.7 30.2-21 48.5-24.1 56.6-24.1 3.4 0 5 .5 5 .5 12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5 1.2 0 2.6-.1 4-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"
-              ></path>
-            </svg>
-          </a>
-        </li>
-        <!-- list item with a link and svg to medium -->
-        <li
-          title="Medium"
-          class=""
-        >
-          <a
-            aria-label="Medium"
-            href="https://medium.com/@mackenzie.sampson"
-            class="hover:opacity-50"
-            ><svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              xmlns="http://www.w3.org/2000/svg"
-              size="24"
-              width="24"
-              height="24"
-              viewBox="0 0 50 50"
-              style="color: rgba(128, 165, 177, 1)"
-            >
-              <path
-                d="M15 12A13 13 0 1015 38 13 13 0 1015 12zM35.5 13c-3.59 0-6.5 5.373-6.5 12 0 1.243.102 2.441.292 3.568.253 1.503.662 2.879 1.192 4.065.265.593.56 1.138.881 1.627.642.978 1.388 1.733 2.202 2.201C34.178 36.811 34.827 37 35.5 37s1.322-.189 1.933-.539c.814-.468 1.56-1.223 2.202-2.201.321-.489.616-1.034.881-1.627.53-1.185.939-2.562 1.192-4.065C41.898 27.441 42 26.243 42 25 42 18.373 39.09 13 35.5 13zM45.5 14c-.259 0-.509.173-.743.495-.157.214-.307.494-.448.833-.071.169-.14.353-.206.551-.133.395-.257.846-.37 1.343-.226.995-.409 2.181-.536 3.497-.063.658-.112 1.349-.146 2.065C43.017 23.499 43 24.241 43 25s.017 1.501.051 2.217c.033.716.082 1.407.146 2.065.127 1.316.31 2.501.536 3.497.113.498.237.948.37 1.343.066.198.135.382.206.551.142.339.292.619.448.833C44.991 35.827 45.241 36 45.5 36c1.381 0 2.5-4.925 2.5-11S46.881 14 45.5 14z"
-              ></path>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="flex flex-row justify-center">
-      <div class="max-w-4xl flex flex-col leading-6 p-8 md:p-32">
-        <div class="flex flex-row items-center mb-12">
-          <div
-            class="flex items-center rounded-full overflow-hidden mr-6 md:mr-8"
-          >
-            <img
-              src="assets/images/profiles/pfp1.jpg"
-              alt="Logo"
-              class="w-32 md:w-96 rounded-full"
-            />
-          </div>
-          <div class="flex flex-col">
-            <h1
-              class="uppercase text-3xl font-bold mb-4 leading-8"
-              style="font-family: 'Roboto', sans-serif"
-            >
-              Mac Sampson
-            </h1>
-            <p
-              class="hidden md:block"
-              style="font-family: 'Merriweather', serif"
-            >
-              I'm Mac, a software developer currently located in Vancouver,
-              Canada (for now). I focus mainly on full stack web development
-              with React, Next.js, Typescript, and Go.
-            </p>
-          </div>
-        </div>
-        <div>
-          <p
-            class="block md:hidden mb-12"
-            style="font-family: 'Merriweather', serif"
-          >
-            I'm Mac, a software developer currently located in Vancouver, Canada
-            (for now). I focus mainly on full stack web development with React,
-            Next.js, Typescript, and Go.
+          <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+          <p class="max-w-2xl mx-auto text-center text-gray-300">
+            I'm a software developer based in Vancouver, Canada. I specialize in
+            full-stack web development with a focus on React, Next.js,
+            TypeScript, and Go. I'm passionate about building beautiful and
+            functional applications.
           </p>
-        </div>
-        <div class="">
-          <ul
-            class="p-0 md:p-8"
-            style="font-family: 'Merriweather', serif"
-          >
-            <li class="pb-6">
-              🛒 I built an ecommerce site (along with a
+        </section>
+
+        <section id="projects">
+          <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-800 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">PocketCaps (2020-2024)</h3>
+              <p class="text-gray-400 mb-4">
+                An ecommerce site for my 3D-printed keycaps business.
+              </p>
               <a
-                class="underline hover:opacity-50 text-cyan-500"
-                href="https://github.com/macsampson/ecommerce-admin"
-                target="_blank"
-              >
-                headless CMS
-              </a>
-              ) for my 3D-printed keycaps business,
-              <a
-                class="underline hover:opacity-50 text-cyan-500"
                 href="https://pocketcaps.com/"
                 target="_blank"
-                >PocketCaps</a
+                class="text-cyan-400 hover:underline"
+                >View Project</a
               >
-            </li>
-
-            <li class="pb-6">
-              🤖 I built a chrome extension called
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">CodeScribe (2023)</h3>
+              <p class="text-gray-400 mb-4">
+                A Chrome extension that explains code from any GitHub
+                repository.
+              </p>
               <a
-                class="underline hover:opacity-50 text-cyan-500"
-                href="https://chrome.google.com/webstore/detail/chatgpt-sidebar/llbhbmemofnidifkpffglhipkjdbgghf"
-                target="_blank"
-                >ChatGPT Sidebar</a
-              >
-              that allows you to use ChatGPT directly in the sidebar of Chrome.
-            </li>
-            <li class="pb-6">
-              🐙 I made another chrome extension that explains code from any
-              GitHub repo called
-              <a
-                class="underline hover:opacity-50 text-cyan-500"
                 href="https://chrome.google.com/webstore/detail/codescribe-for-github/dbjkcephefchomnpbnfnikceacaakkjj"
                 target="_blank"
-                >CodeScribe</a
+                class="text-cyan-400 hover:underline"
+                >View Project</a
               >
-            </li>
-            <li class="pb-6">
-              📝 I built a cover letter generator that utilized OpenAI's GPT-4
-              called
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">
+                Cover Letter GPT (Early 2023)
+              </h3>
+              <p class="text-gray-400 mb-4">
+                A cover letter generator using OpenAI's GPT-4.
+              </p>
               <a
-                class="underline hover:opacity-50 text-cyan-500"
                 href="https://cover-letter-gpt-nine.vercel.app/"
                 target="_blank"
-                >Cover Letter GPT</a
+                class="text-cyan-400 hover:underline"
+                >View Project</a
               >
-            </li>
-            <li class="pb-6">
-              🅿️ I developed a web app that helps you to find parking in Metro
-              Vancouver called
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">ParkSmart (2019)</h3>
+              <p class="text-gray-400 mb-4">
+                A web app to find parking in Metro Vancouver.
+              </p>
               <a
-                class="underline hover:opacity-50 text-cyan-500"
                 href="https://parksmart-vancouver.vercel.app/"
                 target="_blank"
-                >ParkSmart</a
+                class="text-cyan-400 hover:underline"
+                >View Project</a
               >
-            </li>
-          </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="text-center mt-16">
+        <div class="flex justify-center space-x-6">
+          <a
+            href="https://twitter.com/macxsampson"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+            >Twitter</a
+          >
+          <a
+            href="https://github.com/macsampson"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+            >GitHub</a
+          >
+          <a
+            href="https://medium.com/@mackenzie.sampson"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+            >Medium</a
+          >
         </div>
-      </div>
+        <p class="text-gray-500 mt-4">
+          &copy; 2025 Mac Sampson. All rights reserved.
+        </p>
+      </footer>
     </div>
   </body>
 </html>
