@@ -240,8 +240,9 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <p class="text-sm mt-2 opacity-75">A web app that helps you to find parking in Metro Vancouver.</p>
       <div class="tech-stack">
-        <span class="tech-tag">Next.js</span>
-        <span class="tech-tag">Vercel</span>
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Google Maps API</span>
       </div>
     </div>
     <div class="project-card">
@@ -249,7 +250,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="text-sm mt-2 opacity-75">Automated video creation using Llama 3, Tortoise TTS, Stable Diffusion, and FFmpeg</p>
       <div class="tech-stack">
         <span class="tech-tag">Python</span>
-        <span class="tech-tag">OpenAI API</span>
+        <span class="tech-tag">Llama 3</span>
+        <span class="tech-tag">Tortoise TTS</span>
+        <span class="tech-tag">Stable Diffusion</span>
         <span class="tech-tag">FFmpeg</span>
       </div>
     </div>
@@ -258,8 +261,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="text-sm mt-2 opacity-75">E-commerce CMS with modern architecture</p>
       <div class="tech-stack">
         <span class="tech-tag">React</span>
-        <span class="tech-tag">Node.js</span>
-        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Next.js</span>
+        <span class="tech-tag">Supabase</span>
       </div>
     </div>
     
