@@ -203,6 +203,29 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="projects-content">
   <h2 class="text-2xl font-bold mb-4 text-pink-500">My Projects</h2>
   <div class="project-grid">
+  <div class="project-card">
+      <h3 class="text-lg font-bold text-cyan-300">AI Shorts Video Generator</h3>
+      <p class="text-sm mt-2 opacity-75">Automated video creation using Llama 3, Tortoise TTS, Stable Diffusion, and FFmpeg</p>
+      <div class="tech-stack">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Llama 3</span>
+        <span class="tech-tag">Tortoise TTS</span>
+        <span class="tech-tag">Stable Diffusion</span>
+        <span class="tech-tag">FFmpeg</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3 class="text-lg font-bold text-cyan-300">E-commerce CMS</h3>
+      <p class="text-sm mt-2 opacity-75">
+        A headless CMS for online shops that allows you to manage your products, orders, and shipping information.
+      </p>
+      <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Next.js</span>
+        <span class="tech-tag">Supabase</span>
+      </div>
+    </div>
     <div class="project-card">
       <h3 class="text-lg font-bold text-cyan-300">
         <a href="https://github.com/macsampson/chatgpt-sidebar" target="_blank" class="text-pink-500 hover:underline">ChatGPT Sidebar</a>
@@ -245,27 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="tech-tag">Google Maps API</span>
       </div>
     </div>
-    <div class="project-card">
-      <h3 class="text-lg font-bold text-cyan-300">AI Shorts Video Generator</h3>
-      <p class="text-sm mt-2 opacity-75">Automated video creation using Llama 3, Tortoise TTS, Stable Diffusion, and FFmpeg</p>
-      <div class="tech-stack">
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Llama 3</span>
-        <span class="tech-tag">Tortoise TTS</span>
-        <span class="tech-tag">Stable Diffusion</span>
-        <span class="tech-tag">FFmpeg</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <h3 class="text-lg font-bold text-cyan-300">E-commerce Headless CMS</h3>
-      <p class="text-sm mt-2 opacity-75">E-commerce CMS with modern architecture</p>
-      <div class="tech-stack">
-        <span class="tech-tag">React</span>
-        <span class="tech-tag">TypeScript</span>
-        <span class="tech-tag">Next.js</span>
-        <span class="tech-tag">Supabase</span>
-      </div>
-    </div>
+    
     
   </div>
 </div>`
@@ -396,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <section class="resume-section">
     <h3 class="text-xl font-bold text-pink-500 mb-3">Technical Skills</h3>
     <ul class="list-disc ml-8 text-sm space-y-1 text-cyan-200">
-      <li><strong class="text-cyan-300">Languages:</strong> TypeScript/JavaScript, Python, Elixir, C#, SQL</li>
+      <li><strong class="text-cyan-300">Languages:</strong> TypeScript/JavaScript, Python, C#, SQL</li>
       <li><strong class="text-cyan-300">Backend:</strong> Node.js, Express.js, FastAPI</li>
       <li><strong class="text-cyan-300">Frontend:</strong> React, Next.js, HTML, CSS</li>
       <li><strong class="text-cyan-300">Databases:</strong> PostgreSQL, MongoDB</li>
