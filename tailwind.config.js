@@ -4,7 +4,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Press Start 2P"', 'cursive'],
+        display: [
+          '"Fira Code"',
+          '"JetBrains Mono"',
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          '"Liberation Mono"',
+          '"Courier New"',
+          "monospace",
+        ],
       },
     },
   },

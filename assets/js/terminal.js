@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const volumeDisplay = document.querySelector(".volume-display")
   const volumeIcon = document.querySelector(".volume-icon")
 
+  // Debug logging
+  console.log("Terminal initialization starting...")
+  console.log("Elements found:", {
+    output: !!output,
+    input: !!input,
+    display: !!display,
+    audio: !!audio,
+    volumeSlider: !!volumeSlider,
+    volumeDisplay: !!volumeDisplay,
+    volumeIcon: !!volumeIcon,
+  })
+
   // Command history management
   let commandHistory = []
   let historyIndex = -1
@@ -24,11 +36,146 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("click", () => {
       input.focus()
     })
+    console.log("Input focus handlers added")
+  } else {
+    console.error("Input element not found!")
+  }
+
+  // Click anywhere in terminal to focus input
+  const terminal = document.getElementById("terminal")
+  if (terminal && input) {
+    terminal.addEventListener("click", (e) => {
+      // Only focus if not clicking on a clickable element
+      if (
+        !e.target.closest("button") &&
+        !e.target.closest("a") &&
+        !e.target.closest("input")
+      ) {
+        input.focus()
+        e.preventDefault()
+      }
+    })
+    console.log("Terminal click handler added")
+  } else {
+    console.error("Terminal element not found!")
+  }
+
+  // Mobile-friendly enhancements
+  const addMobileSupport = () => {
+    // Prevent zoom on input focus for iOS
+    if (input) {
+      input.addEventListener("focus", () => {
+        if (window.innerWidth <= 768) {
+          // Temporarily disable zoom
+          const viewport = document.querySelector('meta[name="viewport"]')
+          if (viewport) {
+            viewport.content =
+              "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          }
+        }
+      })
+
+      input.addEventListener("blur", () => {
+        if (window.innerWidth <= 768) {
+          // Re-enable zoom after input loses focus
+          const viewport = document.querySelector('meta[name="viewport"]')
+          if (viewport) {
+            viewport.content =
+              "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+          }
+        }
+      })
+    }
+
+    // Improve scroll behavior on mobile
+    const improveScrolling = () => {
+      // Smooth scrolling for terminal output
+      if (output) {
+        output.style.scrollBehavior = "smooth"
+      }
+    }
+
+    // Add touch gesture support for command panel
+    const addTouchSupport = () => {
+      const commandPanel = document.getElementById("commandPanel")
+      if (commandPanel) {
+        let touchStartY = 0
+        let touchEndY = 0
+
+        commandPanel.addEventListener("touchstart", (e) => {
+          touchStartY = e.changedTouches[0].screenY
+        })
+
+        commandPanel.addEventListener("touchend", (e) => {
+          touchEndY = e.changedTouches[0].screenY
+          // Add swipe gestures if needed in the future
+        })
+      }
+    }
+
+    // Improve keyboard behavior on mobile
+    const improveMobileKeyboard = () => {
+      if (input) {
+        // Handle virtual keyboard appearance
+        const handleKeyboardChange = () => {
+          const isKeyboardVisible =
+            window.innerHeight < window.screen.height * 0.75
+
+          if (isKeyboardVisible) {
+            // Keyboard is visible, adjust layout
+            document.body.classList.add("keyboard-visible")
+            // Scroll to input when keyboard appears
+            setTimeout(() => {
+              if (input) {
+                input.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+            }, 300)
+          } else {
+            // Keyboard is hidden
+            document.body.classList.remove("keyboard-visible")
+          }
+        }
+
+        // Listen for viewport changes (keyboard show/hide)
+        window.addEventListener("resize", handleKeyboardChange)
+
+        // Initial check
+        handleKeyboardChange()
+      }
+    }
+
+    // Add haptic feedback for touch interactions (if supported)
+    const addHapticFeedback = () => {
+      // This will be called after command panel is initialized
+      const addHapticToCommands = () => {
+        const commandItems = document.querySelectorAll(".command-item")
+        commandItems.forEach((item) => {
+          item.addEventListener("touchstart", () => {
+            // Haptic feedback for supported devices
+            if ("vibrate" in navigator) {
+              navigator.vibrate(10) // Very light vibration
+            }
+          })
+        })
+      }
+
+      // Return function to be called later
+      return addHapticToCommands
+    }
+
+    // Initialize mobile enhancements
+    improveScrolling()
+    addTouchSupport()
+    improveMobileKeyboard()
+
+    // Store haptic function for later use
+    window.addHapticToCommands = addHapticFeedback()
   }
 
   // Enhanced commands with better descriptions and functionality
   const commands = {
     help: () => {
+      console.log("Help command executed")
       const helpText = `
 <div class="help-content">
   <h3 class="text-lg font-bold mb-2 text-pink-500">Available Commands:</h3>
@@ -39,14 +186,13 @@ document.addEventListener("DOMContentLoaded", () => {
     <li><span class="command-name">about</span> - Learn more about me</li>
     <li><span class="command-name">skills</span> - View my technical skills</li>
     <li><span class="command-name">resume</span> - View my resume</li>
-    <li><span class="command-name">theme [default|light|matrix|neon]</span> - Change theme</li>
     <li><span class="command-name">music [play|stop|pause|toggle|status]</span> - Control synthwave music</li>
     <li><span class="command-name">volume [0-100]</span> - Set music volume</li>
     <li><span class="command-name">clear</span> - Clear terminal output</li>
     <li><span class="command-name">whoami</span> - Display current user</li>
     <li><span class="command-name">date</span> - Show current date and time</li>
   </ul>
-  <p class="mt-3 text-sm opacity-75">💡 Tip: Use Tab for auto-complete, Up/Down arrows for command history</p>
+          <p class="mt-3 text-sm opacity-75"><span class="material-icons">lightbulb</span> Tip: Use Tab for auto-complete, Up/Down arrows for command history</p>
 </div>`
       displayContent(helpText)
       return "Help loaded. Use Tab for auto-complete, arrows for history."
@@ -58,8 +204,49 @@ document.addEventListener("DOMContentLoaded", () => {
   <h2 class="text-2xl font-bold mb-4 text-pink-500">My Projects</h2>
   <div class="project-grid">
     <div class="project-card">
+      <h3 class="text-lg font-bold text-cyan-300">
+        <a href="https://github.com/macsampson/chatgpt-sidebar" target="_blank" class="text-pink-500 hover:underline">ChatGPT Sidebar</a>
+      </h3>
+      <p class="text-sm mt-2 opacity-75">A Chrome extension that allows you to use ChatGPT directly in the sidebar of your browser.</p>
+      <div class="tech-stack">
+        <span class="tech-tag">Chrome Extension</span>
+        <span class="tech-tag">JavaScript</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3 class="text-lg font-bold text-cyan-300">
+        <a href="https://github.com/macsampson/codescribe" target="_blank" class="text-pink-500 hover:underline">CodeScribe</a>
+      </h3>
+      <p class="text-sm mt-2 opacity-75">A Chrome extension that explains code from any GitHub repository.</p>
+      <div class="tech-stack">
+        <span class="tech-tag">Chrome Extension</span>
+        <span class="tech-tag">OpenAI API</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3 class="text-lg font-bold text-cyan-300">
+        <a href="https://github.com/macsampson/cover-letter-gpt" target="_blank" class="text-pink-500 hover:underline">Cover Letter GPT</a>
+      </h3>
+      <p class="text-sm mt-2 opacity-75">A cover letter generator that utilizes OpenAI's GPT-4.</p>
+      <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">GPT-4</span>
+        <span class="tech-tag">Vercel</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3 class="text-lg font-bold text-cyan-300">
+        <a href="https://parksmart-vancouver.vercel.app/" target="_blank" class="text-pink-500 hover:underline">ParkSmart</a>
+      </h3>
+      <p class="text-sm mt-2 opacity-75">A web app that helps you to find parking in Metro Vancouver.</p>
+      <div class="tech-stack">
+        <span class="tech-tag">Next.js</span>
+        <span class="tech-tag">Vercel</span>
+      </div>
+    </div>
+    <div class="project-card">
       <h3 class="text-lg font-bold text-cyan-300">AI Shorts Video Generator</h3>
-      <p class="text-sm mt-2 opacity-75">Automated video creation using OpenAI and FFmpeg</p>
+      <p class="text-sm mt-2 opacity-75">Automated video creation using Llama 3, Tortoise TTS, Stable Diffusion, and FFmpeg</p>
       <div class="tech-stack">
         <span class="tech-tag">Python</span>
         <span class="tech-tag">OpenAI API</span>
@@ -68,24 +255,14 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     <div class="project-card">
       <h3 class="text-lg font-bold text-cyan-300">E-commerce Headless CMS</h3>
-      <p class="text-sm mt-2 opacity-75">Scalable e-commerce solution with modern architecture</p>
+      <p class="text-sm mt-2 opacity-75">E-commerce CMS with modern architecture</p>
       <div class="tech-stack">
         <span class="tech-tag">React</span>
         <span class="tech-tag">Node.js</span>
         <span class="tech-tag">MongoDB</span>
       </div>
     </div>
-    <div class="project-card">
-      <h3 class="text-lg font-bold text-cyan-300">
-        <a href="https://pocketcaps.com/" target="_blank" class="text-pink-500 hover:underline">PocketCaps</a>
-      </h3>
-      <p class="text-sm mt-2 opacity-75">Comprehensive trading card management platform</p>
-      <div class="tech-stack">
-        <span class="tech-tag">MERN Stack</span>
-        <span class="tech-tag">Authentication</span>
-        <span class="tech-tag">Real-time Updates</span>
-      </div>
-    </div>
+    
   </div>
 </div>`
       displayContent(projectsHtml)
@@ -98,22 +275,22 @@ document.addEventListener("DOMContentLoaded", () => {
   <h2 class="text-2xl font-bold mb-4 text-pink-500">Get In Touch</h2>
   <div class="contact-info">
     <div class="contact-item">
-      <span class="contact-label">📧 Email:</span>
+      <span class="contact-label"><span class="material-icons">email</span> Email:</span>
       <a href="mailto:mackenzie.sampson@outlook.com" class="text-pink-500 hover:underline">
         mackenzie.sampson@outlook.com
       </a>
     </div>
     <div class="contact-item">
-      <span class="contact-label">💼 LinkedIn:</span>
+      <span class="contact-label"><span class="material-icons">work</span> LinkedIn:</span>
       <a href="#" class="text-pink-500 hover:underline">linkedin.com/in/mackenzie-sampson</a>
     </div>
     <div class="contact-item">
-      <span class="contact-label">💻 GitHub:</span>
+      <span class="contact-label"><span class="material-icons">code</span> GitHub:</span>
       <a href="#" class="text-pink-500 hover:underline">github.com/mackenzie-sampson</a>
     </div>
     <div class="contact-item">
-      <span class="contact-label">🌐 Portfolio:</span>
-      <span class="text-cyan-300">You're here! 🎉</span>
+      <span class="contact-label"><span class="material-icons">language</span> Portfolio:</span>
+      <span class="text-cyan-300">You're here! <span class="material-icons">celebration</span></span>
     </div>
   </div>
 </div>`
@@ -142,11 +319,11 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="interests">
       <h3 class="text-lg font-bold mb-2 text-cyan-300">Interests:</h3>
       <ul class="interest-list">
-        <li>🚀 Full-stack Development</li>
-        <li>🤖 AI/ML Integration</li>
-        <li>🎮 Game Development</li>
-        <li>🌐 Web3 Technologies</li>
-        <li>📱 Mobile Development</li>
+        <li><span class="material-icons">rocket_launch</span> Full-stack Development</li>
+        <li><span class="material-icons">smart_toy</span> AI/ML Integration</li>
+        <li><span class="material-icons">sports_esports</span> Game Development</li>
+        <li><span class="material-icons">language</span> Web3 Technologies</li>
+        <li><span class="material-icons">phone_android</span> Mobile Development</li>
       </ul>
     </div>
   </div>
@@ -209,82 +386,117 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resume: () => {
       const resumeHtml = `
-<div class="resume-content">
-  <h2 class="text-2xl font-bold mb-4 text-pink-500">Resume</h2>
-  <div class="resume-section">
-    <h3 class="text-lg font-bold text-cyan-300 mb-2">Experience</h3>
-    <div class="experience-item">
-      <h4 class="font-bold">Full-Stack Developer</h4>
-      <p class="text-sm opacity-75">2022 - Present</p>
-      <p class="text-sm mt-1">
-        Developing modern web applications with focus on user experience and scalability.
-        Working with MERN stack, Python, and cloud technologies.
-      </p>
+<div class="resume-content space-y-8">
+  <h2 class="text-3xl font-bold mb-6 text-pink-500 border-b border-cyan-300 pb-2">Resume</h2>
+
+  <section class="resume-section">
+    <h3 class="text-xl font-bold text-pink-500 mb-3">Technical Skills</h3>
+    <ul class="list-disc ml-8 text-sm space-y-1 text-cyan-200">
+      <li><strong class="text-cyan-300">Languages:</strong> TypeScript/JavaScript, Python, Elixir, C#, SQL</li>
+      <li><strong class="text-cyan-300">Backend:</strong> Node.js, Express.js, FastAPI</li>
+      <li><strong class="text-cyan-300">Frontend:</strong> React, Next.js, HTML, CSS</li>
+      <li><strong class="text-cyan-300">Databases:</strong> PostgreSQL, MongoDB</li>
+      <li><strong class="text-cyan-300">DevOps/Cloud:</strong> Docker, Git, Jenkins, AWS (EC2, S3), Kubernetes</li>
+      <li><strong class="text-cyan-300">AI/ML Tools:</strong> Llama 3, Stable Diffusion, Tortoise TTS</li>
+    </ul>
+  </section>
+
+  <section class="resume-section">
+    <h3 class="text-xl font-bold text-pink-500 mb-3">Professional Experience</h3>
+    <div class="space-y-6">
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+          <span class="font-bold text-gray-100">PocketCaps - Founder & Full-Stack Product Engineer</span>
+          <span class="text-xs text-cyan-400 opacity-75">Sept 2020 – Mar 2025 | TypeScript, React, Postgres, NextJS</span>
+        </div>
+        <ul class="list-disc ml-8 text-sm mt-1 space-y-1">
+          <li>Designed and developed a scalable e-commerce platform with Next.js, React, and PostgreSQL.</li>
+          <li>Achieved a 250% sales increase and acquired 1,500+ customers within the first year.</li>
+          <li>Implemented a custom headless CMS with dynamic inventory and real-time order processing.</li>
+          <li>Automated API-driven workflows, reducing manual operations by 80% and minimizing discrepancies.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+          <span class="font-bold text-gray-100">Electronic Arts - Tools Software Engineer (Contract)</span>
+          <span class="text-xs text-cyan-400 opacity-75">Sept 2019 – Nov 2020 | Python, C#, JIRA</span>
+        </div>
+        <ul class="list-disc ml-8 text-sm mt-1 space-y-1">
+          <li>Developed an automated hair physics integration tool using Python, reducing artist costs by 12%.</li>
+          <li>Maintained, updated, and deployed a high-performance asset processing pipeline in C#.</li>
+          <li>Reduced processing time by 15% by automating ingestion, transformation, and export of game assets.</li>
+          <li>Collaborated with QA, Build Engineering, and Art teams within an Agile framework.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+          <span class="font-bold text-gray-100">SAP - Software Engineer Intern (Legal Compliance)</span>
+          <span class="text-xs text-cyan-400 opacity-75">May - Dec 2017 | Python, Selenium</span>
+        </div>
+        <ul class="list-disc ml-8 text-sm mt-1 space-y-1">
+          <li>Engineered and presented an automated compliance data entry tool using Python, Pandas, Excel, and Selenium.</li>
+          <li>Reduced data entry time by 80% and eliminated 95% of manual errors.</li>
+          <li>Improved audit accuracy by 25% and enabled faster compliance reporting through tool integration.</li>
+          <li>Tool adoption led to standardized practices and improved efficiency across multiple teams.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+          <span class="font-bold text-gray-100">MDA - Junior Web Developer</span>
+          <span class="text-xs text-cyan-400 opacity-75">Jan - Sept 2016 | JavaScript, C#, HTML/CSS</span>
+        </div>
+        <ul class="list-disc ml-8 text-sm mt-1 space-y-1">
+          <li>Developed a dynamic infographic using C# and JavaScript, increasing user engagement by 80%.</li>
+          <li>Facilitated stakeholder engagement and purchasing of satellite imaging solutions.</li>
+          <li>Collaborated with internal clients, resulting in the corporate website release 2 months ahead of schedule.</li>
+          <li>Enhanced online presence and reduced project costs by 15%.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="resume-section">
-    <h3 class="text-lg font-bold text-cyan-300 mb-2">Education</h3>
-    <div class="education-item">
-      <h4 class="font-bold">Computer Science</h4>
-      <p class="text-sm opacity-75">Ongoing Studies</p>
-      <p class="text-sm mt-1">
-        Focused on software engineering principles, algorithms, and modern development practices.
-      </p>
+  </section>
+
+  <section class="resume-section">
+    <h3 class="text-xl font-bold text-pink-500 mb-3">Projects</h3>
+    <div class="space-y-6">
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+          <span class="font-bold text-gray-100">AI Shorts Video Generator</span>
+          <span class="text-xs text-cyan-400 opacity-75">July 2024 - Present | Python, FastAPI, React, Docker, Llama 3, Stable Diffusion, Tortoise TTS, FFmpeg</span>
+        </div>
+        <ul class="list-disc ml-8 text-sm mt-1 space-y-1">
+          <li>Architected a scalable video generation pipeline using FastAPI and Docker.</li>
+          <li>Integrated microservices for Llama 3 script generation, Stable Diffusion image creation, and Tortoise TTS voiceovers.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+          <span class="font-bold text-gray-100">E-commerce Headless CMS</span>
+          <span class="text-xs text-cyan-400 opacity-75">Aug 2021 - June 2024 | React, PostgreSQL, TypeScript, Express, Node</span>
+        </div>
+        <ul class="list-disc ml-8 text-sm mt-1 space-y-1">
+          <li>Engineered a React-based headless CMS with PostgreSQL and Express for RESTful APIs.</li>
+          <li>Implemented real-time inventory tracking, automated bundle pricing, and Stripe integration.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="mt-4">
-    <button class="download-btn text-pink-500 hover:underline">
-      📄 Download Full Resume (PDF)
-    </button>
+  </section>
+
+  <section class="resume-section">
+    <h3 class="text-xl font-bold text-pink-500 mb-3">Education</h3>
+    <ul class="list-disc ml-8 text-sm space-y-2">
+      <li><strong class="text-gray-100">Bachelor of Computer Science</strong><br/><span class="text-cyan-400 opacity-75">University of British Columbia</span></li>
+      <li><strong class="text-gray-100">Bachelor of Business Administration (Finance Major)</strong><br/><span class="text-cyan-400 opacity-75">Thompson Rivers University</span></li>
+    </ul>
+  </section>
+
+  <div class="mt-8">
+    <a href="assets/resume/mackenzie_sampson_st.pdf" download target="_blank" class="download-btn text-pink-500 hover:underline flex items-center gap-2 text-lg">
+      <span class="material-icons">download</span> Download Full Resume (PDF)
+    </a>
   </div>
 </div>`
       displayContent(resumeHtml)
-      return "Resume loaded. Click download for full PDF."
-    },
-
-    theme: (theme) => {
-      const themes = {
-        default: {
-          bg: "bg-purple-900",
-          text: "text-cyan-300",
-          prompt: "text-pink-500",
-          name: "default retro",
-        },
-        light: {
-          bg: "bg-gray-100",
-          text: "text-gray-900",
-          prompt: "text-blue-600",
-          name: "light mode",
-        },
-        matrix: {
-          bg: "bg-black",
-          text: "text-green-400",
-          prompt: "text-green-400",
-          name: "matrix",
-        },
-        neon: {
-          bg: "bg-gray-900",
-          text: "text-cyan-400",
-          prompt: "text-magenta-500",
-          name: "neon",
-        },
-      }
-
-      if (themes[theme]) {
-        const body = document.querySelector("body")
-        const prompt = document.querySelector(".flex > span")
-
-        Object.values(themes).forEach((t) => {
-          body.classList.remove(t.bg, t.text)
-          if (prompt) prompt.classList.remove(t.prompt)
-        })
-
-        body.classList.add(themes[theme].bg, themes[theme].text)
-        if (prompt) prompt.classList.add(themes[theme].prompt)
-        return `Theme changed to ${themes[theme].name}`
-      } else {
-        return "Available themes: default, light, matrix, neon"
-      }
+      return "Resume loaded. Use the button to download the full PDF."
     },
 
     music: (action) => {
@@ -298,7 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         isPlaying = true
         updateVolumeIcon()
-        return "🎵 Playing happy synthwave music... 🌈"
+        return '<span class="material-icons">music_note</span> Playing happy synthwave music... <span class="material-icons">palette</span>'
       } else if (action === "stop" || action === "pause") {
         audio.pause()
         isPlaying = false
@@ -311,7 +523,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
           isPlaying = true
           updateVolumeIcon()
-          return "🎵 Music resumed."
+          return '<span class="material-icons">music_note</span> Music resumed.'
         } else {
           audio.pause()
           isPlaying = false
@@ -322,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const status = audio.paused ? "stopped" : "playing"
         const timeFormatted = formatTime(audio.currentTime)
         const durationFormatted = formatTime(audio.duration)
-        return `🎵 Music: ${status} | Volume: ${currentVolume} | Time: ${timeFormatted}/${durationFormatted}`
+        return `<span class="material-icons">music_note</span> Music: ${status} | Volume: ${currentVolume} | Time: ${timeFormatted}/${durationFormatted}`
       } else {
         return "Usage: music [play|stop|pause|toggle|status]"
       }
@@ -334,7 +546,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (level === undefined) {
-        return `🔊 Current volume: ${currentVolume}`
+        return `<span class="material-icons">volume_up</span> Current volume: ${currentVolume}`
       }
 
       const newVolume = parseInt(level)
@@ -343,7 +555,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       setVolume(newVolume)
-      return `🔊 Volume set to ${newVolume}%`
+      return `<span class="material-icons">volume_up</span> Volume set to ${newVolume}%`
     },
 
     clear: () => {
@@ -364,6 +576,10 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   }
 
+  // Debug: Log available commands
+  console.log("Commands object defined with keys:", Object.keys(commands))
+  console.log("Sample command test - help function:", typeof commands.help)
+
   // Volume control functions
   const setVolume = (volume) => {
     currentVolume = Math.max(0, Math.min(100, volume))
@@ -375,13 +591,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updateVolumeIcon = () => {
     if (currentVolume === 0) {
-      volumeIcon.textContent = "🔇"
+      volumeIcon.innerHTML = '<span class="material-icons">volume_off</span>'
     } else if (currentVolume < 30) {
-      volumeIcon.textContent = "🔈"
+      volumeIcon.innerHTML = '<span class="material-icons">volume_down</span>'
     } else if (currentVolume < 70) {
-      volumeIcon.textContent = "🔉"
+      volumeIcon.innerHTML = '<span class="material-icons">volume_down</span>'
     } else {
-      volumeIcon.textContent = "🔊"
+      volumeIcon.innerHTML = '<span class="material-icons">volume_up</span>'
     }
 
     // Add playing animation
@@ -463,6 +679,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Enhanced terminal output with better formatting
   const printToTerminal = (message, type = "normal") => {
+    console.log(`printToTerminal called: "${message}", type: "${type}"`)
+
+    if (!output) {
+      console.error("Output element not found in printToTerminal!")
+      return
+    }
+
     const p = document.createElement("p")
     p.className = `terminal-line ${type}`
 
@@ -473,17 +696,22 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (type === "error") {
       p.innerHTML = `<span class="error-text">❌ ${message}</span>`
     } else if (type === "success") {
-      p.innerHTML = `<span class="success-text">✅ ${message}</span>`
+      p.innerHTML = `<span class="material-icons">
+check_box
+</span> ${message}</span>`
     } else {
       p.innerHTML = highlightCode(message)
     }
 
     output.appendChild(p)
     output.scrollTop = output.scrollHeight
+    console.log("Message added to terminal output")
   }
 
   // Enhanced command handling with better error messages
   const handleCommand = async (commandStr) => {
+    console.log(`handleCommand called with: "${commandStr}"`)
+
     const [command, ...args] = commandStr.trim().split(" ")
 
     // Add command to history
@@ -499,10 +727,18 @@ document.addEventListener("DOMContentLoaded", () => {
     printToTerminal(commandStr, "command")
 
     if (!command) {
+      console.log("Empty command, returning")
       return
     }
 
+    console.log(
+      `Looking for command: "${command}" in commands object:`,
+      Object.keys(commands)
+    )
+
     if (commands[command]) {
+      console.log(`Command "${command}" found, executing...`)
+
       // Show loading state for commands that might take time
       if (["projects", "about", "skills", "resume"].includes(command)) {
         isLoading = true
@@ -519,13 +755,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const result = commands[command](...args)
+        console.log(`Command result:`, result)
         if (result) {
           printToTerminal(result, "success")
         }
+
+        // Highlight the command in the panel
+        highlightActiveCommand(command)
       } catch (error) {
+        console.error(`Error executing command "${command}":`, error)
         printToTerminal(`Error executing command: ${error.message}`, "error")
       }
     } else {
+      console.log(`Command "${command}" not found`)
       // Enhanced error handling with suggestions
       const suggestions = autoComplete(command)
       let errorMessage = `Command not found: ${command}`
@@ -537,8 +779,10 @@ document.addEventListener("DOMContentLoaded", () => {
       printToTerminal(errorMessage, "error")
     }
 
-    input.value = ""
-    input.focus()
+    if (input) {
+      input.value = ""
+      input.focus()
+    }
   }
 
   // Enhanced keyboard event handling
@@ -647,39 +891,221 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize volume control
   setVolume(currentVolume)
 
+  // Command Panel Functionality
+  const initializeCommandPanel = () => {
+    console.log("Initializing command panel...")
+
+    const commandPanel = document.getElementById("commandPanel")
+    const commandList = document.getElementById("commandList")
+
+    console.log("Command panel elements:", {
+      commandPanel: !!commandPanel,
+      commandList: !!commandList,
+    })
+
+    if (!commandPanel || !commandList) {
+      console.error("Command panel elements not found!")
+      return
+    }
+
+    // Command descriptions and shortcuts
+    const commandDescriptions = {
+      help: { desc: "Show all available commands", shortcut: "?" },
+      projects: { desc: "View my projects and work", shortcut: "p" },
+      contact: { desc: "Get contact information", shortcut: "c" },
+      about: { desc: "Learn more about me", shortcut: "a" },
+      skills: { desc: "View technical skills", shortcut: "s" },
+      resume: { desc: "View my resume", shortcut: "r" },
+      music: { desc: "Control background music", shortcut: "m" },
+      volume: { desc: "Adjust music volume", shortcut: "v" },
+      clear: { desc: "Clear terminal output", shortcut: "cls" },
+      whoami: { desc: "Display current user", shortcut: "w" },
+      date: { desc: "Show current date/time", shortcut: "d" },
+    }
+
+    // Generate command list HTML
+    const generateCommandList = () => {
+      const commandKeys = Object.keys(commands)
+      let html = ""
+
+      commandKeys.forEach((cmd) => {
+        const info = commandDescriptions[cmd] || {
+          desc: "Available command",
+          shortcut: "",
+        }
+        html += `
+          <div class="command-item" data-command="${cmd}">
+            <span class="command-item-name">${cmd}</span>
+            <span class="command-item-desc">${info.desc}</span>
+            ${
+              info.shortcut
+                ? `<span class="command-item-shortcut">${info.shortcut}</span>`
+                : ""
+            }
+          </div>
+        `
+      })
+
+      return html
+    }
+
+    // Populate command list
+    commandList.innerHTML = generateCommandList()
+
+    // Add haptic feedback for mobile devices
+    if (window.addHapticToCommands) {
+      window.addHapticToCommands()
+    }
+
+    // Handle command clicks
+    commandList.addEventListener("click", (e) => {
+      const commandItem = e.target.closest(".command-item")
+      if (commandItem) {
+        const command = commandItem.dataset.command
+        if (command && commands[command]) {
+          // Add visual feedback
+          commandItem.style.background = "rgba(236, 72, 153, 0.3)"
+          setTimeout(() => {
+            commandItem.style.background = ""
+          }, 200)
+
+          // Execute command
+          executeCommandFromPanel(command)
+        }
+      }
+    })
+
+    // Add hover effects with command preview
+    commandList.addEventListener("mouseover", (e) => {
+      const commandItem = e.target.closest(".command-item")
+      if (commandItem) {
+        const command = commandItem.dataset.command
+        // You could add a tooltip or preview here if desired
+      }
+    })
+
+    // Add keyboard shortcuts for power users
+    document.addEventListener("keydown", (e) => {
+      // Only activate shortcuts when not typing in the terminal
+      if (e.target === input) return
+
+      if (e.ctrlKey && e.shiftKey) {
+        const shortcutMap = {
+          KeyH: "help",
+          KeyP: "projects",
+          KeyC: "contact",
+          KeyA: "about",
+          KeyS: "skills",
+          KeyR: "resume",
+          KeyM: "music",
+          KeyV: "volume",
+          KeyW: "whoami",
+          KeyD: "date",
+        }
+
+        if (shortcutMap[e.code]) {
+          e.preventDefault()
+          executeCommandFromPanel(shortcutMap[e.code])
+        }
+      }
+    })
+  }
+
+  // Execute command from panel (slightly different from terminal input)
+  const executeCommandFromPanel = (command) => {
+    // Focus the input and set the command
+    input.focus()
+    input.value = command
+
+    // Add a small delay to show the command was clicked
+    setTimeout(() => {
+      handleCommand(command)
+    }, 100)
+  }
+
+  // Add command highlighting in terminal
+  const highlightActiveCommand = (command) => {
+    const commandItems = document.querySelectorAll(".command-item")
+    commandItems.forEach((item) => {
+      if (item.dataset.command === command) {
+        item.style.background = "rgba(34, 211, 238, 0.2)"
+        item.style.borderColor = "#22d3ee"
+
+        setTimeout(() => {
+          item.style.background = ""
+          item.style.borderColor = ""
+        }, 1000)
+      }
+    })
+  }
+
+  // Initialize command panel
+  console.log("About to initialize command panel...")
+  initializeCommandPanel()
+
+  // Initialize mobile support
+  console.log("About to initialize mobile support...")
+  addMobileSupport()
+
   // Enhanced welcome message
   const welcomeMessage = () => {
+    console.log("Welcome message function called")
+
+    if (!display) {
+      console.error("Display element not found in welcomeMessage!")
+      return
+    }
+
+    const isMobile = window.innerWidth <= 768
     const welcomeHtml = `
 <div class="welcome-display">
-  <h2 class="text-2xl font-bold mb-4 text-pink-500">Welcome! 👋</h2>
-  <p class="mb-4">This is an interactive terminal portfolio. Start by typing a command!</p>
+        <h2 class="text-2xl font-bold mb-4 text-pink-500">Welcome! <span class="material-icons">waving_hand</span></h2>
+  <p class="mb-4">This is an interactive terminal portfolio. ${
+    isMobile ? "Tap to start!" : "Start by typing a command!"
+  }</p>
   <div class="quick-commands">
     <h3 class="text-lg font-bold mb-2 text-cyan-300">Quick Start:</h3>
     <ul class="command-suggestions">
       <li>Type <code class="code-highlight">help</code> to see all commands</li>
-      <li>Type <code class="code-highlight">about</code> to learn about me</li>
+      <li>Type <code class="code-highlight">resume</code> to view and download my resume</li>
       <li>Type <code class="code-highlight">projects</code> to see my work</li>
-      <li>Use <kbd>Tab</kbd> for auto-complete</li>
-      <li>Use <kbd>↑/↓</kbd> for command history</li>
+      ${!isMobile ? "<li>Use <kbd>Tab</kbd> for auto-complete</li>" : ""}
+      ${!isMobile ? "<li>Use <kbd>↑/↓</kbd> for command history</li>" : ""}
+      <li>📋 <strong>NEW:</strong> ${
+        isMobile ? "Tap" : "Click"
+      } commands in the bottom bar!</li>
+      
     </ul>
   </div>
 </div>`
 
+    console.log("About to display welcome content")
     displayContent(welcomeHtml)
 
     // Type welcome message in terminal
     setTimeout(() => {
+      console.log("About to print welcome messages to terminal")
       printToTerminal(
-        "Welcome to Mackenzie Sampson's interactive portfolio! 🚀",
+        'Welcome to Mackenzie Sampson\'s interactive portfolio! <span class="material-icons">rocket_launch</span>',
         "success"
       )
       printToTerminal(
-        "Type 'help' to see available commands, or try 'about' to learn more about me.",
+        isMobile
+          ? "Tap 'help' to see commands, or tap 'about' to learn more!"
+          : "Type 'help' to see available commands, or try 'about' to learn more about me.",
         "normal"
+      )
+      printToTerminal(
+        isMobile
+          ? '<span class="material-icons">stars</span> NEW: Tap any command in the bottom bar for instant access!'
+          : '<span class="material-icons">stars</span> NEW: Click any command in the bottom bar for instant access!',
+        "success"
       )
     }, 500)
   }
 
   // Initialize the terminal
+  console.log("About to call welcomeMessage...")
   welcomeMessage()
+  console.log("Terminal initialization complete!")
 })

@@ -2,6 +2,39 @@
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
 
+/* Targeted Fira Code Font Override */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select,
+label,
+code,
+pre,
+kbd,
+samp {
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/* Preserve Material Icons */
+.material-icons {
+  font-family: "Material Icons" !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -46,8 +79,8 @@ html,
   -o-tab-size: 4;
   tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -67,6 +100,10 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  padding-bottom: 140px; /* Space for command panel */
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 400;
 }
 
 /*
@@ -136,8 +173,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -448,7 +485,7 @@ video {
 }
 
 body {
-  font-family: "Press Start 2P", cursive;
+  /* font-family: "Press Start 2P", cursive; */
 }
 
 *,
@@ -658,7 +695,9 @@ body {
 }
 
 .font-display {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 600;
 }
 
 .text-3xl {
@@ -760,6 +799,7 @@ body {
   max-width: 75%;
   margin: 0 auto;
   box-sizing: border-box;
+  padding-bottom: 140px; /* Space for command panel */
 }
 
 /* Header section - allow it to size to content */
@@ -797,8 +837,10 @@ body {
   word-wrap: break-word;
   word-break: break-word;
   max-height: calc(100% - 60px); /* Leave space for input */
-  font-family: "Courier New", monospace;
-  line-height: 1.6;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 400;
+  line-height: 1.5;
   padding: 8px;
 }
 
@@ -809,6 +851,11 @@ body {
   pointer-events: auto;
   z-index: 1;
   position: relative;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Ensure terminal input area is properly positioned */
@@ -840,37 +887,49 @@ body {
 .terminal-line {
   margin: 4px 0;
   word-wrap: break-word;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .terminal-line.command {
   color: #67e8f9;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .terminal-line.error {
   color: #ff6b6b;
+  font-weight: 500;
 }
 
 .terminal-line.success {
   color: #4ecdc4;
+  font-weight: 500;
 }
 
 /* Command prompt styling */
 .command-prompt {
   color: #ff6b9d;
-  font-weight: bold;
+  font-weight: 600;
   margin-right: 8px;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Enhanced text styling */
 .error-text {
   color: #ff6b6b;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .success-text {
   color: #4ecdc4;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .code-highlight {
@@ -878,7 +937,9 @@ body {
   color: #67e8f9;
   padding: 2px 4px;
   border-radius: 3px;
-  font-family: "Courier New", monospace;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 500;
 }
 
 /* Loading animation */
@@ -955,8 +1016,9 @@ body {
 
 .command-name {
   color: #ff6b9d;
-  font-weight: bold;
-  font-family: "Courier New", monospace;
+  font-weight: 600;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   margin-right: 8px;
   min-width: 120px;
 }
@@ -1164,42 +1226,121 @@ body {
   border: 1px solid rgba(255, 107, 157, 0.3);
 }
 
-/* Mobile-friendly adjustments */
+/* Enhanced Mobile-First Responsive Design */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .main-container {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .header-section {
+    padding: 1rem;
+  }
+
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+
+  .main-content {
+    padding: 0.5rem;
+  }
+
+  .terminal-container,
+  .display-container {
+    padding: 0.75rem;
+  }
+
+  /* Volume control for tablets */
+  .volume-control {
+    top: 15px;
+    right: 15px;
+    padding: 6px 8px;
+    gap: 8px;
+  }
+}
+
+/* Mobile landscape and smaller tablets */
 @media (max-width: 768px) {
   .main-container {
-    width: 90%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    padding-bottom: 160px; /* Increased for mobile command panel */
+  }
+
+  .header-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .text-3xl {
+    font-size: 1.25rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
   }
 
   .main-content {
     flex-direction: column;
+    padding: 0.5rem;
+    gap: 1rem;
   }
 
   .w-1\/2 {
     width: 100%;
-    height: 50vh;
+    height: 45vh;
+    min-height: 300px;
   }
 
+  .terminal-container,
+  .display-container {
+    padding: 0.75rem;
+    margin: 0;
+  }
+
+  .terminal-output {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  #input {
+    font-size: 0.9rem;
+  }
+
+  /* Content adjustments */
   .project-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .contact-item {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .contact-label {
     min-width: auto;
+    font-weight: bold;
   }
 
   .tech-stack,
   .skill-tags {
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .tech-tag,
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
   }
 
   /* Mobile volume control */
@@ -1220,19 +1361,74 @@ body {
   }
 }
 
+/* Mobile portrait */
 @media (max-width: 480px) {
+  body {
+    padding-bottom: 180px; /* Extra space for mobile command panel */
+  }
+
   .main-container {
-    width: 95%;
-    max-width: 95%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    padding-bottom: 180px;
   }
 
-  .display-container,
-  .terminal-container {
-    padding: 1rem;
+  .header-section {
+    padding: 1rem 0.75rem;
   }
 
+  .text-3xl {
+    font-size: 1.1rem;
+  }
+
+  .text-lg {
+    font-size: 0.9rem;
+  }
+
+  .text-md {
+    font-size: 0.85rem;
+  }
+
+  .w-24,
+  .h-24 {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .main-content {
+    padding: 0.5rem;
+    gap: 0.75rem;
+  }
+
+  .w-1\/2 {
+    width: 100%;
+    height: 40vh;
+    min-height: 250px;
+  }
+
+  .terminal-container,
+  .display-container {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .terminal-output {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  #input {
+    font-size: 0.8rem;
+  }
+
+  .command-prompt {
+    font-size: 0.8rem;
+  }
+
+  /* Content adjustments for small screens */
   .project-card {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .skill-category {
@@ -1251,6 +1447,30 @@ body {
   .skills-content,
   .resume-content {
     padding: 0.75rem;
+  }
+
+  .tech-tag,
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .command-suggestions {
+    padding: 0;
+  }
+
+  .command-suggestions li {
+    margin: 0.25rem 0;
+    font-size: 0.8rem;
+  }
+
+  .command-suggestions code {
+    font-size: 0.75rem;
+  }
+
+  .command-suggestions kbd {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.3rem;
   }
 
   /* Mobile volume control - smaller screens */
@@ -1272,6 +1492,171 @@ body {
 
   .volume-icon {
     font-size: 0.9em;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .main-container {
+    padding-bottom: 200px;
+  }
+
+  body {
+    padding-bottom: 200px;
+  }
+
+  .header-section {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .text-3xl {
+    font-size: 1rem;
+  }
+
+  .w-24,
+  .h-24 {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main-content {
+    padding: 0.25rem;
+  }
+
+  .w-1\/2 {
+    height: 35vh;
+    min-height: 200px;
+  }
+
+  .terminal-container,
+  .display-container {
+    padding: 0.4rem;
+  }
+
+  .terminal-output {
+    font-size: 0.75rem;
+  }
+
+  #input {
+    font-size: 0.75rem;
+  }
+
+  .volume-control {
+    top: 2px;
+    right: 2px;
+    padding: 1px 2px;
+    gap: 2px;
+  }
+
+  .volume-slider {
+    width: 40px;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (pointer: coarse) {
+  .command-item {
+    min-height: 44px; /* iOS recommended touch target size */
+    padding: 12px 16px;
+  }
+
+  .volume-control {
+    padding: 8px 12px;
+  }
+
+  .volume-slider {
+    height: 24px;
+  }
+
+  input[type="text"] {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Virtual keyboard handling */
+.keyboard-visible {
+  padding-bottom: 0 !important;
+}
+
+.keyboard-visible .command-panel-bottom {
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.keyboard-visible .main-container {
+  padding-bottom: 0 !important;
+}
+
+/* Improved scrolling and focus behavior */
+.terminal-output {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.display-container {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  .command-item {
+    min-height: 48px;
+    padding: 12px 16px;
+    touch-action: manipulation;
+  }
+
+  .volume-control {
+    touch-action: manipulation;
+  }
+
+  .volume-slider {
+    touch-action: manipulation;
+  }
+
+  /* Improve text selection on mobile */
+  .terminal-output {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  /* Better focus indicators for mobile */
+  input:focus {
+    outline: 2px solid #22d3ee;
+    outline-offset: 2px;
+  }
+}
+
+/* Prevent unwanted zoom on double-tap */
+* {
+  touch-action: manipulation;
+}
+
+/* Allow text selection in specific areas */
+.terminal-output,
+.display-container p,
+.display-container span {
+  touch-action: auto;
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .main-content {
+    flex-direction: row;
+  }
+
+  .w-1\/2 {
+    width: 50%;
+    height: 80vh;
+  }
+
+  .header-section {
+    padding: 0.5rem;
+  }
+
+  .text-3xl {
+    font-size: 1.2rem;
   }
 }
 
@@ -1473,5 +1858,328 @@ a:focus {
 
   .w-1\/2 {
     width: 100% !important;
+  }
+}
+
+/* Command Panel Bottom Bar Styles */
+.command-panel-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  border-top: 2px solid #22d3ee;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 -5px 20px rgba(34, 211, 238, 0.3);
+  transition: all 0.3s ease;
+}
+
+.command-panel-bottom:hover {
+  border-top-color: #ec4899;
+  box-shadow: 0 -5px 30px rgba(236, 72, 153, 0.4);
+}
+
+.command-panel-bottom-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.3);
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.command-panel-bottom-title {
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: #22d3ee;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.command-list-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.command-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(34, 211, 238, 0.05);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+.command-item:hover {
+  background: rgba(236, 72, 153, 0.1);
+  border-color: #ec4899;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.command-item-name {
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: #22d3ee;
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.5);
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.command-item-desc {
+  font-size: 9px;
+  color: #a5b4fc;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.command-item-shortcut {
+  font-size: 9px;
+  font-weight: 500;
+  color: #ec4899;
+  margin-left: 8px;
+  padding: 2px 4px;
+  background: rgba(236, 72, 153, 0.1);
+  border-radius: 2px;
+  font-family: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  flex-shrink: 0;
+}
+
+/* Command Panel Bottom Scrollbar */
+.command-list-bottom::-webkit-scrollbar {
+  height: 6px;
+}
+
+.command-list-bottom::-webkit-scrollbar-track {
+  background: rgba(34, 211, 238, 0.1);
+  border-radius: 3px;
+}
+
+.command-list-bottom::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.5);
+  border-radius: 3px;
+}
+
+.command-list-bottom::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.7);
+}
+
+/* Command Panel Animation */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.command-panel-bottom {
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* Responsive adjustments for command panel */
+@media (max-width: 768px) {
+  .command-panel-bottom-header {
+    padding: 6px 12px;
+  }
+
+  .command-panel-bottom-title {
+    font-size: 9px;
+  }
+
+  .command-list-bottom {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .command-item {
+    padding: 6px 8px;
+    min-width: 100px;
+    max-width: 150px;
+  }
+
+  .command-item-name {
+    font-size: 9px;
+  }
+
+  .command-item-desc {
+    font-size: 8px;
+  }
+
+  .command-item-shortcut {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .command-panel-bottom-header {
+    padding: 4px 8px;
+  }
+
+  .command-panel-bottom-title {
+    font-size: 8px;
+  }
+
+  .command-list-bottom {
+    padding: 6px 8px;
+    gap: 4px;
+    max-height: 100px;
+  }
+
+  .command-item {
+    padding: 4px 6px;
+    min-width: 80px;
+    max-width: 120px;
+  }
+
+  .command-item-name {
+    font-size: 8px;
+  }
+
+  .command-item-desc {
+    font-size: 7px;
+  }
+
+  .command-item-shortcut {
+    font-size: 6px;
+  }
+}
+
+/* Material Icons */
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+/* Volume control icon styling */
+.volume-control .material-icons {
+  font-size: 18px;
+  color: #ff6b9d;
+  transition: color 0.3s ease;
+}
+
+.volume-control:hover .material-icons {
+  color: #67e8f9;
+}
+
+/* Contact section icon styling */
+.contact-content .material-icons {
+  font-size: 18px;
+  color: #ff6b9d;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Terminal output icon styling */
+.terminal-output .material-icons {
+  font-size: 16px;
+  color: #ff6b9d;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* Welcome section material icons */
+.welcome-display .material-icons {
+  font-size: 24px;
+  color: #ff6b9d;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+/* About section material icons */
+.about-content .material-icons {
+  font-size: 18px;
+  color: #ff6b9d;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Help section material icons */
+.help-content .material-icons {
+  font-size: 16px;
+  color: #67e8f9;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* Terminal line material icons */
+.terminal-line .material-icons {
+  font-size: 16px;
+  color: #ff6b9d;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.terminal-line.success .material-icons {
+  color: #4ecdc4;
+}
+
+.terminal-line.error .material-icons {
+  color: #ff6b6b;
+}
+
+/* Responsive adjustments for Material Icons */
+@media (max-width: 768px) {
+  .material-icons {
+    font-size: 16px;
+  }
+
+  .welcome-display .material-icons {
+    font-size: 20px;
+  }
+
+  .volume-control .material-icons {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .material-icons {
+    font-size: 14px;
+  }
+
+  .welcome-display .material-icons {
+    font-size: 18px;
+  }
+
+  .volume-control .material-icons {
+    font-size: 14px;
   }
 }

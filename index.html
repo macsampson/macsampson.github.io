@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>Mackenzie Sampson</title>
     <link
@@ -26,9 +26,35 @@
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      .resume-content ul {
+        list-style-type: disc;
+        padding-left: 2rem;
+      }
+      /* Force specific colors within resume content to override body styles */
+      .resume-content .text-pink-500 {
+        color: #ec4899 !important;
+      }
+      .resume-content .text-gray-100 {
+        color: #f3f4f6 !important;
+      }
+      .resume-content .text-cyan-400 {
+        color: #22d3ee !important;
+      }
+      .resume-content .text-cyan-300 {
+        color: #67e8f9 !important;
+      }
+      .resume-content .text-cyan-200 {
+        color: #a5f3fc !important;
+      }
+    </style>
   </head>
   <body class="bg-purple-900 text-cyan-300 font-display full-height">
     <div class="animated-bg"></div>
@@ -37,16 +63,44 @@
     <!-- Main container wrapper to limit width to 75% -->
     <div class="main-container full-height-flex">
       <header class="p-4 text-center header-section">
-        <img
-          src="/assets/images/profiles/pfp.jpg"
-          alt="Mackenzie Sampson"
-          class="rounded-full w-24 h-24 mx-auto mb-4 border-2 border-cyan-300"
-        />
-        <h1 class="text-3xl font-bold">Mackenzie Sampson</h1>
-        <p class="text-md max-w-2xl mx-auto">
-          Full-stack developer specializing in building modern, scalable web
-          applications with a focus on the MERN stack and Python. Proven ability
-          to deliver high-quality software solutions from concept to deployment.
+        <div
+          style="
+            position: relative;
+            width: 196px;
+            height: 196px;
+            margin: 0 auto 1rem auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #67e8f9;
+            background: #000;
+          "
+        >
+          <img
+            src="/assets/images/profiles/pfp.jpg"
+            alt="Mackenzie Sampson"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 20%;
+              width: 300%;
+              height: 300%;
+              object-fit: cover;
+              transform: translate(-20%, -20%);
+            "
+          />
+        </div>
+        <h1
+          class="text-3xl font-bold"
+          style="color: #f3f4f6"
+        >
+          Mackenzie Sampson
+        </h1>
+        <p
+          class="text-md max-w-2xl mx-auto"
+          style="color: #f3f4f6"
+        >
+          Full-Stack Product Engineer | Builds in AI Infra and Ecomm/DTC
+          Platforms
         </p>
       </header>
       <div class="flex flex-grow main-content">
@@ -77,6 +131,22 @@
             <!-- Content will be displayed here -->
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Command Panel - Bottom Static Bar -->
+    <div
+      id="commandPanel"
+      class="command-panel-bottom"
+    >
+      <div class="command-panel-bottom-header">
+        <h3 class="command-panel-bottom-title">AVAILABLE COMMANDS</h3>
+      </div>
+      <div
+        id="commandList"
+        class="command-list-bottom"
+      >
+        <!-- Commands will be populated by JavaScript -->
       </div>
     </div>
 
