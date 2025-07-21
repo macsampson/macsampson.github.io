@@ -12,6 +12,46 @@
   }
 }
 
+/* Mobile-specific improvements */
+@layer utilities {
+  /* Improve text readability on mobile */
+  @media (max-width: 640px) {
+    .text-gray-600,
+    .text-gray-700,
+    .text-gray-500,
+    .text-gray-900 {
+      color: #463a2e !important;
+    }
+    
+    /* Ensure links are touch-friendly */
+    a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 0;
+    }
+    
+    /* Better spacing for mobile */
+    .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+      margin-top: 1rem;
+    }
+    
+    /* Improved tech tags on mobile */
+    .flex-wrap .px-2 {
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+  }
+  
+  /* Better touch targets for tablets */
+  @media (max-width: 768px) {
+    .flex-wrap {
+      gap: 0.5rem;
+    }
+  }
+}
+
 .animated-bg {
   position: fixed;
   top: 0;
