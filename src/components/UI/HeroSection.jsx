@@ -47,9 +47,9 @@ const HeroSection = () => {
                 <div className="flex flex-wrap justify-center sm:justify-start gap-3 text-sm font-medium mb-8">
                     <SocialLink href="https://github.com/macsampson">GitHub</SocialLink>
                     <SocialLink href="https://macsampson.artstation.com/">ArtStation</SocialLink>
-                    <SocialLink href="https://x.com/macxsampson">X</SocialLink>
                     <SocialLink href="https://linkedin.com/in/macsampson">LinkedIn</SocialLink>
                     <SocialLink href="https://medium.com/@mackenzie.sampson">Medium</SocialLink>
+                    {/* <SocialLink href="https://x.com/macxsampson">X</SocialLink> */}
                 </div>
 
                 <motion.div
