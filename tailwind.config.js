@@ -7,11 +7,12 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#463a2e',
-                primaryHover: '#4d3219',
-                secondary: '#e2d9c9',
-                glass: 'rgba(255, 255, 255, 0.1)',
-                glassBorder: 'rgba(255, 255, 255, 0.2)',
+                primary: '#e2e8f0', // Slate 200 - Main text
+                primaryHover: '#f8fafc', // Slate 50 - Hover text
+                secondary: '#94a3b8', // Slate 400 - Muted accents
+                background: '#0f172a', // Slate 900 - Deep blue background
+                glass: 'rgba(30, 41, 59, 0.7)', // Slate 800 with opacity
+                glassBorder: 'rgba(255, 255, 255, 0.08)',
             },
             fontFamily: {
                 spectral: ['Spectral', 'serif'],
