@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ title, url, description, tags }) => (
+const ProjectCard = ({ title, url, description, tags, videoId, image }) => (
     <motion.div
         whileHover={{ scale: 1.02 }}
         className="glass-card p-6 rounded-xl flex flex-col h-full"
@@ -17,6 +17,24 @@ const ProjectCard = ({ title, url, description, tags }) => (
                 <h4 className="font-bold text-lg font-merriweather">{title}</h4>
             )}
         </div>
+
+        {image && (
+            <div className="mb-4 rounded-lg overflow-hidden">
+                <img src={image} alt={title} className="w-full max-h-72 object-cover" />
+            </div>
+        )}
+
+        {videoId && (
+            <div className="mb-4 aspect-video rounded-lg overflow-hidden">
+                <iframe
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                />
+            </div>
+        )}
 
         <ul className="text-sm leading-relaxed mb-4 opacity-80 flex-grow list-disc list-outside ml-4 space-y-1">
             {description.map((point, index) => (
@@ -38,6 +56,7 @@ const ProjectsSection = () => {
     const projects = [
         {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools",
+            image: "/assets/images/projects/mml2.png",
             description: [
                 "Developing modern asset extraction pipeline for Mega Man Legends by adapting reverse-engineering research.",
                 "Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview.",
@@ -49,6 +68,7 @@ const ProjectsSection = () => {
         {
             title: "Procedural House Generator (Houdini HDA)",
             url: "https://macsampson.artstation.com/projects/rl3BV5",
+            videoId: "m1UwbSoq5-0",
             description: [
                 "Built parametric architectural generator as Houdini Digital Asset with 30+ artist-facing controls for doors, windows, columns, stairs, and materials.",
                 "Implemented procedural geometry systems in VEX with attribute-driven snapping logic.",
@@ -59,6 +79,7 @@ const ProjectsSection = () => {
         {
             title: "Procedural Keycap Tool (Blender Add-on)",
             url: "https://github.com/macsampson/blender_keycap_generator",
+            image: "/assets/images/projects/keycap.gif",
             description: [
                 "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
                 "Implemented parametric controls for keycap profiles (Cherry, OEM, SA, DSA) using Python API and bmesh.",
@@ -69,6 +90,7 @@ const ProjectsSection = () => {
         {
             title: "Impossible Digimon Card",
             url: "https://r3f-card01.vercel.app/",
+            image: "/assets/images/projects/cherubimon.gif",
             description: [
                 "Interactive holographic trading card with custom GLSL shaders.",
                 "Features multi-layer parallax, stencil buffer masking, and view-dependent rendering.",
