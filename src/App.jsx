@@ -19,11 +19,11 @@ function App() {
         <ThreeBackground />
       </Suspense>
 
-      <main className="relative z-10 mx-auto px-4 sm:px-6 md:px-8 max-w-4xl pt-12 sm:pt-16 pb-12">
+      <main className="relative z-10 mx-auto px-4 sm:px-6 md:px-8 max-w-6xl pt-12 sm:pt-16 pb-12">
         <HeroSection />
         <SkillsSection />
-        <ExperienceSection />
         <ProjectsSection />
+        <ExperienceSection />
         {/* <Footer /> */}
       </main>
     </div>

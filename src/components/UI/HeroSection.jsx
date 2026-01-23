@@ -56,19 +56,16 @@ const HeroSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="glass-panel p-6 sm:p-8 rounded-2xl"
+                    className="glass-panel p-6 sm:p-8 rounded-2xl max-w-6xl"
                 >
                     <h2 className="font-bold text-xl sm:text-2xl mb-4 font-merriweather text-primary">
-                        Pipeline Tools, Procedural Systems & Real-Time Rendering
+                        About Me
                     </h2>
-                    <p className="text-lg leading-relaxed opacity-90">
-                        Technical Artist with professional AAA experience (FIFA 21, FIFA Online 4) specializing in pipeline
-                        automation,
-                        procedural asset generation, and shader development. I bridge the gap between art and engineering—building
-                        Python/C# tools
-                        for DCC applications, developing procedural workflows in Houdini and Blender, and writing real-time shaders
-                        (HLSL/GLSL).
-                        Strong CS foundation from UBC with expertise across the entire technical art pipeline.
+                    <p className="text-lg sm:text-xl leading-relaxed opacity-90">
+                        Technical Artist building procedural tools, shaders, and pipeline automation
+                        for games and film. <br /><br /> I build HDAs in Houdini, write shaders in HLSL/GLSL,
+                        and create automation tools in Python for Maya and Blender. Previously
+                        automated asset pipelines at EA for FIFA titles.
                     </p>
                 </motion.div>
             </header>

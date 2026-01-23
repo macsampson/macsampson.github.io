@@ -31,23 +31,23 @@ const SkillsSection = () => {
 
             <div className="glass-panel p-6 sm:p-8 rounded-2xl">
                 <SkillGroup
-                    title="Languages"
-                    skills="Python, C++, C#, VEX, HLSL/GLSL, MEL, SQL"
+                    title="Technical"
+                    skills="Houdini, Unreal Engine, Maya, Unity, Blender, Photoshop"
                 />
                 <div className="h-px bg-secondary/30 my-4" />
                 <SkillGroup
-                    title="DCC Tools"
-                    skills="Houdini, Unreal Engine (Materials/PCG/Blueprints), Maya, Blender, Photoshop"
+                    title="Scripting"
+                    skills="Python (PyMEL/Blender API), VEX, HLSL/GLSL, C#, MEL, C++"
                 />
                 <div className="h-px bg-secondary/30 my-4" />
                 <SkillGroup
-                    title="Graphics/Shaders"
-                    skills="Real-time shader development, PBR workflows, Rendering optimization, Lighting systems"
+                    title="Shaders & Rendering"
+                    skills="Custom shader development, PBR material authoring, Real-time rendering, Unreal Material Editor"
                 />
                 <div className="h-px bg-secondary/30 my-4" />
                 <SkillGroup
-                    title="Pipeline/DevOps"
-                    skills="Perforce, Git, Python APIs (Maya/Blender), Docker, Jenkins, AWS (EC2 + S3), GitHub Actions"
+                    title="Pipeline"
+                    skills="Git, Perforce, FBX workflows, Maya/Blender Python APIs, Batch automation"
                 />
             </div>
         </motion.section>

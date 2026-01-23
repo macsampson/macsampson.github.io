@@ -18,9 +18,11 @@ const ProjectCard = ({ title, url, description, tags }) => (
             )}
         </div>
 
-        <p className="text-sm leading-relaxed mb-4 opacity-80 flex-grow">
-            {description}
-        </p>
+        <ul className="text-sm leading-relaxed mb-4 opacity-80 flex-grow list-disc list-outside ml-4 space-y-1">
+            {description.map((point, index) => (
+                <li key={index}>{point}</li>
+            ))}
+        </ul>
 
         <div className="flex flex-wrap gap-2 mt-auto">
             {tags.map((tag, i) => (
@@ -35,26 +37,43 @@ const ProjectCard = ({ title, url, description, tags }) => (
 const ProjectsSection = () => {
     const projects = [
         {
-            title: "Mega Man Legends (PS1) Pipeline Tools",
-            description: "Developing modern asset extraction pipeline for Mega Man Legends by adapting reverse-engineering research. Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview. Re-implemented coordinate space transformations for PS1 hardware-specific vertex data. Automating skinning process while preserving original \"action figure\" deformation style for modern engines.",
-            tags: ["Python", "OpenMaya API", "Qt (PySide2)", "Maya"]
+            title: "Mega Man Legends (PS1) Maya Pipeline Tools",
+            description: [
+                "Developing modern asset extraction pipeline for Mega Man Legends by adapting reverse-engineering research.",
+                "Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview.",
+                "Re-implemented coordinate space transformations for PS1 hardware-specific vertex data.",
+                "Automating skinning process while preserving original \"action figure\" deformation style for modern engines."
+            ],
+            tags: ["Python", "OpenMaya API", "Qt (PyQt/PySide2)", "Maya"]
         },
         {
             title: "Procedural House Generator (Houdini HDA)",
             url: "https://macsampson.artstation.com/projects/rl3BV5",
-            description: "Built parametric architectural generator as Houdini Digital Asset with 30+ artist-facing controls for doors, windows, columns, stairs, and materials. Implemented procedural geometry systems in VEX with attribute-driven snapping logic. Developed smart constraint systems for staircases that auto-calculate rise/run ratios and maintain building code compliance.",
+            description: [
+                "Built parametric architectural generator as Houdini Digital Asset with 30+ artist-facing controls for doors, windows, columns, stairs, and materials.",
+                "Implemented procedural geometry systems in VEX with attribute-driven snapping logic.",
+                "Developed smart constraint systems for staircases that auto-calculate rise/run ratios and maintain building code compliance."
+            ],
             tags: ["Houdini", "VEX", "Procedural Generation"]
         },
         {
             title: "Procedural Keycap Tool (Blender Add-on)",
             url: "https://github.com/macsampson/blender_keycap_generator",
-            description: "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks. Implemented parametric controls for keycap profiles (Cherry, OEM, SA, DSA) using Python API and bmesh. Built automated export pipeline with one-click STL generation and Lychee Slicer integration for print optimization.",
+            description: [
+                "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
+                "Implemented parametric controls for keycap profiles (Cherry, OEM, SA, DSA) using Python API and bmesh.",
+                "Built automated export pipeline with one-click STL generation and Lychee Slicer integration for print optimization."
+            ],
             tags: ["Python", "Blender API", "bmesh", "Procedural Modeling"]
         },
         {
             title: "Impossible Digimon Card",
             url: "https://r3f-card01.vercel.app/",
-            description: "Interactive holographic trading card with custom GLSL shaders, multi-layer parallax, stencil buffer masking, and view-dependent rendering built in React Three Fiber and TypeScript.",
+            description: [
+                "Interactive holographic trading card with custom GLSL shaders.",
+                "Features multi-layer parallax, stencil buffer masking, and view-dependent rendering.",
+                "Built using React Three Fiber and TypeScript."
+            ],
             tags: ["GLSL", "React Three Fiber", "TypeScript", "Photoshop"]
         }
     ];
