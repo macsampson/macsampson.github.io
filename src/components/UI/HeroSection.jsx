@@ -12,6 +12,22 @@ const SocialLink = ({ href, children }) => (
     </a>
 );
 
+const SkillGroup = ({ title, skills }) => (
+    <div className="mb-4">
+        <strong className="block mb-2 font-merriweather text-primary">{title}</strong>
+        <div className="flex flex-wrap gap-2">
+            {skills.split(', ').map((skill, index) => (
+                <span
+                    key={index}
+                    className="px-3 py-1 bg-white/40 border border-secondary/50 rounded-md text-sm"
+                >
+                    {skill}
+                </span>
+            ))}
+        </div>
+    </div>
+);
+
 const HeroSection = () => {
     return (
         <motion.section
@@ -56,17 +72,44 @@ const HeroSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="glass-panel p-6 sm:p-8 rounded-2xl max-w-6xl"
+                    className="glass-panel p-6 sm:p-8 rounded-2xl max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8"
                 >
-                    <h2 className="font-bold text-xl sm:text-2xl mb-4 font-merriweather text-primary">
-                        About Me
-                    </h2>
-                    <p className="text-lg sm:text-xl leading-relaxed opacity-90">
-                        Technical Artist building procedural tools, shaders, and pipeline automation
-                        for games and film. <br /><br /> I build HDAs in Houdini, write shaders in HLSL/GLSL,
-                        and create automation tools in Python for Maya and Blender. Previously
-                        automated asset pipelines at EA for FIFA titles.
-                    </p>
+                    {/* About Me Column */}
+                    <div>
+                        <h2 className="font-bold text-xl sm:text-2xl mb-4 font-merriweather text-primary">
+                            About Me
+                        </h2>
+                        <p className="text-lg sm:text-l leading-relaxed opacity-90 mb-6">
+                            Technical Artist building procedural tools, shaders, and pipeline automation
+                            for games and film. <br /><br /> I build HDAs in Houdini, write shaders in HLSL/GLSL,
+                            and create automation tools in Python for Maya and Blender. Previously
+                            automated asset pipelines at EA for FIFA titles.
+                        </p>
+                    </div>
+
+                    {/* Divider (Hidden on mobile, block on desktop) */}
+                    <div className="hidden md:block w-px bg-secondary/30 absolute left-1/2 top-8 bottom-8"></div>
+
+                    {/* Mobile Divider (Block on mobile, hidden on desktop) */}
+                    <div className="block md:hidden h-px w-full bg-secondary/30 my-4"></div>
+
+                    {/* Skills Column */}
+                    <div>
+                        <SkillGroup
+                            title="Technical"
+                            skills="Houdini, Unreal Engine, Maya, Unity, Blender, Photoshop"
+                        />
+                        <div className="h-px bg-secondary/30 my-4" />
+                        <SkillGroup
+                            title="Scripting"
+                            skills="Python, VEX, HLSL/GLSL, C#, C++"
+                        />
+                        <div className="h-px bg-secondary/30 my-4" />
+                        <SkillGroup
+                            title="Shaders & Rendering"
+                            skills="Custom shader development, PBR material authoring, Real-time rendering, Unreal Material Editor"
+                        />
+                    </div>
                 </motion.div>
             </header>
         </motion.section>

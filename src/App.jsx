@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react'
 import ThreeBackground from './components/Three/ThreeBackground'
 import HeroSection from './components/UI/HeroSection'
-import SkillsSection from './components/UI/SkillsSection'
 import ExperienceSection from './components/UI/ExperienceSection'
 import ProjectsSection from './components/UI/ProjectsSection'
 import Footer from './components/UI/Footer'
@@ -21,7 +20,6 @@ function App() {
 
       <main className="relative z-10 mx-auto px-4 sm:px-6 md:px-8 max-w-6xl pt-12 sm:pt-16 pb-12">
         <HeroSection />
-        <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
         {/* <Footer /> */}

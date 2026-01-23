@@ -54,7 +54,7 @@ const ProjectsSection = () => {
                 "Implemented procedural geometry systems in VEX with attribute-driven snapping logic.",
                 "Developed smart constraint systems for staircases that auto-calculate rise/run ratios and maintain building code compliance."
             ],
-            tags: ["Houdini", "VEX", "Procedural Generation"]
+            tags: ["Houdini", "VEX", "Procedural Modeling"]
         },
         {
             title: "Procedural Keycap Tool (Blender Add-on)",

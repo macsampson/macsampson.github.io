@@ -50,7 +50,7 @@ const ExperienceSection = () => {
                 // "Automated modeling-to-manufacturing pipeline with STL export and Lychee Slicer integration, reducing manual prep time by ~80%.",
                 // "Served 1000+ customers while managing hard manufacturing constraints (±0.1mm tolerances, material shrinkage compensation)."
             ],
-            tags: ["Blender Python API", "Procedural Modeling", "Pipeline Automation", "TypeScript", "React"]
+            tags: ["Blender API", "Procedural Modeling", "Pipeline Automation", "TypeScript", "React"]
         },
         {
             role: "Technical Artist",
