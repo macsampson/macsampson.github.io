@@ -55,7 +55,7 @@ const ProjectCard = ({ title, url, description, tags, videoId, image }) => (
 const ProjectsSection = () => {
     const projects = [
         {
-            title: "Mega Man Legends (PS1) Maya Pipeline Tools",
+            title: "Mega Man Legends (PS1) Maya Pipeline Tools - WIP",
             image: "/assets/images/projects/mml2.png",
             description: [
                 "Developing modern asset extraction pipeline for Mega Man Legends by adapting reverse-engineering research.",
