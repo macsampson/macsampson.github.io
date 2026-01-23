@@ -1,23 +1,23 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["index.html"],
-  theme: {
-    extend: {
-      fontFamily: {
-        display: [
-          '"Fira Code"',
-          '"JetBrains Mono"',
-          "ui-monospace",
-          "SFMono-Regular",
-          "Menlo",
-          "Monaco",
-          "Consolas",
-          '"Liberation Mono"',
-          '"Courier New"',
-          "monospace",
-        ],
-      },
+export default {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                primary: '#463a2e',
+                primaryHover: '#4d3219',
+                secondary: '#e2d9c9',
+                glass: 'rgba(255, 255, 255, 0.1)',
+                glassBorder: 'rgba(255, 255, 255, 0.2)',
+            },
+            fontFamily: {
+                spectral: ['Spectral', 'serif'],
+                merriweather: ['Merriweather', 'serif'],
+            },
+        },
     },
-  },
-  plugins: [require("tailwindcss")],
+    plugins: [],
 }
