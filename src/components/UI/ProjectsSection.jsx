@@ -66,7 +66,7 @@ const ProjectsSection = () => {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools - WIP",
             image: "/assets/images/projects/mml2.png",
             description: [
-                "Developing modern asset extraction pipeline for Mega Man Legends by adapting reverse-engineering research.",
+                "Legacy systems research project developing a modern asset extraction pipeline by adapting previous reverse-engineering efforts.",
                 "Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview.",
                 "Re-implemented coordinate space transformations for PS1 hardware-specific vertex data.",
                 "Automating skinning process while preserving original \"action figure\" deformation style for modern engines."

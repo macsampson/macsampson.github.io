@@ -47,8 +47,8 @@ const ExperienceSection = () => {
             description: [
                 "Built procedural asset pipeline for parametric keycap modeling.",
                 "Developed Blender add-on with custom UI for real-time topology updates and automated STL export workflows.",
-                // "Automated modeling-to-manufacturing pipeline with STL export and Lychee Slicer integration, reducing manual prep time by ~80%.",
-                // "Served 1000+ customers while managing hard manufacturing constraints (±0.1mm tolerances, material shrinkage compensation)."
+                "Automated modeling-to-manufacturing pipeline with STL export and Lychee Slicer integration, reducing manual prep time by ~80%.",
+                "Served 1000+ customers while managing hard manufacturing constraints (±0.1mm tolerances, material shrinkage compensation)."
             ],
             tags: ["Blender API", "Procedural Modeling", "Pipeline Automation", "TypeScript", "React"]
         },
