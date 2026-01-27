@@ -80,9 +80,11 @@ const HeroSection = () => {
                             About Me
                         </h2>
                         <p className="text-lg sm:text-l leading-relaxed opacity-90 mb-6">
-                            I’m a Technical Artist focused on building procedural tools, shaders, and pipelines that scale in real production. With a Computer Science degree from UBC, as well as a Business degree, I view pipelines not just as code, but as the infrastructure for a scalable creative business. <br /><br /> I build Python tooling for Maya and Blender, write shaders in HLSL/GLSL, and create artist-facing digital assets in Houdini. Previously at EA, I helped automate asset pipelines for FIFA titles (FIFA 21 & FIFA Online 4) and supported artists across teams and platforms. That experience taught me that the best tools aren’t flashy, they’re reliable.
+                            I’m a Technical Artist focused on building procedural tools, shaders, and pipelines that scale in real production. With a Computer Science degree from UBC, and a background in business, I view pipelines not just as code, but as the infrastructure for a scalable creative business. <br /><br /> I build Python tooling for Maya and Blender, write shaders in HLSL/GLSL, and create artist-facing digital assets in Houdini. Previously at EA, I helped automate asset pipelines for FIFA titles (FIFA 21 & FIFA Online 4) and supported artists across teams and platforms. That experience taught me that the best tools aren’t flashy, they’re reliable.
                         </p>
                     </div>
+
+
 
                     {/* Divider (Hidden on mobile, block on desktop) */}
                     <div className="hidden md:block w-px bg-secondary/30 absolute left-1/2 top-8 bottom-8"></div>
@@ -90,7 +92,7 @@ const HeroSection = () => {
                     {/* Mobile Divider (Block on mobile, hidden on desktop) */}
                     <div className="block md:hidden h-px w-full bg-secondary/30 my-4"></div>
 
-                    {/* Skills Column */}
+                    {/* Skills & Education Column */}
                     <div>
                         <SkillGroup
                             title="Technical"
@@ -106,10 +108,24 @@ const HeroSection = () => {
                             title="Shaders & Rendering"
                             skills="Custom shader development, PBR material authoring, Real-time rendering, Unreal Material Editor"
                         />
+
+                        <div className="h-px bg-secondary/30 my-4" />
+
+                        <div className="mb-4">
+                            <strong className="block mb-2 font-merriweather text-primary">Education</strong>
+                            <div className="flex flex-row gap-11">
+                                <div>
+                                    <div className="text-sm font-bold opacity-90">University of British Columbia</div>
+                                    <div className="text-sm opacity-80">B.Sc. Computer Science</div>
+                                </div>
+
+
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </header>
-        </motion.section>
+        </motion.section >
     );
 };
 
