@@ -80,10 +80,7 @@ const HeroSection = () => {
                             About Me
                         </h2>
                         <p className="text-lg sm:text-l leading-relaxed opacity-90 mb-6">
-                            Technical Artist building procedural tools, shaders, and pipeline automation
-                            for games and film. <br /><br /> I build HDAs in Houdini, write shaders in HLSL/GLSL,
-                            and create automation tools in Python for Maya and Blender. Previously
-                            automated asset pipelines at EA for FIFA titles.
+                            I’m a Technical Artist focused on building procedural tools, shaders, and pipelines that scale in real production. I’m less interested in code for its own sake and more in designing systems that remove friction. <br /><br /> I build Python tooling for Maya and Blender, write shaders in HLSL/GLSL, and create artist-facing digital assets in Houdini. Previously at EA, I helped automate asset pipelines for FIFA titles (FIFA 21 & FIFA Online 4) and supported artists across teams and platforms. That experience taught me that the best tools aren’t flashy, they’re reliable.
                         </p>
                     </div>
 
