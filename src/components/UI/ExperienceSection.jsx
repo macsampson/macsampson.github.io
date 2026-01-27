@@ -58,11 +58,11 @@ const ExperienceSection = () => {
             period: "Sept 2019 – Nov 2020",
             description: [
                 "Owned Ignite pipeline for FIFA 21 (Switch) and supported FIFA Online 4.",
-                "Built Python tools (PyMEL) to automate vertex-weight reintegration for hair physics across 50+ character rigs, reducing artist overhead by ~60%.",
+                "Built Python tools to automate vertex-weight reintegration for hair physics across 50+ character rigs, reducing artist overhead by ~60%.",
                 "Developed C# CLI tools and Python scripts for metadata migration from Metador database.",
                 "Partnered with artists, producers, and QA to maintain reliable builds under tight sports game release cadence."
             ],
-            tags: ["Python/PyMEL", "C#", "Maya", "Perforce", "JIRA"]
+            tags: ["Python", "C#", "Maya", "Perforce", "JIRA"]
         },
         // {
         //     role: "Compliance Tools Intern",
