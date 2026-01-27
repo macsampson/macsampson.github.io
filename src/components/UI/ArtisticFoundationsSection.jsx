@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
-const ArtCard = ({ title, image, description, intention, onClick }) => (
+const ArtCard = ({ title, image, description, intention, tags, onClick }) => (
     <motion.div
         whileHover={{ scale: 1.02 }}
         className="glass-card p-6 rounded-xl flex flex-col h-full cursor-pointer group"
@@ -33,6 +33,16 @@ const ArtCard = ({ title, image, description, intention, onClick }) => (
                 <h5 className="text-xs uppercase tracking-wider text-secondary font-bold mb-1">Learning Intention</h5>
                 <p className="text-sm leading-relaxed opacity-80 italic">{intention}</p>
             </div> */}
+
+            {tags && (
+                <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-secondary/20">
+                    {tags.map((tag, i) => (
+                        <span key={i} className="px-2 py-1 bg-secondary/10 text-xs rounded text-primary/80 border border-secondary/20">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            )}
         </div>
     </motion.div>
 );
@@ -70,7 +80,16 @@ const ArtModal = ({ piece, onClose }) => {
 
                 <div className="bg-black/60 p-4 rounded-lg backdrop-blur-md text-center max-w-2xl">
                     <h3 className="text-xl font-merriweather text-white mb-2">{piece.title}</h3>
-                    <p className="text-white/80 text-sm">{piece.description}</p>
+                    <p className="text-white/80 text-sm mb-4">{piece.description}</p>
+                    {piece.tags && (
+                        <div className="flex flex-wrap gap-2 justify-center">
+                            {piece.tags.map((tag, i) => (
+                                <span key={i} className="px-2 py-1 bg-white/10 text-xs rounded text-white/90 border border-white/20">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </motion.div>
         </motion.div>
@@ -84,17 +103,20 @@ const ArtisticFoundationsSection = () => {
         {
             title: "Tracer Pose Study",
             image: "/assets/images/art/mac-sampson-tracer-posing-fixed22.jpg",
-            description: "Dynamic character posing study featuring Tracer from Overwatch. This work was mainly focused on recreating various surface types - matte leather jacket, high-gloss chrome bracers, and emissive glow of the chronal accelerator. Created using Photoshop."
+            description: "Dynamic character posing study featuring Tracer from Overwatch. This work was mainly focused on recreating various surface types - matte leather jacket, high-gloss chrome bracers, and emissive glow of the chronal accelerator. Created using Photoshop.",
+            tags: ["Photoshop"]
         },
         {
             title: "Black Panther Study",
             image: "/assets/images/art/mac-sampson-black-panther1.jpg",
-            description: "A digital painting focused on recreating one of the pieces from a favorite artist of mine. Created using Photoshop."
+            description: "A digital painting focused on recreating one of the pieces from a favorite artist of mine. Created using Photoshop.",
+            tags: ["Photoshop"]
         },
         {
             title: "Portrait Study",
             image: "/assets/images/art/mac-sampson-img-20160118-190026.jpg",
-            description: "A portrait study in facial proportions and anatomical landmarks. Created using charcoal pencils."
+            description: "A portrait study in facial proportions and anatomical landmarks. Created using charcoal pencils.",
+            tags: ["Charcoal", "Traditional"]
         },
     ];
 

@@ -1,31 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 
 const ProjectCard = ({ title, url, description, tags, videoId, image }) => (
     <motion.div
-        whileHover={{ scale: 1.02 }}
-        className="glass-card p-6 rounded-xl flex flex-col h-full"
+        // whileHover={{ scale: 1.02 }}
+        className="glass-card p-6 rounded-xl flex flex-col h-full group/card"
     >
         <div className="mb-3">
-            {url ? (
-                <a href={url} target="_blank" rel="noreferrer" className="group">
-                    <h4 className="font-bold text-lg font-merriweather group-hover:underline decoration-primary decoration-2 underline-offset-4">
-                        {title} ↗
-                    </h4>
-                </a>
-            ) : (
-                <h4 className="font-bold text-lg font-merriweather">{title}</h4>
-            )}
+            <h4 className="font-bold text-lg font-merriweather text-primary">{title}</h4>
         </div>
 
         {image && (
-            <div className="mb-4 rounded-lg overflow-hidden">
+            <div className="mb-4 rounded-lg overflow-hidden border border-secondary/20 relative">
+                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10" />
                 <img src={image} alt={title} className="w-full max-h-72 object-cover" />
             </div>
         )}
 
         {videoId && (
-            <div className="mb-4 aspect-video rounded-lg overflow-hidden">
+            <div className="mb-4 aspect-video rounded-lg overflow-hidden border border-secondary/20">
                 <iframe
                     src={`https://www.youtube.com/embed/${videoId}`}
                     title={title}
@@ -36,18 +30,32 @@ const ProjectCard = ({ title, url, description, tags, videoId, image }) => (
             </div>
         )}
 
-        <ul className="text-sm leading-relaxed mb-4 opacity-80 flex-grow list-disc list-outside ml-4 space-y-1">
+        <ul className="text-sm leading-relaxed mb-6 opacity-80 flex-grow list-disc list-outside ml-4 space-y-1">
             {description.map((point, index) => (
                 <li key={index}>{point}</li>
             ))}
         </ul>
 
-        <div className="flex flex-wrap gap-2 mt-auto">
-            {tags.map((tag, i) => (
-                <span key={i} className="px-2 py-1 bg-secondary/20 text-xs rounded text-primary border border-secondary/20">
-                    {tag}
-                </span>
-            ))}
+        <div className="mt-auto space-y-4 pt-4 border-t border-secondary/20">
+            <div className="flex flex-wrap gap-2">
+                {tags.map((tag, i) => (
+                    <span key={i} className="px-2 py-1 bg-secondary/10 text-xs rounded text-primary/80 border border-secondary/20">
+                        {tag}
+                    </span>
+                ))}
+            </div>
+
+            {url && (
+                <a
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-secondary/70 hover:bg-secondary/90 text-primary rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 group font-medium hover:scale-105"
+                >
+                    View Project
+                    <ExternalLink size={16} className="" />
+                </a>
+            )}
         </div>
     </motion.div>
 );
