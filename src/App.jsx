@@ -3,6 +3,7 @@ import ThreeBackground from './components/Three/ThreeBackground'
 import HeroSection from './components/UI/HeroSection'
 import ExperienceSection from './components/UI/ExperienceSection'
 import ProjectsSection from './components/UI/ProjectsSection'
+import ArtisticFoundationsSection from './components/UI/ArtisticFoundationsSection'
 import Footer from './components/UI/Footer'
 
 const LoadingScreen = () => (
@@ -22,6 +23,7 @@ function App() {
         <HeroSection />
         <ProjectsSection />
         <ExperienceSection />
+        <ArtisticFoundationsSection />
         {/* <Footer /> */}
       </main>
     </div>
