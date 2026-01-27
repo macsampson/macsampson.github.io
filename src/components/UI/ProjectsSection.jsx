@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
-const ProjectCard = ({ title, url, description, tags, videoId, image }) => (
+const ProjectCard = ({ title, githubUrl, demoUrl, description, tags, videoId, image }) => (
     <motion.div
         // whileHover={{ scale: 1.02 }}
         className="glass-card p-6 rounded-xl flex flex-col h-full group/card"
@@ -45,17 +45,30 @@ const ProjectCard = ({ title, url, description, tags, videoId, image }) => (
                 ))}
             </div>
 
-            {url && (
-                <a
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-secondary/70 hover:bg-secondary/90 text-primary rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 group font-medium hover:scale-105"
-                >
-                    View Project
-                    <ExternalLink size={16} className="" />
-                </a>
-            )}
+            <div className="flex gap-3">
+                {githubUrl && (
+                    <a
+                        href={githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary/70 hover:bg-primary/90 text-primary rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 group font-medium hover:scale-105 text-sm"
+                    >
+                        View on GitHub
+                        <ExternalLink size={14} />
+                    </a>
+                )}
+                {demoUrl && (
+                    <a
+                        href={demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-secondary/70 hover:bg-secondary/90 text-primary rounded-lg border border-primary/30 hover:border-primary/60 transition-all duration-300 group font-medium hover:scale-105 text-sm"
+                    >
+                        {demoUrl.includes("artstation") ? "View on ArtStation" : "View Demo"}
+                        <ExternalLink size={14} />
+                    </a>
+                )}
+            </div>
         </div>
     </motion.div>
 );
@@ -64,7 +77,7 @@ const ProjectsSection = () => {
     const projects = [
         {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools - WIP",
-            image: "/assets/images/projects/mml2.png",
+            image: "/assets/images/projects/megaman1.gif",
             description: [
                 "Legacy systems research project developing a modern asset extraction pipeline by adapting previous reverse-engineering efforts.",
                 "Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview.",
@@ -75,7 +88,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Procedural House Generator (Houdini HDA)",
-            url: "https://macsampson.artstation.com/projects/rl3BV5",
+            demoUrl: "https://macsampson.artstation.com/projects/rl3BV5",
             videoId: "m1UwbSoq5-0",
             description: [
                 "Built parametric architectural generator as Houdini Digital Asset with 30+ artist-facing controls for doors, windows, columns, stairs, and materials.",
@@ -86,7 +99,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Procedural Keycap Tool (Blender Add-on)",
-            url: "https://github.com/macsampson/blender_keycap_generator",
+            githubUrl: "https://github.com/macsampson/blender_keycap_generator",
             image: "/assets/images/projects/keycap.gif",
             description: [
                 "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
@@ -97,7 +110,8 @@ const ProjectsSection = () => {
         },
         {
             title: "Impossible Digimon Card",
-            url: "https://r3f-card01.vercel.app/",
+            demoUrl: "https://r3f-card01.vercel.app/",
+            githubUrl: "https://github.com/macsampson/r3f-card",
             image: "/assets/images/projects/cherubimon.gif",
             description: [
                 "Interactive holographic trading card with custom GLSL shaders.",
