@@ -93,13 +93,13 @@ const HeroSection = () => {
                     <div className="block md:hidden h-px w-full bg-secondary/30 my-4"></div>
 
                     {/* Skills & Education Column */}
-                    <div>
-                        <div className="mb-4">
+                    <div >
+                        <div className="px-3 py-2 bg-white/40 border border-secondary/50 rounded-md">
                             <strong className="block mb-2 font-merriweather text-primary">Education</strong>
                             <div className="flex flex-row gap-11">
                                 <div>
-                                    <div className="text-sm font-bold opacity-90">University of British Columbia</div>
-                                    <div className="text-sm opacity-80">B.Sc. Computer Science</div>
+                                    <div className="text-md font-bold opacity-90">University of British Columbia</div>
+                                    <div className="text-md opacity-80">B.Sc. Computer Science</div>
                                 </div>
 
 
