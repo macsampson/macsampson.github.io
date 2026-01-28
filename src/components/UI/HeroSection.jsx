@@ -99,7 +99,7 @@ const HeroSection = () => {
                             <div className="flex flex-row gap-11">
                                 <div>
                                     <div className="text-md font-bold opacity-90">University of British Columbia</div>
-                                    <div className="text-md opacity-80">B.Sc. Computer Science</div>
+                                    <div className="text-md opacity-80">Bachelor of Computer Science</div>
                                 </div>
 
 
