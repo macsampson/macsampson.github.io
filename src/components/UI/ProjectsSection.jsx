@@ -78,8 +78,9 @@ const ProjectsSection = () => {
         {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools - WIP",
             image: "/assets/images/projects/megaman1.gif",
+            githubUrl: "https://github.com/macsampson/mml-maya-tool",
             description: [
-                "Legacy systems research project developing a modern asset extraction pipeline by adapting previous reverse-engineering efforts.",
+                "Legacy systems research project developing a modern asset extraction pipeline by building on previous reverse-engineering efforts.",
                 "Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview.",
                 "Re-implemented coordinate space transformations for PS1 hardware-specific vertex data.",
                 "Automating skinning process while preserving original \"action figure\" deformation style for modern engines."
@@ -98,17 +99,6 @@ const ProjectsSection = () => {
             tags: ["Houdini", "VEX", "Procedural Modeling"]
         },
         {
-            title: "Procedural Keycap Tool (Blender Add-on)",
-            githubUrl: "https://github.com/macsampson/blender_keycap_generator",
-            image: "/assets/images/projects/keycap.gif",
-            description: [
-                "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
-                "Implemented parametric controls for keycap profiles (Cherry, OEM, SA, DSA) using Python API and bmesh.",
-                "Built automated export pipeline with one-click STL generation and Lychee Slicer integration for print optimization."
-            ],
-            tags: ["Python", "Blender API", "bmesh", "Procedural Modeling"]
-        },
-        {
             title: "Impossible Digimon Card",
             demoUrl: "https://r3f-card01.vercel.app/",
             githubUrl: "https://github.com/macsampson/r3f-card",
@@ -119,7 +109,18 @@ const ProjectsSection = () => {
                 "Built using React Three Fiber and TypeScript."
             ],
             tags: ["GLSL", "React Three Fiber", "TypeScript", "Photoshop"]
-        }
+        },
+        {
+            title: "Procedural Keycap Tool (Blender Add-on)",
+            githubUrl: "https://github.com/macsampson/blender_keycap_generator",
+            image: "/assets/images/projects/keycap.gif",
+            description: [
+                "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
+                "Implemented parametric controls for keycap profiles (Cherry, OEM, SA, DSA) using Python API and bmesh.",
+                "Built automated export pipeline with one-click STL generation and Lychee Slicer integration for print optimization."
+            ],
+            tags: ["Python", "Blender API", "bmesh", "Procedural Modeling"]
+        },
     ];
 
     return (

@@ -94,6 +94,18 @@ const HeroSection = () => {
 
                     {/* Skills & Education Column */}
                     <div>
+                        <div className="mb-4">
+                            <strong className="block mb-2 font-merriweather text-primary">Education</strong>
+                            <div className="flex flex-row gap-11">
+                                <div>
+                                    <div className="text-sm font-bold opacity-90">University of British Columbia</div>
+                                    <div className="text-sm opacity-80">B.Sc. Computer Science</div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div className="h-px bg-secondary/30 my-4" />
                         <SkillGroup
                             title="Technical"
                             skills="Houdini, Unreal Engine, Maya, Unity, Blender, Photoshop"
@@ -109,19 +121,7 @@ const HeroSection = () => {
                             skills="Custom shader development, PBR material authoring, Real-time rendering, Unreal Material Editor"
                         />
 
-                        <div className="h-px bg-secondary/30 my-4" />
 
-                        <div className="mb-4">
-                            <strong className="block mb-2 font-merriweather text-primary">Education</strong>
-                            <div className="flex flex-row gap-11">
-                                <div>
-                                    <div className="text-sm font-bold opacity-90">University of British Columbia</div>
-                                    <div className="text-sm opacity-80">B.Sc. Computer Science</div>
-                                </div>
-
-
-                            </div>
-                        </div>
                     </div>
                 </motion.div>
             </header>
