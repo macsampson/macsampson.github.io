@@ -6,7 +6,7 @@ const SocialLink = ({ href, children }) => (
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-4 py-2 bg-white/50 hover:bg-white/80 backdrop-blur-sm rounded-full transition-all border border-secondary hover:shadow-sm text-primary"
+        className="px-4 py-2 bg-secondary/10 hover:bg-secondary/20 backdrop-blur-sm rounded-full transition-all border border-secondary/20 hover:shadow-sm text-primary"
     >
         {children}
     </a>
@@ -19,7 +19,7 @@ const SkillGroup = ({ title, skills }) => (
             {skills.split(', ').map((skill, index) => (
                 <span
                     key={index}
-                    className="px-3 py-1 bg-white/40 border border-secondary/50 rounded-md text-sm"
+                    className="px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-md text-sm"
                 >
                     {skill}
                 </span>
@@ -94,7 +94,7 @@ const HeroSection = () => {
 
                     {/* Skills & Education Column */}
                     <div >
-                        <div className="px-3 py-2 bg-white/40 border border-secondary/50 rounded-md">
+                        <div className="px-3 py-2 bg-secondary/10 border border-secondary/20 rounded-md">
                             <strong className="block mb-2 font-merriweather text-primary">Education</strong>
                             <div className="flex flex-row gap-11">
                                 <div>
