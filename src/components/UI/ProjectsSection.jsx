@@ -182,8 +182,8 @@ const ProjectsSection = () => {
             image: "/assets/images/projects/gifs/robot_arm.gif",
             thumbnail: "/assets/images/projects/images/robot_arm_frame1.gif",
             description: [
-                "Implemented strict Channel Control and attribute locking to prevent mechanical breaks and speed up blocking.",
-                "Utilized Local Rotation Axis (LRA) alignment, mapping complex claw motions to a unified Z-axis for symmetrical control.",
+                "Implemented strict Channel Control and attribute locking to adhere to real world constraints.",
+                "Utilized Local Rotation Axis (LRA) alignment, mapping claw motions to a unified Z-axis for symmetrical control.",
                 "Ensured geometric accuracy using Projected Centering for pivots."
             ],
             tags: ["Maya", "Rigging", "Arnold", "Nuke"]
