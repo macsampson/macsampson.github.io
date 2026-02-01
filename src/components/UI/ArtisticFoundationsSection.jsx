@@ -101,19 +101,19 @@ const ArtisticFoundationsSection = () => {
 
     const artPieces = [
         {
-            title: "Tracer Pose Study",
+            title: "Tracer",
             image: "/assets/images/art/mac-sampson-tracer-posing-fixed22.jpg",
-            description: "Dynamic character posing study featuring Tracer from Overwatch. This work was mainly focused on recreating various surface types - matte leather jacket, high-gloss chrome bracers, and emissive glow of the chronal accelerator. Created using Photoshop.",
+            description: "Character/material study featuring Tracer from Overwatch. This work was mainly focused on recreating various surface types - matte leather jacket, high-gloss chrome bracers, and emissive glow of the chronal accelerator. Created using Photoshop + Wacom tablet.",
             tags: ["Photoshop"]
         },
         {
-            title: "Black Panther Study",
+            title: "Black Panther",
             image: "/assets/images/art/mac-sampson-black-panther1.jpg",
-            description: "A digital painting focused on recreating one of the pieces from a favorite artist of mine. Created using Photoshop.",
+            description: "A digital painting focused on recreating one of the pieces from a favorite artist of mine. Created using Photoshop + Wacom tablet.",
             tags: ["Photoshop"]
         },
         {
-            title: "Portrait Study",
+            title: "Portrait",
             image: "/assets/images/art/mac-sampson-img-20160118-190026.jpg",
             description: "A portrait study in facial proportions and anatomical landmarks. Created using charcoal pencils.",
             tags: ["Charcoal", "Traditional"]

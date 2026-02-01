@@ -181,6 +181,7 @@ const ProjectsSection = () => {
             title: "Industrial Robot Arm Rig - WIP",
             image: "/assets/images/projects/gifs/robot_arm.gif",
             thumbnail: "/assets/images/projects/images/robot_arm_frame1.gif",
+            demoUrl: "https://macsampson.artstation.com/projects/2BEdzB",
             description: [
                 "Implemented strict Channel Control and attribute locking to adhere to real world constraints.",
                 "Utilized Local Rotation Axis (LRA) alignment, mapping claw motions to a unified Z-axis for symmetrical control.",
