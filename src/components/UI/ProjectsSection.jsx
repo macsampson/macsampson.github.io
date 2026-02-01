@@ -166,7 +166,7 @@ const ProjectsSection = () => {
     const projects = [
         {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools - WIP",
-            image: "/assets/images/projects/megaman.gif",
+            image: "/assets/images/projects/gifs/megaman.gif",
             thumbnail: "/assets/images/projects/images/megaman_frame1.gif",
             githubUrl: "https://github.com/macsampson/mml-maya-tool",
             description: [
@@ -179,7 +179,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Industrial Robot Arm Rig - WIP",
-            image: "/assets/images/projects/robot_arm.gif",
+            image: "/assets/images/projects/gifs/robot_arm.gif",
             thumbnail: "/assets/images/projects/images/robot_arm_frame1.gif",
             description: [
                 "Implemented strict Channel Control and attribute locking to prevent mechanical breaks and speed up blocking.",
@@ -190,7 +190,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Procedural House Generator (Houdini HDA)",
-            image: "/assets/images/projects/house.gif",
+            image: "/assets/images/projects/gifs/house.gif",
             thumbnail: "/assets/images/projects/images/house_frame1.gif",
             demoUrl: "https://macsampson.artstation.com/projects/rl3BV5",
             videoId: "m1UwbSoq5-0",
@@ -205,7 +205,7 @@ const ProjectsSection = () => {
             title: "Impossible Digimon Card",
             demoUrl: "https://r3f-card01.vercel.app/",
             githubUrl: "https://github.com/macsampson/r3f-card",
-            image: "/assets/images/projects/cherubimon.gif",
+            image: "/assets/images/projects/gifs/cherubimon.gif",
             thumbnail: "/assets/images/projects/images/cherubimon_frame1.gif",
             description: [
                 "Interactive holographic trading card with custom GLSL shaders.",
@@ -217,7 +217,7 @@ const ProjectsSection = () => {
         {
             title: "Procedural Keycap Tool (Blender Add-on)",
             githubUrl: "https://github.com/macsampson/blender_keycap_generator",
-            image: "/assets/images/projects/keycap.gif",
+            image: "/assets/images/projects/gifs/keycap.gif",
             thumbnail: "/assets/images/projects/images/keycap_frame1.png",
             description: [
                 "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
