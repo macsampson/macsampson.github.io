@@ -178,7 +178,7 @@ const ProjectsSection = () => {
             tags: ["Python", "OpenMaya API", "Qt (PyQt/PySide2)", "Maya"]
         },
         {
-            title: "Industrial Robot Arm Rig - WIP",
+            title: "Industrial Robot Arm Rig",
             image: "/assets/images/projects/gifs/robot_arm.gif",
             thumbnail: "/assets/images/projects/images/robot_arm_frame1.gif",
             demoUrl: "https://macsampson.artstation.com/projects/2BEdzB",
