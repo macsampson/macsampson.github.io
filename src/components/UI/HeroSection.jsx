@@ -48,15 +48,10 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
           <p className="text-base leading-relaxed text-primary/85 mb-4">
-            I'm a Technical Artist and Software Engineer focused on graphics, pipelines, and
-            AI-driven tooling. I hold a Computer Science degree from UBC and have shipped
-            production pipelines at EA across FIFA titles on Nintendo Switch and Mobile Live
-            Services.
+            I'm Mackenzie, a technical artist and software engineer who generally exists at the seam between art tools and graphics programming. My first job out of school was at EA, building Python pipelines in Maya for FIFA and the Ignite engine. After that I spent a couple of years running a 3D-printed keycap business, which turned out to be mostly procedural Blender tooling and a lot of backend code. These days I split my time between artist-facing work like shaders, houdini, pipeline tools, and going deeper into the rendering stack with C++, path tracing, and Vulkan.
           </p>
           <p className="text-base leading-relaxed text-primary/85">
-            My current work sits at the intersection of rendering research and generative AI —
-            I'm actively studying ray tracing and built Apparition.io, an end-to-end AI
-            video generation pipeline using Stable Diffusion, LLaMA 3, Whisper, and FFmpeg.
+
           </p>
         </div>
 
