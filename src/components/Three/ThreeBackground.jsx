@@ -72,18 +72,7 @@ function FloatingGeometries() {
 export default function ThreeBackground() {
     return (
         <div className="fixed inset-0 z-0 bg-[#0f172a]">
-            <Canvas dpr={1}>
-                <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={50} />
-                <ambientLight intensity={0.2} />
-                <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} color="#38bdf8" />
-                <pointLight position={[-10, -10, -10]} intensity={1} color="#64748b" />
 
-                {/* <FloatingGeometries /> */}
-
-                <Stars radius={100} depth={100} count={1000} factor={7} saturation={0} fade speed={1} />
-
-                <fog attach="fog" args={['#0f172a', 10, 25]} />
-            </Canvas>
         </div>
     )
 }
