@@ -4,23 +4,19 @@
 
 @layer base {
   body {
-    @apply antialiased text-primary selection:bg-primary selection:text-white;
+    @apply antialiased text-primary bg-background;
   }
 }
 
-@layer utilities {
-  .glass-panel {
-    @apply bg-glass backdrop-blur-md border border-glassBorder shadow-lg;
-  }
-  
-  .glass-card {
-    @apply bg-glass backdrop-blur-sm border border-glassBorder shadow-sm transition-all duration-300 hover:shadow-md hover:bg-glass/80;
+@layer components {
+  .card {
+    @apply bg-white border border-secondary/20 rounded-lg;
   }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -28,10 +24,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d6cfc7;
+  background: #c8c0b8;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c0b8b0;
+  background: #a89e96;
 }

@@ -1,40 +1,36 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const ExperienceCard = ({ role, company, period, type, url, description, tags }) => (
-    <motion.div
-        whileHover={{ y: -5 }}
-        className="glass-card p-6 rounded-xl mb-6 last:mb-0"
-    >
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-            <h4 className="font-bold text-lg font-merriweather">{role}</h4>
-            <span className="text-sm opacity-70 bg-secondary/30 px-2 py-0.5 rounded">{period}</span>
+const ExperienceCard = ({ role, company, period, url, description, tags }) => (
+    <div className="pb-8 mb-8 border-b border-secondary/15 last:border-0 last:mb-0 last:pb-0">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1 gap-1">
+            <h4 className="font-semibold font-merriweather text-primary">{role}</h4>
+            <span className="text-xs text-secondary shrink-0">{period}</span>
         </div>
 
-        <div className="mb-3 flex items-center justify-between">
+        <div className="mb-3">
             {url ? (
-                <a href={url} target="_blank" rel="noreferrer" className="text-primary hover:text-primaryHover font-medium underline">
+                <a href={url} target="_blank" rel="noreferrer" className="text-sm text-secondary hover:text-primary underline underline-offset-2 transition-colors">
                     {company} ↗
                 </a>
             ) : (
-                <span className="text-primary font-medium">{company}</span>
+                <span className="text-sm text-secondary">{company}</span>
             )}
         </div>
 
-        <ul className="text-sm leading-relaxed mb-4 opacity-80 list-disc list-outside ml-4 space-y-1">
+        <ul className="text-sm leading-relaxed text-primary/75 space-y-1.5 mb-4 list-disc list-outside ml-4">
             {description.map((point, index) => (
                 <li key={index}>{point}</li>
             ))}
         </ul>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5">
             {tags.map((tag, i) => (
-                <span key={i} className="px-2 py-1 bg-secondary/20 text-xs rounded text-primary border border-secondary/20">
+                <span key={i} className="px-2 py-0.5 bg-secondary/10 text-xs rounded text-secondary border border-secondary/20">
                     {tag}
                 </span>
             ))}
         </div>
-    </motion.div>
+    </div>
 );
 
 const ExperienceSection = () => {
@@ -43,7 +39,7 @@ const ExperienceSection = () => {
             role: "Founder | Technical Pipeline & Tools Developer",
             company: "PocketCaps",
             url: "https://pocketcaps.com",
-            period: "March 2021 – Aug 2024",
+            period: "March 2021 – Aug 2023",
             description: [
                 "Built procedural asset pipeline for parametric keycap modeling.",
                 "Developed Blender add-on with custom UI for real-time topology updates and automated STL export workflows.",
@@ -64,32 +60,22 @@ const ExperienceSection = () => {
             ],
             tags: ["Python", "C#", "Maya", "Perforce", "JIRA"]
         },
-        // {
-        //     role: "Compliance Tools Intern",
-        //     company: "SAP",
-        //     period: "May – Dec 2017",
-        //     description: [
-        //         "Identified inefficiencies in manual compliance workflows and developed automated tool for FOSS library integration management.",
-        //         "Reduced data entry time by ~80% and errors by ~95% through web scraping and database integration.",
-        //         "Acted as liaison between legal and engineering teams for requirements gathering and tool iteration."
-        //     ],
-        //     tags: ["Python", "Selenium", "SQL"]
-        // }
     ];
 
     return (
         <motion.section
             id="work"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            transition={{ duration: 0.4 }}
+            className="mb-20"
         >
-            <h2 className="font-bold text-2xl sm:text-3xl mb-8 font-merriweather text-primary border-b border-secondary/30 pb-4 inline-block">
+            <h2 className="font-bold text-xl font-merriweather text-primary mb-8 pb-3 border-b border-secondary/20">
                 Experience
             </h2>
 
-            <div className="space-y-6 max-w-6xl">
+            <div>
                 {experiences.map((exp, index) => (
                     <ExperienceCard key={index} {...exp} />
                 ))}
