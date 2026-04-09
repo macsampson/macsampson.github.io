@@ -64,7 +64,7 @@ const HeroSection = () => {
           <SocialLink href="https://github.com/macsampson">GitHub</SocialLink>
           <SocialLink href="https://macsampson.artstation.com/">ArtStation</SocialLink>
           <SocialLink href="https://linkedin.com/in/macsampson">LinkedIn</SocialLink>
-          <SocialLink href="https://medium.com/@mackenzie.sampson">Medium</SocialLink>
+          {/* <SocialLink href="https://medium.com/@mackenzie.sampson">Medium</SocialLink> */}
           {/* <SocialLink href="https://x.com/macxsampson">X</SocialLink> */}
         </div>
 
