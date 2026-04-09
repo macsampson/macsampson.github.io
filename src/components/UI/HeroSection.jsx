@@ -28,7 +28,7 @@ const HeroSection = () => {
     >
       <div className="flex flex-col sm:flex-row items-start gap-8 mb-10">
         <img
-          src="/assets/images/profiles/pfp.jpg"
+          src="/assets/images/profiles/pfp.webp"
           alt="Mackenzie Sampson"
           className="w-24 h-24 rounded-full object-cover border border-secondary/20"
         />
