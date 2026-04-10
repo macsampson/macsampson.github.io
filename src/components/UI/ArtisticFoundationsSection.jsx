@@ -77,19 +77,19 @@ const ArtisticFoundationsSection = () => {
 
     const artPieces = [
         {
-            title: "Tracer",
+            title: "Recall",
             image: "/assets/images/art/mac-sampson-tracer-posing-fixed22.jpg",
             description: "Character/material study featuring Tracer from Overwatch. Focused on recreating various surface types — matte leather, high-gloss chrome, and emissive glow.",
             tags: ["Photoshop"]
         },
         {
-            title: "Black Panther",
+            title: "Warrior Queen",
             image: "/assets/images/art/mac-sampson-black-panther1.jpg",
             description: "A digital painting focused on recreating one of the pieces from a favorite artist of mine.",
             tags: ["Photoshop"]
         },
         {
-            title: "Portrait",
+            title: "Lumos",
             image: "/assets/images/art/mac-sampson-img-20160118-190026.jpg",
             description: "A portrait study in facial proportions and anatomical landmarks.",
             tags: ["Charcoal", "Traditional"]
