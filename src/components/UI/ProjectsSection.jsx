@@ -185,6 +185,20 @@ const ProjectsSection = () => {
             tags: ["Python", "OpenMaya API", "Qt (PySide2)", "Maya"]
         },
         {
+            title: "Impossible Digimon Card",
+            date: "2025",
+            demoUrl: "https://r3f-card01.vercel.app/",
+            githubUrl: "https://github.com/macsampson/r3f-card",
+            image: "/assets/images/projects/gifs/cherubimon.gif",
+            thumbnail: "/assets/images/projects/images/cherubimon_frame1.gif",
+            description: [
+                "Interactive holographic trading card with custom GLSL shaders.",
+                "Features multi-layer parallax, stencil buffer masking, and view-dependent rendering.",
+                "Built using React Three Fiber and TypeScript."
+            ],
+            tags: ["GLSL", "React Three Fiber", "TypeScript", "Photoshop"]
+        },
+        {
             title: "Industrial Robot Arm Rig",
             date: "2025",
             image: "/assets/images/projects/gifs/robot_arm.gif",
@@ -210,20 +224,6 @@ const ProjectsSection = () => {
                 "Developed smart constraint systems for staircases that auto-calculate rise/run ratios and maintain building code compliance."
             ],
             tags: ["Houdini", "VEX", "Procedural Modeling"]
-        },
-        {
-            title: "Impossible Digimon Card",
-            date: "2025",
-            demoUrl: "https://r3f-card01.vercel.app/",
-            githubUrl: "https://github.com/macsampson/r3f-card",
-            image: "/assets/images/projects/gifs/cherubimon.gif",
-            thumbnail: "/assets/images/projects/images/cherubimon_frame1.gif",
-            description: [
-                "Interactive holographic trading card with custom GLSL shaders.",
-                "Features multi-layer parallax, stencil buffer masking, and view-dependent rendering.",
-                "Built using React Three Fiber and TypeScript."
-            ],
-            tags: ["GLSL", "React Three Fiber", "TypeScript", "Photoshop"]
         },
         {
             title: "Procedural Keycap Tool (Blender Add-on)",
