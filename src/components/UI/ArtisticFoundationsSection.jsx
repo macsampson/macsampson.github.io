@@ -110,7 +110,7 @@ const ArtisticFoundationsSection = () => {
             className="mb-20"
         >
             <h2 className="font-bold text-xl font-merriweather text-primary mb-8 pb-3 border-b border-secondary/20">
-                Artistic Foundations
+                Art
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -10,7 +10,7 @@ function App() {
         <HeroSection />
         <ProjectsSection />
         <ExperienceSection />
-        <ArtisticFoundationsSection />
+        {/* <ArtisticFoundationsSection /> */}
       </main>
     </div>
   )
