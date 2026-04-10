@@ -65,7 +65,7 @@ const HeroSection = () => {
             I'm Mackenzie, a technical artist and software engineer who exists at the border between art tools and graphics programming.
           </p>
           <p className="text-base leading-relaxed text-primary/85 mb-4">
-            My first job out of school was at EA, building Python pipelines in Maya for FIFA and the Ignite engine. After that I spent a couple of years running a 3D-printed keycap business, which turned out to be mostly procedural Blender tooling and a lot of backend code.
+            My first job out of school was at EA, building Python pipelines in Maya for FIFA and the Ignite engine. After that I spent a couple of years building backend tooling for a small 3D-printed keycap business of my own.
           </p>
           <p className="text-base leading-relaxed text-primary/85">
             These days I split my time between artist-facing work like shaders, engine tools, and pipeline work, and going deeper into the rendering stack with C++, path tracing, and Vulkan.
