@@ -149,6 +149,19 @@ const ProjectsSection = () => {
 
     const projects = [
         {
+            title: "Monte Carlo Path Tracer",
+            image: "/assets/images/projects/images/pathtracer.png",
+            thumbnail: "/assets/images/projects/images/pathtracer.png",
+            githubUrl: "https://github.com/macsampson/pathtracer",
+            description: [
+                "Physically-based path tracer built from scratch in modern C++ following the Ray Tracing in One Weekend series, extended with production-oriented optimizations.",
+                "Implemented BVH acceleration with TBB-based parallelism, achieving ~27× speedup over the single-threaded baseline.",
+                "Added Next Event Estimation (NEE) for direct light sampling on both diffuse and volumetric surfaces, with importance sampling and firefly clamping for variance reduction.",
+                "Profiled and optimized hot paths using Callgrind and KCachegrind, fixing BVH integration bugs and degenerate AABB cases along the way."
+            ],
+            tags: ["C++", "Ray Tracing", "BVH", "TBB", "Monte Carlo"]
+        },
+        {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools - WIP",
             image: "/assets/images/projects/gifs/megaman.gif",
             thumbnail: "/assets/images/projects/images/megaman_frame1.gif",
@@ -211,18 +224,18 @@ const ProjectsSection = () => {
             ],
             tags: ["Python", "Blender API", "bmesh", "Procedural Modeling"]
         },
-        {
-            title: "Head Textures XL (Stable Diffusion LoRA)",
-            demoUrl: "https://civitai.com/models/122181/head-textures-xl",
-            image: "/assets/images/projects/images/head_textures_xl.png",
-            thumbnail: "/assets/images/projects/images/head_textures_xl.png",
-            description: [
-                "Fine-tuned Stable Diffusion XL LoRA for generating photorealistic face texture maps using Kohya_ss training pipeline.",
-                "Achieved 2,000+ downloads and 'Very Positive' rating (400+ reviews) on CivitAI.",
-                "Proof of concept for using AI to generate assets for 3D models."
-            ],
-            tags: ["Stable Diffusion XL", "LoRA", "Kohya_ss", "Texture Generation"]
-        }
+        // {
+        //     title: "Head Textures XL (Stable Diffusion LoRA)",
+        //     demoUrl: "https://civitai.com/models/122181/head-textures-xl",
+        //     image: "/assets/images/projects/images/head_textures_xl.png",
+        //     thumbnail: "/assets/images/projects/images/head_textures_xl.png",
+        //     description: [
+        //         "Fine-tuned Stable Diffusion XL LoRA for generating photorealistic face texture maps using Kohya_ss training pipeline.",
+        //         "Achieved 2,000+ downloads and 'Very Positive' rating (400+ reviews) on CivitAI.",
+        //         "Proof of concept for using AI to generate assets for 3D models."
+        //     ],
+        //     tags: ["Stable Diffusion XL", "LoRA", "Kohya_ss", "Texture Generation"]
+        // }
     ];
 
     return (
