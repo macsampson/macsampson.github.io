@@ -50,9 +50,11 @@ const HeroSection = () => {
           <p className="text-base leading-relaxed text-primary/85 mb-4">
             I'm Mackenzie, a technical artist and software engineer who exists at the border between art tools and graphics programming.
           </p>
-          <p className="text-base leading-relaxed text-primary/85">
-            My first job out of school was at EA, building Python pipelines in Maya for FIFA and the Ignite engine. After that I spent a couple of years running a 3D-printed keycap business, which turned out to be mostly procedural Blender tooling and a lot of backend code. These days I split my time between artist-facing work like shaders, engine tools, and pipeline work, and going deeper into the rendering stack with C++, path tracing, and Vulkan.
+          <p className="text-base leading-relaxed text-primary/85 mb-4">
+            My first job out of school was at EA, building Python pipelines in Maya for FIFA and the Ignite engine. After that I spent a couple of years running a 3D-printed keycap business, which turned out to be mostly procedural Blender tooling and a lot of backend code.
           </p>
+          <p className="text-base leading-relaxed text-primary/85">
+          </p>These days I split my time between artist-facing work like shaders, engine tools, and pipeline work, and going deeper into the rendering stack with C++, path tracing, and Vulkan.
         </div>
 
         <div className="border-l border-secondary/20 pl-8">
@@ -62,7 +64,7 @@ const HeroSection = () => {
             <p className="text-sm text-primary/70">Bachelor of Computer Science</p>
           </div>
           <div className="h-px bg-secondary/15 my-4" />
-          <SkillGroup title="Engines" skills="Unreal Engine, Unity" />
+          <SkillGroup title="Engines" skills="Unreal, Unity" />
           <SkillGroup title="DCC" skills="Maya, Blender, Houdini, Photoshop" />
           <SkillGroup title="Programming" skills="C++, C#, HLSL/GLSL, Python, JavaScript" />
           <SkillGroup title="Graphics" skills="PBR, path tracing, Vulkan" />

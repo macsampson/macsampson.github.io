@@ -36,7 +36,7 @@ const ExperienceCard = ({ role, company, period, url, description, tags }) => (
 const ExperienceSection = () => {
     const experiences = [
         {
-            role: "Founder | Technical Pipeline & Tools Developer",
+            role: "Technical Pipeline & Tools Developer",
             company: "PocketCaps",
             url: "https://pocketcaps.com",
             period: "March 2021 – Aug 2023",
@@ -46,7 +46,7 @@ const ExperienceSection = () => {
                 "Automated modeling-to-manufacturing pipeline with STL export and Lychee Slicer integration, reducing manual prep time by ~80%.",
                 "Served 1000+ customers while managing hard manufacturing constraints (±0.1mm tolerances, material shrinkage compensation)."
             ],
-            tags: ["Blender API", "Procedural Modeling", "Pipeline Automation"]
+            tags: ["Blender API", "Procedural Modeling", "Pipeline Automation", "Python"]
         },
         {
             role: "Technical Artist - Tools & Pipeline",
