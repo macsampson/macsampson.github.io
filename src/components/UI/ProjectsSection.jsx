@@ -32,7 +32,11 @@ const ProjectModal = ({ project, onClose }) => {
                 </button>
 
                 <div className="p-6 md:p-8">
-                    <h2 className="text-2xl font-bold font-merriweather text-primary mb-6">{project.title}</h2>
+                    <h2 className="text-2xl font-bold font-merriweather text-primary mb-1">{project.title}</h2>
+                    {project.date && (
+                        <p className="text-sm text-secondary mb-6">{project.date}</p>
+                    )}
+                    {!project.date && <div className="mb-6" />}
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
@@ -131,7 +135,11 @@ const ProjectCard = ({ project, onClick }) => {
             )}
 
             <div className="p-4">
-                <h4 className="font-semibold text-sm font-merriweather text-primary mb-2 line-clamp-2">{project.title}</h4>
+                <h4 className="font-semibold text-sm font-merriweather text-primary line-clamp-2">{project.title}</h4>
+                {project.date && (
+                    <p className="text-xs text-secondary mb-2">{project.date}</p>
+                )}
+                {!project.date && <div className="mb-2" />}
                 <div className="flex flex-wrap gap-1.5">
                     {project.tags.slice(0, 3).map((tag, i) => (
                         <span key={i} className="px-1.5 py-0.5 bg-secondary/10 text-xs rounded text-secondary">
@@ -150,6 +158,7 @@ const ProjectsSection = () => {
     const projects = [
         {
             title: "Monte Carlo Path Tracer",
+            date: "2026",
             image: "/assets/images/projects/images/pathtracer.png",
             thumbnail: "/assets/images/projects/images/pathtracer.png",
             githubUrl: "https://github.com/macsampson/pathtracer",
@@ -159,10 +168,11 @@ const ProjectsSection = () => {
                 "Added Next Event Estimation (NEE) for direct light sampling on both diffuse and volumetric surfaces, with importance sampling and firefly clamping for variance reduction.",
                 "Profiled and optimized hot paths using Callgrind and KCachegrind, fixing BVH integration bugs and degenerate AABB cases along the way."
             ],
-            tags: ["C++", "Ray Tracing", "BVH", "TBB", "Monte Carlo"]
+            tags: ["C++", "Ray Tracing", "BVH", "TBB", "Importance Sampling"]
         },
         {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools",
+            date: "2025",
             image: "/assets/images/projects/gifs/megaman.gif",
             thumbnail: "/assets/images/projects/images/megaman_frame1.gif",
             githubUrl: "https://github.com/macsampson/mml-maya-tool",
@@ -176,6 +186,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Industrial Robot Arm Rig",
+            date: "2025",
             image: "/assets/images/projects/gifs/robot_arm.gif",
             thumbnail: "/assets/images/projects/images/robot_arm_frame1.gif",
             demoUrl: "https://macsampson.artstation.com/projects/2BEdzB",
@@ -188,6 +199,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Procedural House Generator (Houdini HDA)",
+            date: "2025",
             image: "/assets/images/projects/gifs/house.gif",
             thumbnail: "/assets/images/projects/images/house_frame1.gif",
             demoUrl: "https://macsampson.artstation.com/projects/rl3BV5",
@@ -201,6 +213,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Impossible Digimon Card",
+            date: "2025",
             demoUrl: "https://r3f-card01.vercel.app/",
             githubUrl: "https://github.com/macsampson/r3f-card",
             image: "/assets/images/projects/gifs/cherubimon.gif",
@@ -214,6 +227,7 @@ const ProjectsSection = () => {
         },
         {
             title: "Procedural Keycap Tool (Blender Add-on)",
+            date: "2021",
             githubUrl: "https://github.com/macsampson/blender_keycap_generator",
             image: "/assets/images/projects/gifs/keycap.gif",
             thumbnail: "/assets/images/projects/images/keycap_frame1.png",

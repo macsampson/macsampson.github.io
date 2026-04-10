@@ -85,7 +85,12 @@ const ArtisticFoundationsSection = () => {
         {
             title: "Warrior Queen",
             image: "/assets/images/art/mac-sampson-black-panther1.jpg",
-            description: "A digital painting focused on recreating one of the pieces from a favorite artist of mine.",
+            description: (
+                <>
+                    A digital painting focused on pose and anatomical perspective, after a piece by{' '}
+                    <a href="https://www.instagram.com/marcusthevisual" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-primary transition-colors" onClick={(e) => e.stopPropagation()}>marcusthevisual</a>.
+                </>
+            ),
             tags: ["Photoshop"]
         },
         {
