@@ -162,17 +162,17 @@ const ProjectsSection = () => {
             tags: ["C++", "Ray Tracing", "BVH", "TBB", "Monte Carlo"]
         },
         {
-            title: "Mega Man Legends (PS1) Maya Pipeline Tools - WIP",
+            title: "Mega Man Legends (PS1) Maya Pipeline Tools",
             image: "/assets/images/projects/gifs/megaman.gif",
             thumbnail: "/assets/images/projects/images/megaman_frame1.gif",
             githubUrl: "https://github.com/macsampson/mml-maya-tool",
             description: [
-                "Legacy systems research project developing a modern asset extraction pipeline by building on previous reverse-engineering efforts.",
+                "Modern asset extraction pipeline for Mega Man Legends (PS1), built on community reverse-engineering work to bring legacy character data into Maya.",
                 "Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview.",
                 "Re-implemented coordinate space transformations for PS1 hardware-specific vertex data.",
-                "Automating skinning process while preserving original \"action figure\" deformation style for modern engines."
+                "Automated skinning process while preserving original \"action figure\" deformation style for modern engines."
             ],
-            tags: ["Python", "OpenMaya API", "Qt (PyQt/PySide2)", "Maya"]
+            tags: ["Python", "OpenMaya API", "Qt (PySide2)", "Maya"]
         },
         {
             title: "Industrial Robot Arm Rig",
