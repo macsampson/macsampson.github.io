@@ -9,7 +9,7 @@ const ExperienceCard = ({ role, company, period, url, description, tags }) => (
 
         <div className="mb-3">
             {url ? (
-                <a href={url} target="_blank" rel="noreferrer" className="text-sm text-secondary hover:text-primary underline underline-offset-2 transition-colors">
+                <a href={url} target="_blank" rel="noreferrer" className="text-sm text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors">
                     {company} ↗
                 </a>
             ) : (

@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="py-8 border-t border-secondary/30 mt-16 text-center">
             <div className="mb-4">
                 <a href="https://macsampson.artstation.com/albums/14768734" target="_blank" rel="noopener noreferrer"
-                    className="hover:opacity-70 transition-colors underline font-merriweather" style={{ color: '#463a2e' }}>
+                    className="text-blue-600 hover:text-blue-800 transition-colors underline font-merriweather">
                     Digital & Traditional Art Portfolio
                 </a>
             </div>

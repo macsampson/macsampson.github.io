@@ -72,20 +72,31 @@ const ProjectModal = ({ project, onClose }) => {
                                         href={project.githubUrl}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="flex-1 flex items-center justify-center gap-2 py-2 px-4 border border-secondary/30 hover:border-secondary/60 rounded-lg transition-colors text-sm font-medium"
+                                        className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-black text-white hover:bg-neutral-800 rounded-lg transition-colors text-sm font-medium"
                                     >
                                         GitHub <ExternalLink size={13} />
                                     </a>
                                 )}
                                 {project.demoUrl && (
-                                    <a
-                                        href={project.demoUrl}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-primary text-white hover:bg-primaryHover rounded-lg transition-colors text-sm font-medium"
-                                    >
-                                        {project.demoUrl.includes("artstation") ? "ArtStation" : "Demo"} <ExternalLink size={13} />
-                                    </a>
+                                    project.demoUrl.includes("artstation") ? (
+                                        <a
+                                            href={project.demoUrl}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-[#0f1923] text-[#13AFF0] hover:bg-[#1a2835] rounded-lg transition-colors text-sm font-medium"
+                                        >
+                                            ArtStation <ExternalLink size={13} />
+                                        </a>
+                                    ) : (
+                                        <a
+                                            href={project.demoUrl}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-green-700 text-green-50 hover:bg-green-800 rounded-lg transition-colors text-sm font-medium"
+                                        >
+                                            Demo <ExternalLink size={13} />
+                                        </a>
+                                    )
                                 )}
                             </div>
                         </div>

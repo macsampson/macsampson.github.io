@@ -18,7 +18,7 @@ const SocialLink = ({ href, icon: Icon, children }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-1.5 text-secondary hover:text-primary underline underline-offset-2 transition-colors text-sm"
+    className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors text-sm"
   >
     <Icon size={14} />
     {children}
