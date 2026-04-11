@@ -220,10 +220,10 @@ const ProjectsSection = () => {
             videoId: "m1UwbSoq5-0",
             description: [
                 "Built parametric architectural generator as Houdini Digital Asset with 30+ artist-facing controls for doors, windows, columns, stairs, and materials.",
-                "Implemented procedural geometry systems in VEX with attribute-driven snapping logic.",
+                "Implemented procedural geometry systems in VEX with attribute-driven snapping logic and group-based material/collision assignment for Unreal Engine integration.",
                 "Developed smart constraint systems for staircases that auto-calculate rise/run ratios and maintain building code compliance."
             ],
-            tags: ["Houdini", "VEX", "Procedural Modeling"]
+            tags: ["Houdini", "VEX", "Unreal"]
         },
         {
             title: "Procedural Keycap Tool (Blender Add-on)",
@@ -265,7 +265,7 @@ const ProjectsSection = () => {
                     Projects
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                     {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
