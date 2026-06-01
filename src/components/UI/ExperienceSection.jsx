@@ -39,7 +39,7 @@ const ExperienceSection = () => {
             role: "Technical Pipeline & Tools Developer",
             company: "PocketCaps",
             url: "https://pocketcaps.com",
-            period: "March 2021 – Aug 2023",
+            period: "March 2021 – Aug 2024",
             description: [
                 "Built procedural asset pipeline for parametric keycap modeling.",
                 "Developed Blender add-on with custom UI for real-time topology updates and automated STL export workflows.",

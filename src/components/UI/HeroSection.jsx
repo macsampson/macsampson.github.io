@@ -79,7 +79,7 @@ const HeroSection = () => {
             <p className="text-sm text-primary/70">Bachelor of Computer Science</p>
           </div>
           <div className="h-px bg-secondary/15 my-4" />
-          <SkillGroup title="Engines" skills="Unreal, Unity" />
+          <SkillGroup title="Engines" skills="Unreal, Unity, Godot" />
           <SkillGroup title="DCC" skills="Maya, Blender, Houdini, Photoshop" />
           <SkillGroup title="Programming" skills="C++, C#, HLSL/GLSL, Python, JavaScript" />
           <SkillGroup title="Graphics" skills="PBR, path tracing, Vulkan" />

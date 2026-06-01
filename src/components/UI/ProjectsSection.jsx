@@ -168,6 +168,19 @@ const ProjectsSection = () => {
 
     const projects = [
         {
+            title: "Software 3D Renderer",
+            date: "2026",
+            image: "/assets/images/projects/gifs/link.gif",
+            thumbnail: "/assets/images/projects/images/link_frame1.png",
+            githubUrl: "https://github.com/macsampson/3d-renderer",
+            description: [
+                "CPU-only software rasterizer in C — all vertex transformation, clipping, rasterization, and texturing run on the CPU with SDL2 used only for window management and pixel presentation.",
+                "Perspective-correct texture mapping, Sutherland-Hodgman view-frustum clipping, backface culling, and a 1/w z-buffer for correct occlusion on complex geometry.",
+                "Cubemap skybox, OBJ/MTL multi-material loading, FPS camera with mouse look, and a 6-mode render toggle (wireframe through textured)."
+            ],
+            tags: ["C", "SDL2", "Rasterization", "Linear Algebra", "3D Graphics"]
+        },
+        {
             title: "Monte Carlo Path Tracer",
             date: "2026",
             image: "/assets/images/projects/images/pathtracer.png",
