@@ -170,7 +170,7 @@ const ProjectsSection = () => {
         {
             title: "Software 3D Renderer",
             date: "2026",
-            image: "/assets/images/projects/gifs/link.gif",
+            image: "/assets/images/projects/gifs/link.webp",
             thumbnail: "/assets/images/projects/images/link_frame1.png",
             githubUrl: "https://github.com/macsampson/3d-renderer",
             description: [
@@ -197,8 +197,8 @@ const ProjectsSection = () => {
         {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools",
             date: "2025",
-            image: "/assets/images/projects/gifs/megaman.gif",
-            thumbnail: "/assets/images/projects/images/megaman_frame1.gif",
+            image: "/assets/images/projects/gifs/megaman.webp",
+            thumbnail: "/assets/images/projects/images/megaman_frame1.webp",
             githubUrl: "https://github.com/macsampson/mml-maya-tool",
             description: [
                 "Modern asset extraction pipeline for Mega Man Legends (PS1), built on community reverse-engineering work to bring legacy character data into Maya.",
@@ -213,8 +213,8 @@ const ProjectsSection = () => {
             date: "2025",
             demoUrl: "https://r3f-card01.vercel.app/",
             githubUrl: "https://github.com/macsampson/r3f-card",
-            image: "/assets/images/projects/gifs/cherubimon.gif",
-            thumbnail: "/assets/images/projects/images/cherubimon_frame1.gif",
+            image: "/assets/images/projects/gifs/cherubimon.webp",
+            thumbnail: "/assets/images/projects/images/cherubimon_frame1.webp",
             description: [
                 "Interactive holographic trading card with custom GLSL shaders.",
                 "Features multi-layer parallax, stencil buffer masking, and view-dependent rendering.",
@@ -225,8 +225,8 @@ const ProjectsSection = () => {
         {
             title: "Industrial Robot Arm Rig",
             date: "2025",
-            image: "/assets/images/projects/gifs/robot_arm.gif",
-            thumbnail: "/assets/images/projects/images/robot_arm_frame1.gif",
+            image: "/assets/images/projects/gifs/robot_arm.webp",
+            thumbnail: "/assets/images/projects/images/robot_arm_frame1.webp",
             demoUrl: "https://macsampson.artstation.com/projects/2BEdzB",
             description: [
                 "Implemented strict Channel Control and attribute locking to adhere to real world constraints.",
@@ -238,8 +238,8 @@ const ProjectsSection = () => {
         {
             title: "Procedural House Generator (Houdini HDA)",
             date: "2025",
-            image: "/assets/images/projects/gifs/house.gif",
-            thumbnail: "/assets/images/projects/images/house_frame1.gif",
+            image: "/assets/images/projects/gifs/house.webp",
+            thumbnail: "/assets/images/projects/images/house_frame1.webp",
             demoUrl: "https://macsampson.artstation.com/projects/rl3BV5",
             videoId: "m1UwbSoq5-0",
             description: [
@@ -253,7 +253,7 @@ const ProjectsSection = () => {
             title: "Procedural Keycap Tool (Blender Add-on)",
             date: "2021",
             githubUrl: "https://github.com/macsampson/blender_keycap_generator",
-            image: "/assets/images/projects/gifs/keycap.gif",
+            image: "/assets/images/projects/gifs/keycap.webp",
             thumbnail: "/assets/images/projects/images/keycap_frame1.png",
             description: [
                 "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
