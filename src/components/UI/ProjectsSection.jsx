@@ -46,18 +46,6 @@ const ProjectModal = ({ project, onClose }) => {
                                 </div>
                             )}
 
-                            {project.videoId && (
-                                <div className="aspect-video rounded-lg overflow-hidden border border-secondary/20 mb-6">
-                                    <iframe
-                                        src={`https://www.youtube.com/embed/${project.videoId}`}
-                                        title={project.title}
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        className="w-full h-full"
-                                    />
-                                </div>
-                            )}
-
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {project.tags.map((tag, i) => (
                                     <span key={i} className="px-2 py-1 bg-secondary/10 text-xs rounded text-primary/80 border border-secondary/20">
@@ -78,25 +66,14 @@ const ProjectModal = ({ project, onClose }) => {
                                     </a>
                                 )}
                                 {project.demoUrl && (
-                                    project.demoUrl.includes("artstation") ? (
-                                        <a
-                                            href={project.demoUrl}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-[#0f1923] text-[#13AFF0] hover:bg-[#1a2835] rounded-lg transition-colors text-sm font-medium"
-                                        >
-                                            ArtStation <ExternalLink size={13} />
-                                        </a>
-                                    ) : (
-                                        <a
-                                            href={project.demoUrl}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-green-700 text-green-50 hover:bg-green-800 rounded-lg transition-colors text-sm font-medium"
-                                        >
-                                            Demo <ExternalLink size={13} />
-                                        </a>
-                                    )
+                                    <a
+                                        href={project.demoUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-green-700 text-green-50 hover:bg-green-800 rounded-lg transition-colors text-sm font-medium"
+                                    >
+                                        Demo <ExternalLink size={13} />
+                                    </a>
                                 )}
                             </div>
                         </div>
@@ -168,19 +145,6 @@ const ProjectsSection = () => {
 
     const projects = [
         {
-            title: "Software 3D Renderer",
-            date: "2026",
-            image: "/assets/images/projects/gifs/link.webp",
-            thumbnail: "/assets/images/projects/images/link_frame1.png",
-            githubUrl: "https://github.com/macsampson/3d-renderer",
-            description: [
-                "CPU-only software rasterizer in C — all vertex transformation, clipping, rasterization, and texturing run on the CPU with SDL2 used only for window management and pixel presentation.",
-                "Perspective-correct texture mapping, Sutherland-Hodgman view-frustum clipping, backface culling, and a 1/w z-buffer for correct occlusion on complex geometry.",
-                "Cubemap skybox, OBJ/MTL multi-material loading, FPS camera with mouse look, and a 6-mode render toggle (wireframe through textured)."
-            ],
-            tags: ["C", "SDL2", "Rasterization", "Linear Algebra", "3D Graphics"]
-        },
-        {
             title: "Monte Carlo Path Tracer",
             date: "2026",
             image: "/assets/images/projects/images/pathtracer.png",
@@ -195,18 +159,31 @@ const ProjectsSection = () => {
             tags: ["C++", "Ray Tracing", "BVH", "TBB", "Importance Sampling"]
         },
         {
+            title: "Software 3D Renderer",
+            date: "2026",
+            image: "/assets/images/projects/gifs/link.webp",
+            thumbnail: "/assets/images/projects/images/link_frame1.png",
+            githubUrl: "https://github.com/macsampson/3d-renderer",
+            description: [
+                "CPU-only software rasterizer in C where all vertex transformation, clipping, rasterization, and texturing run on the CPU with SDL2 used only for window management and pixel presentation.",
+                "Perspective-correct texture mapping, Sutherland-Hodgman view-frustum clipping, backface culling, and a 1/w z-buffer for correct occlusion on complex geometry.",
+                "Cubemap skybox, OBJ/MTL multi-material loading, FPS camera with mouse look, and a 6-mode render toggle (wireframe through textured)."
+            ],
+            tags: ["C", "SDL2", "Rasterization", "Linear Algebra", "3D Graphics"]
+        },
+        {
             title: "Mega Man Legends (PS1) Maya Pipeline Tools",
             date: "2025",
             image: "/assets/images/projects/gifs/megaman.webp",
             thumbnail: "/assets/images/projects/images/megaman_frame1.webp",
             githubUrl: "https://github.com/macsampson/mml-maya-tool",
             description: [
-                "Modern asset extraction pipeline for Mega Man Legends (PS1), built on community reverse-engineering work to bring legacy character data into Maya.",
-                "Built native Maya importer using PySide2 and OpenMaya API with real-time 3D preview.",
-                "Re-implemented coordinate space transformations for PS1 hardware-specific vertex data.",
-                "Automated skinning process while preserving original \"action figure\" deformation style for modern engines."
+                "Reverse-engineered the PS1 asset format for Mega Man Legends to extract legacy character data, building on community decompilation work.",
+                "Built a native importer with a PySide2 Qt UI and real-time 3D preview on top of the OpenMaya API.",
+                "Re-implemented coordinate-space transformations to translate PS1 hardware-specific vertex data into modern engine space.",
+                "Automated the skinning process while preserving the original \"action figure\" deformation style."
             ],
-            tags: ["Python", "OpenMaya API", "Qt (PySide2)", "Maya"]
+            tags: ["Python", "Reverse Engineering", "Binary Parsing", "Qt (PySide2)", "OpenMaya API"]
         },
         {
             title: "Impossible Digimon Card",
@@ -220,60 +197,21 @@ const ProjectsSection = () => {
                 "Features multi-layer parallax, stencil buffer masking, and view-dependent rendering.",
                 "Built using React Three Fiber and TypeScript."
             ],
-            tags: ["GLSL", "React Three Fiber", "TypeScript", "Photoshop"]
+            tags: ["GLSL", "React Three Fiber", "TypeScript", "WebGL"]
         },
         {
-            title: "Industrial Robot Arm Rig",
-            date: "2025",
-            image: "/assets/images/projects/gifs/robot_arm.webp",
-            thumbnail: "/assets/images/projects/images/robot_arm_frame1.webp",
-            demoUrl: "https://macsampson.artstation.com/projects/2BEdzB",
-            description: [
-                "Implemented strict Channel Control and attribute locking to adhere to real world constraints.",
-                "Utilized Local Rotation Axis (LRA) alignment, mapping claw motions to a unified Z-axis for symmetrical control.",
-                "Ensured geometric accuracy using Projected Centering for pivots."
-            ],
-            tags: ["Maya", "Rigging", "Arnold", "Nuke"]
-        },
-        {
-            title: "Procedural House Generator (Houdini HDA)",
-            date: "2025",
-            image: "/assets/images/projects/gifs/house.webp",
-            thumbnail: "/assets/images/projects/images/house_frame1.webp",
-            demoUrl: "https://macsampson.artstation.com/projects/rl3BV5",
-            videoId: "m1UwbSoq5-0",
-            description: [
-                "Built parametric architectural generator as Houdini Digital Asset with 30+ artist-facing controls for doors, windows, columns, stairs, and materials.",
-                "Implemented procedural geometry systems in VEX with attribute-driven snapping logic and group-based material/collision assignment for Unreal Engine integration.",
-                "Developed smart constraint systems for staircases that auto-calculate rise/run ratios and maintain building code compliance."
-            ],
-            tags: ["Houdini", "VEX", "Unreal"]
-        },
-        {
-            title: "Procedural Keycap Tool (Blender Add-on)",
+            title: "Procedural Keycap Tool",
             date: "2021",
             githubUrl: "https://github.com/macsampson/blender_keycap_generator",
             image: "/assets/images/projects/gifs/keycap.webp",
             thumbnail: "/assets/images/projects/images/keycap_frame1.png",
             description: [
                 "Production-ready Blender add-on for procedural keycap generation with real-time topology updates via modifier stacks.",
-                "Implemented parametric controls for keycap profiles (Cherry, OEM, SA, DSA) using Python API and bmesh.",
-                "Built automated export pipeline with one-click STL generation and Lychee Slicer integration for print optimization."
+                "Implemented parametric controls for keycap profiles (Cherry, OEM, SA, DSA) using the Python API and bmesh.",
+                "Built an automated export pipeline with one-click STL generation and Lychee Slicer integration for print optimization."
             ],
-            tags: ["Python", "Blender API", "bmesh", "Procedural Modeling"]
+            tags: ["Python", "Blender API", "bmesh", "Automation"]
         },
-        // {
-        //     title: "Head Textures XL (Stable Diffusion LoRA)",
-        //     demoUrl: "https://civitai.com/models/122181/head-textures-xl",
-        //     image: "/assets/images/projects/images/head_textures_xl.png",
-        //     thumbnail: "/assets/images/projects/images/head_textures_xl.png",
-        //     description: [
-        //         "Fine-tuned Stable Diffusion XL LoRA for generating photorealistic face texture maps using Kohya_ss training pipeline.",
-        //         "Achieved 2,000+ downloads and 'Very Positive' rating (400+ reviews) on CivitAI.",
-        //         "Proof of concept for using AI to generate assets for 3D models."
-        //     ],
-        //     tags: ["Stable Diffusion XL", "LoRA", "Kohya_ss", "Texture Generation"]
-        // }
     ];
 
     return (

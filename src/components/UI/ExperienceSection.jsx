@@ -36,27 +36,25 @@ const ExperienceCard = ({ role, company, period, url, description, tags }) => (
 const ExperienceSection = () => {
     const experiences = [
         {
-            role: "Technical Pipeline & Tools Developer",
+            role: "Full-Stack Developer & Tooling",
             company: "PocketCaps",
             url: "https://pocketcaps.com",
             period: "March 2021 – Aug 2024",
             description: [
-                "Built procedural asset pipeline for parametric keycap modeling.",
-                "Developed Blender add-on with custom UI for real-time topology updates and automated STL export workflows.",
-                "Automated modeling-to-manufacturing pipeline with STL export and Lychee Slicer integration, reducing manual prep time by ~80%.",
+                "Built and shipped the entire stack solo: a customer-facing storefront and a separate admin app, both Next.js on Vercel, backed by a Supabase (Postgres) database.",
+                "Developed the admin app as a custom dashboard and CMS for managing products, inventory, and orders.",
+                // "Developed a procedural asset pipeline and a custom Blender add-on with real-time topology updates and automated STL export workflows.",
                 // "Served 1000+ customers while managing hard manufacturing constraints (±0.1mm tolerances, material shrinkage compensation)."
             ],
-            tags: ["Blender API", "Procedural Modeling", "Pipeline Automation", "Python"]
+            tags: ["Next.js", "Supabase", "Vercel", "Python", "Blender API"]
         },
         {
-            role: "Technical Artist - Tools & Pipeline",
+            role: "Pipeline Tools Engineer",
             company: "Electronic Arts",
             period: "Sept 2019 – Nov 2020",
             description: [
-                "Owned Ignite pipeline for FIFA 21 (Switch) and supported FIFA Online 4.",
-                "Built Python tools to automate vertex-weight reintegration for hair physics across 50+ character rigs, reducing artist overhead by ~60%.",
-                "Developed C# CLI tools and Python scripts for metadata migration from Metador database.",
-                "Partnered with artists, producers, and QA to maintain reliable builds under tight sports game release cadence."
+                "Owned the Ignite pipeline for FIFA 21 (Switch) and supported FIFA Online 4.",
+                "Built Python tools to automate vertex-weight reintegration for hair physics across 50+ character rigs, reducing artist overhead by ~60%."
             ],
             tags: ["Python", "C#", "Maya", "Perforce", "JIRA"]
         },

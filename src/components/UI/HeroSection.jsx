@@ -50,7 +50,7 @@ const HeroSection = () => {
           <h1 className="font-bold text-3xl sm:text-4xl font-merriweather mb-1 text-primary">
             mackenzie sampson
           </h1>
-          <p className="text-secondary italic mb-4">Technical Artist &amp; Software Engineer</p>
+          <p className="text-secondary italic mb-4">Software Engineer · Graphics &amp; Systems</p>
           <div className="flex flex-wrap gap-4">
             <SocialLink href="https://github.com/macsampson" icon={GithubIcon}>GitHub</SocialLink>
             <SocialLink href="https://macsampson.artstation.com/" icon={Palette}>ArtStation</SocialLink>
@@ -62,13 +62,13 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
           <p className="text-base leading-relaxed text-primary/85 mb-4">
-            I'm Mackenzie, a technical artist and software engineer who exists at the border between art tools and graphics programming.
+            I'm Mackenzie, a software engineer drawn to graphics and systems programming: the work that lives close to the metal, from software rasterizers and path tracers to the tooling that keeps creative pipelines running.
           </p>
           <p className="text-base leading-relaxed text-primary/85 mb-4">
-            My first job out of school was at EA, building Python pipelines in Maya for FIFA and the Ignite engine. After that I spent a couple of years building backend tooling for a small 3D-printed keycap business of my own.
+            I started out at EA writing Python and C# tooling for the FIFA pipeline, then spent a few years building the backend and automation for a 3D-printed keycap business of my own.
           </p>
           <p className="text-base leading-relaxed text-primary/85">
-            These days I split my time between artist-facing work like shaders, engine tools, and pipeline work, and going deeper into the rendering stack with C++, path tracing, and Vulkan.
+            These days I'm going deeper into the rendering stack, writing C and C++ renderers from scratch, BVH-accelerated path tracing, and exploring Vulkan.
           </p>
         </div>
 
@@ -79,10 +79,9 @@ const HeroSection = () => {
             <p className="text-sm text-primary/70">Bachelor of Computer Science</p>
           </div>
           <div className="h-px bg-secondary/15 my-4" />
-          <SkillGroup title="Engines" skills="Unreal, Unity, Godot" />
-          <SkillGroup title="DCC" skills="Maya, Blender, Houdini, Photoshop" />
-          <SkillGroup title="Programming" skills="C++, C#, HLSL/GLSL, Python, JavaScript" />
-          <SkillGroup title="Graphics" skills="PBR, path tracing, Vulkan" />
+          <SkillGroup title="Languages" skills="C++, C, C#, Python, JavaScript/TypeScript, GLSL/HLSL" />
+          <SkillGroup title="Graphics & Systems" skills="Rasterization, path tracing, BVH, multithreading, Vulkan, PBR" />
+          <SkillGroup title="Tools" skills="Git, Perforce, SDL2, Qt/PySide2, Callgrind" />
         </div>
       </div>
     </motion.section>

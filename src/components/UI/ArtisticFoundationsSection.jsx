@@ -79,7 +79,7 @@ const ArtisticFoundationsSection = () => {
         {
             title: "Recall",
             image: "/assets/images/art/mac-sampson-tracer-posing-fixed22.jpg",
-            description: "Character/material study featuring Tracer from Overwatch. Focused on recreating various surface types — matte leather, high-gloss chrome, and emissive glow.",
+            description: "Character/material study featuring Tracer from Overwatch. Focused on recreating various surface types: matte leather, high-gloss chrome, and emissive glow.",
             tags: ["Photoshop"]
         },
         {
