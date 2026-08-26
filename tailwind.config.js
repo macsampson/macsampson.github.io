@@ -7,16 +7,23 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#1a1a1a',       // Near-black text
-                primaryHover: '#000000',  // Black hover
-                secondary: '#7c736a',     // Warm muted gray
-                background: '#f8f6f3',    // Warm white
-                glass: 'rgba(255, 255, 255, 0.9)',
-                glassBorder: 'rgba(0, 0, 0, 0.08)',
+                background: '#fdfaf6',  // Cream
+                primary: '#1c1917',     // Near-black, headings and titles
+                body: '#585654',        // Softer neutral grey, body copy
+                secondary: '#605d59',   // Metadata
+                rule: '#e7e5e4',        // Hairline borders
             },
             fontFamily: {
-                spectral: ['Spectral', 'serif'],
-                merriweather: ['Merriweather', 'serif'],
+                sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+                display: ['Satoshi', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            },
+            fontSize: {
+                base: ['15px', '1.6'],
+                small: ['13.5px', '1.6'],
+                kicker: ['10px', '1.4'],
+            },
+            maxWidth: {
+                measure: '720px',
             },
         },
     },

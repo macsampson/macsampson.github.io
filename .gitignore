@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Pulled from the private resumes repo at build time
+public/assets/resume.pdf
+.resumes/

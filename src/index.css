@@ -3,18 +3,100 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply antialiased text-primary bg-background;
+    @apply antialiased font-sans text-base text-primary bg-background;
+  }
+
+  ::selection {
+    @apply bg-primary text-background;
   }
 }
 
 @layer components {
-  .card {
-    @apply bg-white border border-secondary/20 rounded-lg;
+  /* Section heading: 10px uppercase, no rule beneath it. */
+  .kicker {
+    @apply text-kicker uppercase tracking-[0.12em] text-secondary mb-[9px];
+  }
+
+  /* Links are underlined with a border, not text-decoration, so the line sits
+     lower and stays a consistent weight next to inline icons. */
+  .link {
+    @apply no-underline border-b border-primary/90 transition-opacity hover:opacity-[0.85];
+  }
+
+  /* Icon + label link with no underline (used for the socials list). */
+  .icon-link {
+    @apply inline-flex items-center gap-2.5 no-underline border-0
+           transition-opacity hover:opacity-70;
   }
 }
 
-/* Custom scrollbar */
+@layer components {
+  /* Tab navigation. The ::after clone reserves the bold width so switching
+     tabs never shifts the row. */
+  .nav-link {
+    @apply inline-flex flex-col items-center text-[0.88rem] text-secondary no-underline
+           border-b-[1.5px] border-transparent pb-[2px]
+           transition-colors hover:text-primary hover:border-primary;
+  }
+
+  .nav-link::after {
+    /* The `/ ""` alt-text form hides the clone from screen readers, but is not
+       universally supported, so the plain form stays as a fallback. */
+    content: attr(data-text);
+    content: attr(data-text) / "";
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    font-weight: 600;
+  }
+
+  .nav-link[aria-current="page"] {
+    @apply text-primary font-semibold border-primary;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.45s ease both;
+}
+
+/* Re-runs on every route change via a keyed remount. */
+.page-fade-in {
+  animation: fade-in 0.25s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -24,10 +106,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c8c0b8;
+  background: #ddd8d2;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a89e96;
+  background: #c3bcb4;
 }

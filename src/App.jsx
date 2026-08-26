@@ -1,18 +1,34 @@
-import HeroSection from './components/UI/HeroSection'
-import ExperienceSection from './components/UI/ExperienceSection'
+import { useTab } from './router'
+import Header from './components/UI/Header'
+import AboutSection from './components/UI/AboutSection'
 import ProjectsSection from './components/UI/ProjectsSection'
-import ArtisticFoundationsSection from './components/UI/ArtisticFoundationsSection'
+import ExperienceSection from './components/UI/ExperienceSection'
+import LinksSection from './components/UI/LinksSection'
+import Footer from './components/UI/Footer'
+
+const pages = {
+  '': (
+    <>
+      <AboutSection />
+      <LinksSection />
+    </>
+  ),
+  projects: <ProjectsSection />,
+  work: <ExperienceSection />,
+}
 
 function App() {
+  const tab = useTab()
+
   return (
-    <div className="min-h-screen bg-background font-spectral text-primary selection:bg-primary selection:text-white">
-      <main className="mx-auto px-4 sm:px-6 md:px-8 max-w-5xl pt-16 pb-20">
-        <HeroSection />
-        <ProjectsSection />
-        <ExperienceSection />
-        {/* <ArtisticFoundationsSection /> */}
-      </main>
-    </div>
+    <main className="relative mx-auto w-full max-w-measure px-6 py-6 sm:py-16">
+      <Header tab={tab} />
+      {/* Keyed so the fade replays on every tab change. */}
+      <div key={tab} className="page-fade-in">
+        {pages[tab]}
+      </div>
+      <Footer />
+    </main>
   )
 }
 

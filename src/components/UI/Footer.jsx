@@ -1,19 +1,16 @@
-import React from 'react';
+import { profile } from "../../content";
+import { MailIcon } from "./Icons";
 
-const Footer = () => {
-    return (
-        <footer className="py-8 border-t border-secondary/30 mt-16 text-center">
-            <div className="mb-4">
-                <a href="https://macsampson.artstation.com/albums/14768734" target="_blank" rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 transition-colors underline font-merriweather">
-                    Digital & Traditional Art Portfolio
-                </a>
-            </div>
-            <p className="text-sm opacity-60">
-                &copy; {new Date().getFullYear()} Mackenzie Sampson.
-            </p>
-        </footer>
-    );
-};
+const Footer = () => (
+    <footer className="mt-[30px] pt-6 border-t border-rule flex flex-wrap items-center justify-between gap-3">
+        <p className="text-small text-secondary">
+            &copy; {new Date().getFullYear()} {profile.name}
+        </p>
+        <a className="icon-link text-small text-secondary" href={`mailto:${profile.email}`}>
+            <MailIcon width="14" height="14" />
+            {profile.email}
+        </a>
+    </footer>
+);
 
 export default Footer;

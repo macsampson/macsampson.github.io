@@ -5,9 +5,16 @@ on:
     branches:
       - main
       - master
+  # Lets a résumé update in the private repo reach the site without a push here.
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  RESUME_SOURCE: swe/pdf/mackenzie_sampson_resume.pdf
 
 jobs:
   build-and-deploy:
@@ -15,6 +22,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # The résumé lives in a private repo, so it is pulled here with a scoped
+      # secret rather than at runtime. Never expose a token to the client.
+      - name: Fetch résumé
+        id: fetch-resume
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: macsampson/resumes
+          token: ${{ secrets.RESUME_REPO_TOKEN }}
+          path: .resumes
+          sparse-checkout: ${{ env.RESUME_SOURCE }}
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Stage résumé
+        run: |
+          if [ -f ".resumes/$RESUME_SOURCE" ]; then
+            mkdir -p public/assets
+            cp ".resumes/$RESUME_SOURCE" public/assets/resume.pdf
+            echo "Staged $RESUME_SOURCE"
+          else
+            echo "::warning::Résumé not fetched; /assets/resume.pdf will 404. Check the RESUME_REPO_TOKEN secret."
+          fi
 
       - name: Install and Build
         run: |
