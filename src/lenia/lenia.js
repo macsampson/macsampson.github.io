@@ -66,7 +66,7 @@ export class Lenia {
         this.options = {
             grid: null, // auto
             stepsPerSecond: 30,
-            intensity: null, // randomised per load
+            intensity: 0.11, // randomised per load
             decay: 0.965,
             // 'auto' uses each preset's published kn/gn for an exact
             // reproduction; the named forms override every species.
@@ -308,12 +308,12 @@ export class Lenia {
 
         // Skip ahead a random distance so you don't always arrive at frame zero
         // with everything still sitting in neat little blobs.
-        this.renderStatic(Math.round(between(0, 260)));
+        // this.renderStatic(Math.round(between(0, 260))); 
 
         if (this.options.debug) {
             console.info(
                 `[lenia] ${this.preset.name} x${count} · ${this.palette.name} · ` +
-                    `R=${this.preset.R} mu=${this.mu.toFixed(4)} sigma=${this.sigma.toFixed(4)}`,
+                `R=${this.preset.R} mu=${this.mu.toFixed(4)} sigma=${this.sigma.toFixed(4)}`,
             );
         }
     }
@@ -505,7 +505,7 @@ export class Lenia {
                     if (this.options.debug) {
                         console.warn(
                             `[lenia] ${this.gpuMs.toFixed(0)}ms/frame, ` +
-                                `now ${this.options.stepsPerSecond} steps/s`,
+                            `now ${this.options.stepsPerSecond} steps/s`,
                         );
                     }
                 }
@@ -515,7 +515,7 @@ export class Lenia {
         if (this.options.debug && this.frame % 120 === 0) {
             console.info(
                 `[lenia] ${this.gridW}x${this.gridH} R=${this.preset.R} ` +
-                    `${this.gpuMs.toFixed(2)}ms per step+draw`,
+                `${this.gpuMs.toFixed(2)}ms per step+draw`,
             );
         }
     }
