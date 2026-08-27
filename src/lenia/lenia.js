@@ -66,7 +66,7 @@ export class Lenia {
         this.options = {
             grid: null, // auto
             stepsPerSecond: 30,
-            intensity: 0.11, // randomised per load
+            intensity: 0.21, // randomised per load
             decay: 0.965,
             // 'auto' uses each preset's published kn/gn for an exact
             // reproduction; the named forms override every species.
