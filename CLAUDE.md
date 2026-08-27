@@ -91,7 +91,19 @@ The visual style deliberately follows wcagas.com. Keep these rules when adding a
 - Every link carries an icon: a brand mark for socials, `ArrowIcon` for other external links.
 - Avatar is a 104px squircle (`rounded-[22px]`), above the name, not a circle.
 - `.nav-link` reserves its bold width with an `::after` clone so switching tabs never shifts
-  the nav row. Keep both `content` declarations.
+  the nav row. Keep both `content` declarations. Its `::before` is the tap area, kept separate
+  so the active underline stays tight against the label.
+- `.page-shell` owns the column's padding. Its generous vertical padding is gated on
+  `min-height: 600px` as well as `sm`, so a landscape phone is wide enough for `sm` but does
+  not get 64px of dead space above the fold.
+- **Title/metadata rows stay side by side on mobile only while the metadata is short** (a year,
+  a date range). Education stacks below `sm` because the degree is long enough to squeeze the
+  school name onto three lines at 320px.
+- Every link must have at least a 24px tap area. Text links that are shorter than that get
+  `.tap-target` (standalone rows: the links list, the footer) or `.tap-target-sm` (a title link
+  sitting directly above its own detail lines, where a taller overlay would steal taps from that
+  text). Both grow the hit box with an absolutely positioned `::before`, so neither moves layout
+  or shifts an underline.
 
 ## Lenia background
 
@@ -117,8 +129,7 @@ behind the content, updated entirely in a WGSL compute shader.
   7x under the site's Gaussian default), which is what `options.core/growth = "auto"` is for.
 - Seeding never uses random noise (it dies or turns to mush). It spawns several copies of one
   preset creature at random positions and axis-aligned rotations.
-- Each load randomises preset, palette (`PALETTES`), colour intensity, creature count, and a
-  warm-up of up to 260 steps so you never arrive at frame zero.
+- Each load randomises preset, palette (`PALETTES`), colour intensity, and creature count.
 - **mu/sigma jitter has per-preset ceilings in `JITTER_LIMIT`, established by CPU runs.** The
   Orbiums and Gyrorbium tolerate +/-5% and break at +/-8%; Hydrogeminium explodes to 7x mass at
   +/-3% and is capped at 1%. Re-validate before widening any of them: an unstable preset either
@@ -147,7 +158,11 @@ behind the content, updated entirely in a WGSL compute shader.
 - Palette: cream `background` `#fdfaf6`, near-black `primary` `#1c1917` for headings, softer
   `body` `#585654` for prose, `secondary` `#605d59` for metadata, `rule` `#e7e5e4` hairlines.
 - Fonts: Inter (`font-sans`) for everything, Satoshi (`font-display`) for the name only.
-- Sizes: `text-base` is 15px/1.6, `text-small` is 13.5px, `text-kicker` is 10px.
+- Sizes come from custom properties defined on `:root` in `index.css`, so the whole scale steps
+  up as one below 640px: `text-base` 15 -> 16px, `text-meta` 0.9 -> 0.95rem, `text-small`
+  13.5 -> 14.5px, `text-kicker` 10 -> 11px. **Add new sizes to that scale rather than hard-coding
+  a `text-[0.9rem]`**, or they will stay desktop-sized on a phone.
+- `body` sets `overflow-wrap: break-word` so no long identifier can widen the page at 320px.
 - Avoid em-dashes in user-facing copy (use colons/commas instead).
 
 ## Content Updates

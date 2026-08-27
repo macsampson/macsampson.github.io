@@ -6,7 +6,10 @@ const Footer = () => (
         <p className="text-small text-secondary">
             &copy; {new Date().getFullYear()} {profile.name}
         </p>
-        <a className="icon-link text-small text-secondary" href={`mailto:${profile.email}`}>
+        <a
+            className="icon-link tap-target text-small text-secondary"
+            href={`mailto:${profile.email}`}
+        >
             <MailIcon width="14" height="14" />
             {profile.email}
         </a>

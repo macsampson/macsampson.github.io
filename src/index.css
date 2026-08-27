@@ -3,6 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  /* The whole type scale lives here so it can step up as one on small screens.
+     Below 640px every size gains ~1px: 13.5px metadata and a 10px kicker read
+     fine at arm's length on a desktop monitor and not at all on a phone. */
+  :root {
+    --fs-base: 15px;
+    --fs-meta: 0.9rem;
+    --fs-small: 13.5px;
+    --fs-kicker: 10px;
+  }
+
+  @media (max-width: 639px) {
+    :root {
+      --fs-base: 16px;
+      --fs-meta: 0.95rem;
+      --fs-small: 14.5px;
+      --fs-kicker: 11px;
+    }
+  }
+
   html {
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
@@ -11,6 +30,8 @@
 
   body {
     @apply antialiased font-sans text-base text-primary bg-background;
+    /* A long URL or identifier must never widen the page on a 320px screen. */
+    overflow-wrap: break-word;
   }
 
   ::selection {
@@ -19,6 +40,19 @@
 }
 
 @layer components {
+  /* The single column. Generous vertical padding is gated on viewport height
+     as well as width, so a landscape phone (wide enough for `sm`, only ~375px
+     tall) does not spend a sixth of the screen on empty space. */
+  .page-shell {
+    @apply relative z-10 mx-auto w-full max-w-measure px-5 sm:px-6 py-8;
+  }
+
+  @media (min-width: 640px) and (min-height: 600px) {
+    .page-shell {
+      @apply py-16;
+    }
+  }
+
   /* Section heading: 10px uppercase, no rule beneath it. */
   .kicker {
     @apply text-kicker uppercase tracking-[0.12em] text-secondary mb-[9px];
@@ -35,15 +69,46 @@
     @apply inline-flex items-center gap-2.5 no-underline border-0
            transition-opacity hover:opacity-70;
   }
+
+  /* Grows a link's hit area without touching its layout or its underline, so
+     the small text targets stay thumb-sized on a phone. */
+  .tap-target {
+    position: relative;
+  }
+
+  .tap-target::before {
+    content: "";
+    position: absolute;
+    inset: -10px -8px;
+  }
+
+  /* For a title link sitting directly above its own detail lines: the overhang
+     stays inside the leading below, so it never steals a tap from that text. */
+  .tap-target-sm {
+    position: relative;
+  }
+
+  .tap-target-sm::before {
+    content: "";
+    position: absolute;
+    inset: -6px -6px;
+  }
 }
 
 @layer components {
   /* Tab navigation. The ::after clone reserves the bold width so switching
      tabs never shifts the row. */
   .nav-link {
-    @apply inline-flex flex-col items-center text-[0.88rem] text-secondary no-underline
+    @apply relative inline-flex flex-col items-center text-meta text-secondary no-underline
            border-b-[1.5px] border-transparent pb-[2px]
            transition-colors hover:text-primary hover:border-primary;
+  }
+
+  /* Tap area only: the underline stays tight against the label. */
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    inset: -11px -8px;
   }
 
   .nav-link::after {

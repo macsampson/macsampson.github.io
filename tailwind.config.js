@@ -17,10 +17,14 @@ export default {
                 sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
                 display: ['Satoshi', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             },
+            // Sizes come from custom properties so the whole scale can step up
+            // on small screens in one place (see index.css). Desktop values are
+            // 15 / 14.4 / 13.5 / 10px.
             fontSize: {
-                base: ['15px', '1.6'],
-                small: ['13.5px', '1.6'],
-                kicker: ['10px', '1.4'],
+                base: ['var(--fs-base)', '1.6'],
+                meta: ['var(--fs-meta)', '1.6'],
+                small: ['var(--fs-small)', '1.6'],
+                kicker: ['var(--fs-kicker)', '1.4'],
             },
             maxWidth: {
                 measure: '720px',

@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <LeniaBackground />
-      <main className="relative z-10 mx-auto w-full max-w-measure px-6 py-6 sm:py-16">
+      <main className="page-shell">
         <Header tab={tab} />
         {/* Keyed so the fade replays on every tab change. */}
         <div key={tab} className="page-fade-in">

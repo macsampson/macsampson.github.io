@@ -10,7 +10,7 @@ const ExperienceSection = () => (
                     <div className="flex items-baseline justify-between gap-3">
                         <h3 className="text-base font-semibold tracking-[0.01em]">
                             {url ? (
-                                <a className="link" href={url} target="_blank" rel="noreferrer">
+                                <a className="link tap-target-sm" href={url} target="_blank" rel="noreferrer">
                                     {company}
                                     <ArrowIcon className="inline-block ml-[0.2rem] align-[-0.08em]" />
                                 </a>

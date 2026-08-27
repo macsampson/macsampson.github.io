@@ -6,7 +6,7 @@ const ProjectItem = ({ title, year, summary, tech, githubUrl, demoUrl }) => (
         <div className="flex items-baseline justify-between gap-3">
             <h3 className="text-base font-semibold tracking-[0.01em]">
                 {githubUrl ? (
-                    <a className="link" href={githubUrl} target="_blank" rel="noreferrer">
+                    <a className="link tap-target-sm" href={githubUrl} target="_blank" rel="noreferrer">
                         {title}
                         <GithubIcon width="14" height="14" className="inline-block ml-[0.35rem] align-[-0.12em]" />
                     </a>

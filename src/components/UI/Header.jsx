@@ -1,6 +1,11 @@
 import { profile } from "../../content";
 import { TABS, hrefFor } from "../../router";
 
+// Optional fields (focus, status, authorization) are commented out in
+// content.js from time to time, so join what exists rather than rendering a
+// dangling separator or an empty paragraph.
+const byline = [profile.title, profile.focus].filter(Boolean).join(" · ");
+
 const Header = ({ tab }) => (
     <header className="mb-[42px]">
         <img
@@ -18,14 +23,15 @@ const Header = ({ tab }) => (
                 {profile.name}
             </a>
         </h1>
-        <p className="text-[0.9rem] text-secondary mb-1">
-            {profile.title} · {profile.focus}
-        </p>
-        <p className="text-[0.9rem]">{profile.location}</p>
-        <p className="text-[0.9rem] font-medium mt-1">{profile.status}</p>
-        <p className="text-small text-secondary">{profile.authorization}</p>
+        {byline && <p className="text-meta text-secondary mb-1">{byline}</p>}
+        <p className="text-meta">{profile.location}</p>
+        {profile.status && <p className="text-meta font-medium mt-1">{profile.status}</p>}
+        {profile.authorization && (
+            <p className="text-small text-secondary">{profile.authorization}</p>
+        )}
 
-        <nav className="flex gap-5 mt-4" aria-label="Main navigation">
+        {/* gap-y leaves room for the tab hit areas, which overhang the row. */}
+        <nav className="flex flex-wrap gap-x-6 gap-y-5 mt-5" aria-label="Main navigation">
             {TABS.map(({ label, id }) => (
                 <a
                     key={label}

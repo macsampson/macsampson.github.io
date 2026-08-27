@@ -28,7 +28,7 @@ const LinksSection = () => (
                             ·
                         </span>
                         <a
-                            className="icon-link text-[0.92rem] py-1"
+                            className="icon-link text-meta py-2 sm:py-1"
                             href={href}
                             {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
                         >

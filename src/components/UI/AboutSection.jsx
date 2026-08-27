@@ -15,9 +15,16 @@ const AboutSection = () => (
             <h2 className="kicker">Education</h2>
             <ul className="grid gap-[14px]">
                 {education.map(({ school, degree }) => (
-                    <li key={school} className="flex items-baseline justify-between gap-3">
+                    /* The degree is too long to sit beside the school on a phone:
+                       side by side it squeezes the school name onto three lines. */
+                    <li
+                        key={school}
+                        className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between sm:gap-3"
+                    >
                         <p className="text-base font-semibold tracking-[0.01em]">{school}</p>
-                        <span className="text-small text-secondary shrink-0 text-right">{degree}</span>
+                        <span className="text-small text-secondary mt-[3px] sm:mt-0 sm:shrink-0 sm:text-right">
+                            {degree}
+                        </span>
                     </li>
                 ))}
             </ul>
