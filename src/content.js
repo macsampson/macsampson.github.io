@@ -14,7 +14,7 @@ export const profile = {
     resume: "/assets/resume.pdf",
     // One sentence each, following the reference: interests, currently, previously.
     intro: [
-        "I'm a software engineer in Vancouver, interested in systems programming, performance, and what happens close to the metal.",
+        "I'm a software engineer interested in systems programming, performance, and what happens close to the metal.",
         "Currently I'm open-sourcing the ecommerce platform I built while running PocketCaps.",
         "Previously I built pipeline tooling at Electronic Arts, and interned at SAP and MDA.",
     ],
