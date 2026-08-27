@@ -26,6 +26,13 @@
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
     -webkit-text-size-adjust: 100%;
+    /* Opts out of forced dark mode (Brave Android's night mode, Chrome's Auto
+       Dark Theme). Those invert CSS colors but never canvas pixels, so the
+       Lenia layer stayed cream while every text colour was lightened to cream:
+       the page rendered invisible. `only` is what makes it an opt-out; a plain
+       `light` still allows the UA to override. Mirrored by the meta tag in
+       index.html so it applies before this stylesheet loads. */
+    color-scheme: only light;
   }
 
   body {

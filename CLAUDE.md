@@ -163,6 +163,13 @@ behind the content, updated entirely in a WGSL compute shader.
   13.5 -> 14.5px, `text-kicker` 10 -> 11px. **Add new sizes to that scale rather than hard-coding
   a `text-[0.9rem]`**, or they will stay desktop-sized on a phone.
 - `body` sets `overflow-wrap: break-word` so no long identifier can widen the page at 320px.
+- **The page is light-only, declared with `color-scheme: only light` on `html` and a matching
+  meta tag in `index.html`. Do not remove either.** A forced dark mode (Brave Android's night
+  mode, Chrome's Auto Dark Theme) inverts CSS colours but never canvas pixels, so the Lenia
+  layer kept painting cream while every text colour was lightened to cream: nav, links and the
+  degree line disappeared into the background. The `only` keyword is what makes it an opt-out;
+  a bare `light` still lets the UA override. Supporting a real dark mode would mean a dark
+  token set *and* dark `BG`/`PALETTES` in `lenia.js`, since the shader bakes in the cream.
 - Avoid em-dashes in user-facing copy (use colons/commas instead).
 
 ## Content Updates
