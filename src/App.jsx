@@ -1,4 +1,5 @@
 import { useTab } from './router'
+import LeniaBackground from './components/UI/LeniaBackground'
 import Header from './components/UI/Header'
 import AboutSection from './components/UI/AboutSection'
 import ProjectsSection from './components/UI/ProjectsSection'
@@ -21,14 +22,17 @@ function App() {
   const tab = useTab()
 
   return (
-    <main className="relative mx-auto w-full max-w-measure px-6 py-6 sm:py-16">
-      <Header tab={tab} />
-      {/* Keyed so the fade replays on every tab change. */}
-      <div key={tab} className="page-fade-in">
-        {pages[tab]}
-      </div>
-      <Footer />
-    </main>
+    <>
+      <LeniaBackground />
+      <main className="relative z-10 mx-auto w-full max-w-measure px-6 py-6 sm:py-16">
+        <Header tab={tab} />
+        {/* Keyed so the fade replays on every tab change. */}
+        <div key={tab} className="page-fade-in">
+          {pages[tab]}
+        </div>
+        <Footer />
+      </main>
+    </>
   )
 }
 

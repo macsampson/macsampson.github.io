@@ -64,6 +64,14 @@
   }
 }
 
+/* Shown when WebGPU is unavailable, so the page never renders a bare canvas. */
+.lenia-fallback {
+  background:
+    radial-gradient(60% 50% at 18% 14%, rgba(168, 154, 136, 0.16), transparent 70%),
+    radial-gradient(45% 40% at 82% 30%, rgba(107, 96, 85, 0.10), transparent 70%),
+    radial-gradient(55% 45% at 50% 88%, rgba(168, 154, 136, 0.12), transparent 72%);
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

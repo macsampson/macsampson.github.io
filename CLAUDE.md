@@ -29,6 +29,8 @@ one screen of substance, no click-throughs required to read anything.
 - **Tailwind CSS 3** - `tailwind.config.js`, PostCSS in `postcss.config.js`
 - No animation, icon, or 3D libraries. Section entry is a CSS `fade-in` keyframe;
   icons are hand-written inline SVG in `components/UI/Icons.jsx`.
+- **WebGPU** (raw, no wrapper) for the Lenia background. WGSL lives in real `.wgsl`
+  files imported with Vite's `?raw`.
 
 ## Architecture
 
@@ -44,8 +46,14 @@ Editing site content means editing that one file, never the components.
 │   ├── router.js           (TABS table, useTab hook, hrefFor)
 │   ├── content.js          (profile, links, education, skills, projects, experience)
 │   ├── index.css           (Tailwind directives, .kicker / .link / .icon-link / .nav-link)
+│   ├── lenia/              (WebGPU Lenia background, see below)
+│   │   ├── lenia.js        (device setup, ping-pong dispatch, render pass)
+│   │   ├── kernel.js       (kernel precompute, creature seeding)
+│   │   ├── presets.js      (generated from Chan's animals.json; do not hand-edit)
+│   │   └── shaders/        (update.wgsl, render.wgsl)
 │   └── components/UI/
 │       ├── Icons.jsx              (inline SVG icons, 16px, currentColor)
+│       ├── LeniaBackground.jsx    (canvas layer, lifecycle, fallback, debug panel)
 │       ├── Header.jsx             (avatar, name, role, location, tab nav)
 │       ├── AboutSection.jsx       (intro, education, skills)
 │       ├── ProjectsSection.jsx    (text-only project rows)
@@ -84,6 +92,55 @@ The visual style deliberately follows wcagas.com. Keep these rules when adding a
 - Avatar is a 104px squircle (`rounded-[22px]`), above the name, not a circle.
 - `.nav-link` reserves its bold width with an `::after` clone so switching tabs never shifts
   the nav row. Keep both `content` declarations.
+
+## Lenia background
+
+A continuous cellular automaton (Bert Chan's Lenia) running as a full-page ambient layer
+behind the content, updated entirely in a WGSL compute shader.
+
+- `A(t+dt) = clip(A + dt * G(K * A), 0, 1)` on a toroidal grid, one invocation per cell.
+- Two `vec2<f32>` storage buffers ping-pong each step: `.x` is state, `.y` a decaying trail.
+- Each 16x16 workgroup stages its tile plus an R-wide halo into workgroup memory, so the
+  `(2R+1)^2` taps per cell hit shared memory. The halo is sized for `RMAX=20`
+  (56x56 f32 = 12.25 KB, under the 16 KB guaranteed limit). **`RMAX` in `update.wgsl` and
+  `lenia.js` must stay in sync**, as must `TILE` and `WORKGROUP`.
+- Kernel weights are precomputed on the CPU whenever R/beta/core change, never per frame.
+- The convolution walks only the kernel *disc*, bounding each row to
+  `|dx| <= sqrt(R^2 - dy^2)`. Exact, not an approximation: the skipped taps have weight zero.
+  Saves ~21% (1 - pi/4) of the work. Verified against a naive convolution to 0 difference.
+- **`src/lenia/presets.js` is generated. Do not hand-edit it.** Change the `SPECIES` list in
+  `scripts/build-presets.mjs`, then `npm run presets` and `npm run presets:check`.
+  `npm run presets -- --list` shows the 310 runnable species of Chan's 548.
+- **Always run `npm run presets:check` after changing the preset list.** It runs the CPU
+  reference and fails on any creature that dies or explodes; both are silent in the browser.
+  Some species are only stable under their published `kn`/`gn` (Helicium cavus pedes explodes
+  7x under the site's Gaussian default), which is what `options.core/growth = "auto"` is for.
+- Seeding never uses random noise (it dies or turns to mush). It spawns several copies of one
+  preset creature at random positions and axis-aligned rotations.
+- Each load randomises preset, palette (`PALETTES`), colour intensity, creature count, and a
+  warm-up of up to 260 steps so you never arrive at frame zero.
+- **mu/sigma jitter has per-preset ceilings in `JITTER_LIMIT`, established by CPU runs.** The
+  Orbiums and Gyrorbium tolerate +/-5% and break at +/-8%; Hydrogeminium explodes to 7x mass at
+  +/-3% and is capped at 1%. Re-validate before widening any of them: an unstable preset either
+  dies to a blank page or floods the whole grid.
+- **Simulation and display rates are decoupled.** Steps run at a fixed 30/s; the render pass
+  binds *both* ping-pong buffers and interpolates between them with `View.alpha`, so the page
+  draws at display rate. `renderGroups[src]` binds `state[1-src]` as prev, `state[src]` as curr.
+  Right after a step `alpha` is 0, not 1. The backing store is capped at 1x DPR (`dprCap`).
+- **The render loop applies backpressure**: at most `MAX_PENDING` (2) frames in flight
+  (`pending` + `onSubmittedWorkDone`), and only stepping frames are timed. Removing this lets the queue grow
+  without bound on a slow device, which can take down the browser's GPU process. A watchdog
+  drops to 10 steps/s past 50ms/frame and stops entirely past 250ms/frame.
+- `init()` validates workgroup storage, invocations, storage-buffer size, and fragment-stage
+  storage buffers up front, so an unsupported device lands on the CSS fallback rather than
+  failing mid-frame.
+- Grid is fixed at 384 (256 on coarse pointers or a software `isFallbackAdapter`) and never
+  reallocated; resize only rescales
+  device-pixels-per-cell. Steps run at 30/s, pause on `visibilitychange`, and
+  `prefers-reduced-motion` renders a static frame instead of animating.
+- No WebGPU means no canvas: the component falls back to `.lenia-fallback` gradients.
+- `?lenia` in the query string enables a debug panel (preset picker, mu/sigma/dt/intensity).
+- Validate shader edits with `naga src/lenia/shaders/*.wgsl` — the build does **not** compile WGSL.
 
 ## Styling
 

@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "resume": "bash scripts/fetch-resume.sh"
+    "resume": "bash scripts/fetch-resume.sh",
+    "presets": "node scripts/build-presets.mjs",
+    "presets:check": "node scripts/check-presets.mjs"
   },
   "dependencies": {
     "autoprefixer": "^10.4.23",

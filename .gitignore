@@ -26,3 +26,8 @@ dist-ssr
 # Pulled from the private resumes repo at build time
 public/assets/resume.pdf
 .resumes/
+
+# Cached species catalogue for scripts/build-presets.mjs
+scripts/.animals.json
+
+LENIA.md
